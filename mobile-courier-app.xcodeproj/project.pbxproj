@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B58EF772BE6BBE90066F447 /* mobile_courier_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* mobile_courier_appApp.swift */; };
-		1B58EF792BE6BBE90066F447 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* ContentView.swift */; };
+		1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0557F52BE9074100367124 /* AuthEndpoints.swift */; };
+		1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */; };
+		1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* MainView.swift */; };
 		1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */; };
 		1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7E2BE6BBEA0066F447 /* Preview Assets.xcassets */; };
 		1B58EF892BE6BBEA0066F447 /* mobile_courier_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */; };
 		1B58EF932BE6BBEA0066F447 /* mobile_courier_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */; };
 		1B58EF952BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */; };
+		1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA22BE6BF9A0066F447 /* LoginView.swift */; };
+		1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */; };
+		1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */; };
+		1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */; };
+		1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */; };
+		1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFB82BE729D20066F447 /* Endpoint.swift */; };
+		1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */; };
+		1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */; };
+		1BE63F712BE980D60016A26E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F702BE980D60016A26E /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0557F52BE9074100367124 /* AuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoints.swift; sourceTree = "<group>"; };
 		1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-courier-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B58EF762BE6BBE90066F447 /* mobile_courier_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appApp.swift; sourceTree = "<group>"; };
-		1B58EF782BE6BBE90066F447 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierApp.swift; sourceTree = "<group>"; };
+		1B58EF782BE6BBE90066F447 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mobile_courier_app.entitlements; sourceTree = "<group>"; };
 		1B58EF7E2BE6BBEA0066F447 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +56,16 @@
 		1B58EF8E2BE6BBEA0066F447 /* mobile-courier-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-courier-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appUITests.swift; sourceTree = "<group>"; };
 		1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B58EFA22BE6BF9A0066F447 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierTextFieldStyle.swift; sourceTree = "<group>"; };
+		1B58EFB82BE729D20066F447 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestClient.swift; sourceTree = "<group>"; };
+		1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		1BE63F702BE980D60016A26E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		1BE63F722BE98ADD0016A26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +116,16 @@
 		1B58EF752BE6BBE90066F447 /* mobile-courier-app */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF762BE6BBE90066F447 /* mobile_courier_appApp.swift */,
-				1B58EF782BE6BBE90066F447 /* ContentView.swift */,
+				1BE63F722BE98ADD0016A26E /* Info.plist */,
+				1B58EFAF2BE6E9D00066F447 /* Networking */,
+				1B58EFA62BE6BFD70066F447 /* Utilities */,
+				1B58EFA12BE6BF870066F447 /* Login */,
+				1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */,
+				1B58EF782BE6BBE90066F447 /* MainView.swift */,
 				1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */,
 				1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */,
 				1B58EF7D2BE6BBEA0066F447 /* Preview Content */,
+				1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */,
 			);
 			path = "mobile-courier-app";
 			sourceTree = "<group>";
@@ -127,6 +153,52 @@
 				1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */,
 			);
 			path = "mobile-courier-appUITests";
+			sourceTree = "<group>";
+		};
+		1B58EFA12BE6BF870066F447 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFA22BE6BF9A0066F447 /* LoginView.swift */,
+				1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1B58EFA62BE6BFD70066F447 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFAC2BE6C2A70066F447 /* Styles */,
+				1B58EFA72BE6BFDF0066F447 /* Modifiers */,
+				1BE63F702BE980D60016A26E /* Storage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1B58EFA72BE6BFDF0066F447 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		1B58EFAC2BE6C2A70066F447 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		1B58EFAF2BE6E9D00066F447 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFB82BE729D20066F447 /* Endpoint.swift */,
+				1B0557F52BE9074100367124 /* AuthEndpoints.swift */,
+				1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */,
+				1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */,
 				1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */,
 				1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */,
 			);
@@ -259,8 +332,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B58EF792BE6BBE90066F447 /* ContentView.swift in Sources */,
-				1B58EF772BE6BBE90066F447 /* mobile_courier_appApp.swift in Sources */,
+				1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */,
+				1BE63F712BE980D60016A26E /* Storage.swift in Sources */,
+				1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */,
+				1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */,
+				1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */,
+				1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */,
+				1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */,
+				1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */,
+				1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */,
+				1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */,
+				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,17 +504,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mobile-courier-app/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -440,10 +524,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -458,17 +543,19 @@
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mobile-courier-app/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -476,10 +563,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
