@@ -1,32 +1,11 @@
 //
-//  AuthRepositoryProtocol.swift
+//  AuthRepository.swift
 //  mobile-courier-app
 //
-//  Created by Vladimir Espinola on 2024-05-06.
+//  Created by Vladimir Espinola on 2024-05-20.
 //
 
 import Foundation
-
-struct LoginModel: Decodable {
-  var username: String
-  var accessToken: String
-
-}
-
-extension LoginModel {
-  func asEntity() -> LoginEntity {
-    .init(username: username, accessToken: accessToken)
-  }
-}
-
-struct LoginEntity: Codable {
-  var username: String
-  var accessToken: String
-}
-
-protocol AuthRepositoryProtocol {
-  func performLogin(email: String, password: String) async throws -> LoginEntity
-}
 
 struct AuthRepository: AuthRepositoryProtocol {
   private var apiRequestClient: APIRequestClientProtocol

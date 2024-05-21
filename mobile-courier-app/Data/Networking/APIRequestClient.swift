@@ -38,8 +38,8 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
 
 
       let configuration = URLSessionConfiguration.default
-      configuration.timeoutIntervalForRequest = 60
-      configuration.timeoutIntervalForResource = 60
+      configuration.timeoutIntervalForRequest = 10
+      configuration.timeoutIntervalForResource = 10
       configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
       configuration.urlCache = nil
 

@@ -34,7 +34,7 @@ extension Endpoint {
   var port: Int { 8449 }
   var headers: [String: String] {
     var internalHeaders = [
-      "application/json": "Content-Type"
+      "Content-Type": "application/json"
     ]
 
     if let authToken = authToken {
