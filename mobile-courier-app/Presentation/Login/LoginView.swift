@@ -75,6 +75,10 @@ struct LoginView: View {
         .disabled(!viewModel.buttonIsEnabled)
       }
       .padding(20)
+
+      if viewModel.isLoading {
+        RippleSpinnerView()
+      }
     }
   }
 }

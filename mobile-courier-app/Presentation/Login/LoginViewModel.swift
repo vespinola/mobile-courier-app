@@ -17,6 +17,7 @@ final class LoginViewModel: ObservableObject {
   @Published var password: String = ""
   @Published var email: String = ""
   @Published var isToggled = false
+  @Published var isLoading = false
 
   private let storage: Storage
 
@@ -36,10 +37,11 @@ final class LoginViewModel: ObservableObject {
 
   func doLogin() async {
     do {
+      isLoading = true
       let loginEntity = try await authRepository.performLogin(email: email, password: password)
-      print(loginEntity)
+      isLoading = false
     } catch {
-      print(error.localizedDescription)
+      isLoading = false
     }
   }
 
