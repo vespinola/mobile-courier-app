@@ -25,6 +25,7 @@
 		1B85E8E22BFC4DAE003040CC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E8E12BFC4DAE003040CC /* LoginModel.swift */; };
 		1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E8E62BFC4E24003040CC /* LoginEntity.swift */; };
 		1B85E8EA2BFC4E85003040CC /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E8E92BFC4E85003040CC /* AuthRepository.swift */; };
+		1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */; };
 		1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */; };
 		1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */; };
 		1BE63F712BE980D60016A26E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F702BE980D60016A26E /* Storage.swift */; };
@@ -70,6 +71,7 @@
 		1B85E8E12BFC4DAE003040CC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		1B85E8E62BFC4E24003040CC /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
 		1B85E8E92BFC4E85003040CC /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestClient.swift; sourceTree = "<group>"; };
 		1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
 		1BE63F702BE980D60016A26E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		1B58EFA62BE6BFD70066F447 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */,
 				1B58EFAC2BE6C2A70066F447 /* Styles */,
 				1B58EFA72BE6BFDF0066F447 /* Modifiers */,
 				1BE63F702BE980D60016A26E /* Storage.swift */,
@@ -363,6 +366,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 1B58EF6A2BE6BBE90066F447;
 			productRefGroup = 1B58EF742BE6BBE90066F447 /* Products */;
@@ -382,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */,
+				1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */,
 				1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */,
 				1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */,
 			);

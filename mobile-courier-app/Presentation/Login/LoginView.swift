@@ -29,7 +29,7 @@ struct LoginView: View {
           .cornerRadius(8)
           .clipped()
 
-        TextField("Correo electrónico", text: $viewModel.email)
+        TextField("Email", text: $viewModel.email)
           .focused($focusField, equals: .email)
           .textFieldStyle(CourierTextFieldStyle())
           .keyboardType(.emailAddress)
@@ -40,7 +40,7 @@ struct LoginView: View {
             focusField = .password
           }
 
-        SecureField("Contraseña", text: $viewModel.password)
+        SecureField("Password", text: $viewModel.password)
           .focused($focusField, equals: .password)
           .textFieldStyle(CourierTextFieldStyle())
           .submitLabel(.done)
@@ -51,7 +51,7 @@ struct LoginView: View {
             //API CALL
           }
 
-        Toggle("Recordar correo", isOn: $viewModel.isToggled)
+        Toggle("Remember me", isOn: $viewModel.isToggled)
           .onChange(of: viewModel.isToggled) { newValue in
             viewModel.saveUserPreferences(isOn: newValue)
           }
@@ -59,7 +59,7 @@ struct LoginView: View {
 
         Spacer()
 
-        Button("Ingresar") {
+        Button("Log In") {
           Task {
             await viewModel.doLogin()
           }

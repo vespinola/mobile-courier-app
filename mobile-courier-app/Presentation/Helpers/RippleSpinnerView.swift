@@ -58,4 +58,3 @@ struct RippleSpinnerView: View {
 #Preview {
   RippleSpinnerView()
 }
-
