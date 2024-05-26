@@ -1,5 +1,5 @@
 //
-//  mobile_courier_appUITestsLaunchTests.swift
+//  MobileCourierAppUITestsLaunchTests.swift
 //  mobile-courier-appUITests
 //
 //  Created by Vladimir Espinola on 2024-05-04.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class mobile_courier_appUITestsLaunchTests: XCTestCase {
+final class MobileCourierAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -48,7 +48,9 @@ struct LoginView: View {
           .onSubmit {
             focusField = nil
 
-            //API CALL
+            Task {
+              await viewModel.doLogin()
+            }
           }
 
         Toggle("Remember me", isOn: $viewModel.isToggled)

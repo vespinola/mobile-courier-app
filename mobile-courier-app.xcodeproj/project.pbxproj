@@ -13,9 +13,9 @@
 		1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* MainView.swift */; };
 		1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */; };
 		1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7E2BE6BBEA0066F447 /* Preview Assets.xcassets */; };
-		1B58EF892BE6BBEA0066F447 /* mobile_courier_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */; };
-		1B58EF932BE6BBEA0066F447 /* mobile_courier_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */; };
-		1B58EF952BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */; };
+		1B58EF892BE6BBEA0066F447 /* MobileCourierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF882BE6BBEA0066F447 /* MobileCourierAppTests.swift */; };
+		1B58EF932BE6BBEA0066F447 /* MobileCourierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */; };
+		1B58EF952BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF942BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift */; };
 		1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA22BE6BF9A0066F447 /* LoginView.swift */; };
 		1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */; };
 		1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */; };
@@ -58,10 +58,10 @@
 		1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mobile_courier_app.entitlements; sourceTree = "<group>"; };
 		1B58EF7E2BE6BBEA0066F447 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B58EF842BE6BBEA0066F447 /* mobile-courier-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-courier-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appTests.swift; sourceTree = "<group>"; };
+		1B58EF882BE6BBEA0066F447 /* MobileCourierAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppTests.swift; sourceTree = "<group>"; };
 		1B58EF8E2BE6BBEA0066F447 /* mobile-courier-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-courier-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appUITests.swift; sourceTree = "<group>"; };
-		1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppUITests.swift; sourceTree = "<group>"; };
+		1B58EF942BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1B58EFA22BE6BF9A0066F447 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
@@ -118,6 +118,7 @@
 				1B58EF872BE6BBEA0066F447 /* mobile-courier-appTests */,
 				1B58EF912BE6BBEA0066F447 /* mobile-courier-appUITests */,
 				1B58EF742BE6BBE90066F447 /* Products */,
+				1B9D15A02C02D904001F47E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,7 +161,7 @@
 		1B58EF872BE6BBEA0066F447 /* mobile-courier-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */,
+				1B58EF882BE6BBEA0066F447 /* MobileCourierAppTests.swift */,
 			);
 			path = "mobile-courier-appTests";
 			sourceTree = "<group>";
@@ -168,8 +169,8 @@
 		1B58EF912BE6BBEA0066F447 /* mobile-courier-appUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */,
-				1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */,
+				1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */,
+				1B58EF942BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift */,
 			);
 			path = "mobile-courier-appUITests";
 			sourceTree = "<group>";
@@ -280,6 +281,13 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		1B9D15A02C02D904001F47E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,6 +296,7 @@
 			buildConfigurationList = 1B58EF982BE6BBEA0066F447 /* Build configuration list for PBXNativeTarget "mobile-courier-app" */;
 			buildPhases = (
 				1B58EF6F2BE6BBE90066F447 /* Sources */,
+				1B9D15A32C02DAF8001F47E8 /* Swiftlint */,
 				1B58EF702BE6BBE90066F447 /* Frameworks */,
 				1B58EF712BE6BBE90066F447 /* Resources */,
 			);
@@ -296,6 +305,8 @@
 			dependencies = (
 			);
 			name = "mobile-courier-app";
+			packageProductDependencies = (
+			);
 			productName = "mobile-courier-app";
 			productReference = 1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */;
 			productType = "com.apple.product-type.application";
@@ -369,6 +380,8 @@
 				es,
 			);
 			mainGroup = 1B58EF6A2BE6BBE90066F447;
+			packageReferences = (
+			);
 			productRefGroup = 1B58EF742BE6BBE90066F447 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -408,6 +421,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B9D15A32C02DAF8001F47E8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B58EF6F2BE6BBE90066F447 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -435,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B58EF892BE6BBEA0066F447 /* mobile_courier_appTests.swift in Sources */,
+				1B58EF892BE6BBEA0066F447 /* MobileCourierAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +478,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B58EF952BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift in Sources */,
-				1B58EF932BE6BBEA0066F447 /* mobile_courier_appUITests.swift in Sources */,
+				1B58EF952BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift in Sources */,
+				1B58EF932BE6BBEA0066F447 /* MobileCourierAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +623,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mobile-courier-app/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -627,6 +663,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "mobile-courier-app/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

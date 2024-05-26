@@ -1,5 +1,5 @@
 //
-//  mobile_courier_appUITests.swift
+//  MobileCourierAppUITests.swift
 //  mobile-courier-appUITests
 //
 //  Created by Vladimir Espinola on 2024-05-04.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class mobile_courier_appUITests: XCTestCase {
+final class MobileCourierAppUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
