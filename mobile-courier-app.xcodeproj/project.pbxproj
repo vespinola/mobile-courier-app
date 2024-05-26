@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B58EF772BE6BBE90066F447 /* mobile_courier_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* mobile_courier_appApp.swift */; };
-		1B58EF792BE6BBE90066F447 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* ContentView.swift */; };
+		1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0557F52BE9074100367124 /* AuthEndpoints.swift */; };
+		1B07BC8D2BFD677900D8B149 /* RippleSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07BC8C2BFD677900D8B149 /* RippleSpinnerView.swift */; };
+		1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */; };
+		1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* MainView.swift */; };
 		1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */; };
 		1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7E2BE6BBEA0066F447 /* Preview Assets.xcassets */; };
-		1B58EF892BE6BBEA0066F447 /* mobile_courier_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */; };
-		1B58EF932BE6BBEA0066F447 /* mobile_courier_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */; };
-		1B58EF952BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */; };
+		1B58EF892BE6BBEA0066F447 /* MobileCourierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF882BE6BBEA0066F447 /* MobileCourierAppTests.swift */; };
+		1B58EF932BE6BBEA0066F447 /* MobileCourierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */; };
+		1B58EF952BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF942BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift */; };
+		1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA22BE6BF9A0066F447 /* LoginView.swift */; };
+		1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */; };
+		1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */; };
+		1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */; };
+		1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */; };
+		1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFB82BE729D20066F447 /* Endpoint.swift */; };
+		1B85E8E22BFC4DAE003040CC /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E8E12BFC4DAE003040CC /* LoginModel.swift */; };
+		1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E8E62BFC4E24003040CC /* LoginEntity.swift */; };
+		1B85E8EA2BFC4E85003040CC /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85E8E92BFC4E85003040CC /* AuthRepository.swift */; };
+		1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */; };
+		1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */; };
+		1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */; };
+		1BE63F712BE980D60016A26E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F702BE980D60016A26E /* Storage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +49,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B0557F52BE9074100367124 /* AuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoints.swift; sourceTree = "<group>"; };
+		1B07BC8C2BFD677900D8B149 /* RippleSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleSpinnerView.swift; sourceTree = "<group>"; };
 		1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-courier-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B58EF762BE6BBE90066F447 /* mobile_courier_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appApp.swift; sourceTree = "<group>"; };
-		1B58EF782BE6BBE90066F447 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierApp.swift; sourceTree = "<group>"; };
+		1B58EF782BE6BBE90066F447 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mobile_courier_app.entitlements; sourceTree = "<group>"; };
 		1B58EF7E2BE6BBEA0066F447 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B58EF842BE6BBEA0066F447 /* mobile-courier-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-courier-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appTests.swift; sourceTree = "<group>"; };
+		1B58EF882BE6BBEA0066F447 /* MobileCourierAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppTests.swift; sourceTree = "<group>"; };
 		1B58EF8E2BE6BBEA0066F447 /* mobile-courier-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobile-courier-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appUITests.swift; sourceTree = "<group>"; };
-		1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppUITests.swift; sourceTree = "<group>"; };
+		1B58EF942BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1B58EFA22BE6BF9A0066F447 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierTextFieldStyle.swift; sourceTree = "<group>"; };
+		1B58EFB82BE729D20066F447 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1B85E8E12BFC4DAE003040CC /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		1B85E8E62BFC4E24003040CC /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		1B85E8E92BFC4E85003040CC /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestClient.swift; sourceTree = "<group>"; };
+		1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		1BE63F702BE980D60016A26E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		1BE63F722BE98ADD0016A26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B07BC8B2BFD676100D8B149 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1B07BC8C2BFD677900D8B149 /* RippleSpinnerView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		1B58EF6A2BE6BBE90066F447 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +118,7 @@
 				1B58EF872BE6BBEA0066F447 /* mobile-courier-appTests */,
 				1B58EF912BE6BBEA0066F447 /* mobile-courier-appUITests */,
 				1B58EF742BE6BBE90066F447 /* Products */,
+				1B9D15A02C02D904001F47E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +135,17 @@
 		1B58EF752BE6BBE90066F447 /* mobile-courier-app */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF762BE6BBE90066F447 /* mobile_courier_appApp.swift */,
-				1B58EF782BE6BBE90066F447 /* ContentView.swift */,
+				1B85E8EB2BFC4EAB003040CC /* Presentation */,
+				1B85E8E42BFC4E00003040CC /* Data */,
+				1B85E8E32BFC4DF9003040CC /* Domain */,
+				1BE63F722BE98ADD0016A26E /* Info.plist */,
+				1B58EFA62BE6BFD70066F447 /* Utilities */,
+				1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */,
+				1B58EF782BE6BBE90066F447 /* MainView.swift */,
 				1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */,
 				1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */,
 				1B58EF7D2BE6BBEA0066F447 /* Preview Content */,
+				1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */,
 			);
 			path = "mobile-courier-app";
 			sourceTree = "<group>";
@@ -115,7 +161,7 @@
 		1B58EF872BE6BBEA0066F447 /* mobile-courier-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF882BE6BBEA0066F447 /* mobile_courier_appTests.swift */,
+				1B58EF882BE6BBEA0066F447 /* MobileCourierAppTests.swift */,
 			);
 			path = "mobile-courier-appTests";
 			sourceTree = "<group>";
@@ -123,10 +169,123 @@
 		1B58EF912BE6BBEA0066F447 /* mobile-courier-appUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF922BE6BBEA0066F447 /* mobile_courier_appUITests.swift */,
-				1B58EF942BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift */,
+				1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */,
+				1B58EF942BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift */,
 			);
 			path = "mobile-courier-appUITests";
+			sourceTree = "<group>";
+		};
+		1B58EFA12BE6BF870066F447 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFA22BE6BF9A0066F447 /* LoginView.swift */,
+				1B58EFA42BE6BFBB0066F447 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1B58EFA62BE6BFD70066F447 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */,
+				1B58EFAC2BE6C2A70066F447 /* Styles */,
+				1B58EFA72BE6BFDF0066F447 /* Modifiers */,
+				1BE63F702BE980D60016A26E /* Storage.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1B58EFA72BE6BFDF0066F447 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		1B58EFAC2BE6C2A70066F447 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		1B58EFAF2BE6E9D00066F447 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1B85E8E02BFC4D9F003040CC /* Models */,
+				1B58EFB82BE729D20066F447 /* Endpoint.swift */,
+				1B0557F52BE9074100367124 /* AuthEndpoints.swift */,
+				1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1B85E8DF2BFC4D0B003040CC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		1B85E8E02BFC4D9F003040CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B85E8E12BFC4DAE003040CC /* LoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B85E8E32BFC4DF9003040CC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1B85E8E52BFC4E12003040CC /* Entities */,
+				1B85E8DF2BFC4D0B003040CC /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1B85E8E42BFC4E00003040CC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1B85E8E82BFC4E4E003040CC /* ConcreteRepositories */,
+				1B58EFAF2BE6E9D00066F447 /* Networking */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1B85E8E52BFC4E12003040CC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1B85E8E62BFC4E24003040CC /* LoginEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1B85E8E82BFC4E4E003040CC /* ConcreteRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				1B85E8E92BFC4E85003040CC /* AuthRepository.swift */,
+			);
+			path = ConcreteRepositories;
+			sourceTree = "<group>";
+		};
+		1B85E8EB2BFC4EAB003040CC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				1B07BC8B2BFD676100D8B149 /* Helpers */,
+				1B58EFA12BE6BF870066F447 /* Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		1B9D15A02C02D904001F47E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +296,7 @@
 			buildConfigurationList = 1B58EF982BE6BBEA0066F447 /* Build configuration list for PBXNativeTarget "mobile-courier-app" */;
 			buildPhases = (
 				1B58EF6F2BE6BBE90066F447 /* Sources */,
+				1B9D15A32C02DAF8001F47E8 /* Swiftlint */,
 				1B58EF702BE6BBE90066F447 /* Frameworks */,
 				1B58EF712BE6BBE90066F447 /* Resources */,
 			);
@@ -145,6 +305,8 @@
 			dependencies = (
 			);
 			name = "mobile-courier-app";
+			packageProductDependencies = (
+			);
 			productName = "mobile-courier-app";
 			productReference = 1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */;
 			productType = "com.apple.product-type.application";
@@ -215,8 +377,11 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 1B58EF6A2BE6BBE90066F447;
+			packageReferences = (
+			);
 			productRefGroup = 1B58EF742BE6BBE90066F447 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +398,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */,
+				1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */,
 				1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */,
 				1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */,
 			);
@@ -254,13 +421,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B9D15A32C02DAF8001F47E8 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1B58EF6F2BE6BBE90066F447 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B58EF792BE6BBE90066F447 /* ContentView.swift in Sources */,
-				1B58EF772BE6BBE90066F447 /* mobile_courier_appApp.swift in Sources */,
+				1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */,
+				1B07BC8D2BFD677900D8B149 /* RippleSpinnerView.swift in Sources */,
+				1B85E8E22BFC4DAE003040CC /* LoginModel.swift in Sources */,
+				1BE63F712BE980D60016A26E /* Storage.swift in Sources */,
+				1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */,
+				1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */,
+				1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */,
+				1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */,
+				1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */,
+				1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */,
+				1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */,
+				1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */,
+				1B85E8EA2BFC4E85003040CC /* AuthRepository.swift in Sources */,
+				1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */,
+				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B58EF892BE6BBEA0066F447 /* mobile_courier_appTests.swift in Sources */,
+				1B58EF892BE6BBEA0066F447 /* MobileCourierAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +478,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B58EF952BE6BBEA0066F447 /* mobile_courier_appUITestsLaunchTests.swift in Sources */,
-				1B58EF932BE6BBEA0066F447 /* mobile_courier_appUITests.swift in Sources */,
+				1B58EF952BE6BBEA0066F447 /* MobileCourierAppUITestsLaunchTests.swift in Sources */,
+				1B58EF932BE6BBEA0066F447 /* MobileCourierAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,18 +623,21 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mobile-courier-app/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -440,10 +645,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,18 +663,21 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "mobile-courier-app/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -476,10 +685,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
