@@ -1,6 +1,6 @@
 name: CI
 
-on
+on:
   issue_comment:
     types: [created]
 
