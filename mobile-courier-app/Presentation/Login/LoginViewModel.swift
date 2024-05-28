@@ -13,7 +13,7 @@ final class LoginViewModel: ObservableObject {
     static let rememberedUserKey = "rememberedUser"
     static let rememberedUsernameKey = "rememberedUsername"
   }
-  
+
   @Published var password: String = ""
   @Published var email: String = ""
   @Published var isToggled = false
