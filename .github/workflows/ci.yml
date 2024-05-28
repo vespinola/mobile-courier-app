@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  test:
+    if: ${{ github.event.issue.pull_request != null && github.event.comment.body == '/build' }}
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Run unit tests
+      run: |
+        xcodebuild test \
+          -scheme mobile-courier-appTests \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
+          -enableCodeCoverage YES | xcpretty
+
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: xcode-test-results
+        path: DerivedData/**/Logs/Test/*.xcresult

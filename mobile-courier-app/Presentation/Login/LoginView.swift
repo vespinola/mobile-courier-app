@@ -86,6 +86,7 @@ struct LoginView: View {
 }
 
 #Preview {
-  LoginView(viewModel: LoginViewModel(authRepository: AuthRepository(apiRequestClient: APIRequestClient()), storage: UserDefaultsStorage()))
+  LoginView(
+    viewModel: LoginViewModel.previewInstance()
+  )
 }
-
