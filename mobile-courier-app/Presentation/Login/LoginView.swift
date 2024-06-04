@@ -15,6 +15,7 @@ struct LoginView: View {
 
   @ObservedObject var viewModel: LoginViewModel
   @FocusState private var focusField: Field?
+  @EnvironmentObject var coordinator: Coordinator
 
   public var body: some View {
     ZStack {
@@ -47,9 +48,9 @@ struct LoginView: View {
           .textContentType(.password)
           .onSubmit {
             focusField = nil
-
             Task {
-              await viewModel.doLogin()
+              guard await viewModel.doLogin() else { return }
+              coordinator.push(.home)
             }
           }
 
@@ -63,7 +64,8 @@ struct LoginView: View {
 
         Button("Log In") {
           Task {
-            await viewModel.doLogin()
+            guard await viewModel.doLogin() else { return }
+            coordinator.push(.home)
           }
         }
         .frame(maxWidth: .infinity, minHeight: 44)

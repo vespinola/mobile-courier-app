@@ -35,13 +35,16 @@ final class LoginViewModel: ObservableObject {
     self.isToggled = storage.getBool(forKey: Constants.rememberedUserKey)
   }
 
-  func doLogin() async {
+
+  func doLogin() async -> Bool {
     do {
       isLoading = true
-      let loginEntity = try await authRepository.performLogin(email: email, password: password)
+      let _ = try await authRepository.performLogin(email: email, password: password)
       isLoading = false
+      return true
     } catch {
       isLoading = false
+      return false
     }
   }
 
