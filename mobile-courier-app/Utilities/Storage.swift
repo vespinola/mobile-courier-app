@@ -20,11 +20,11 @@ final class UserDefaultsStorage: Storage {
   func getString(forKey key: String) -> String? {
     UserDefaults.standard.string(forKey: key)
   }
-  
+
   func setString(_ value: String, forKey key: String) {
     UserDefaults.standard.setValue(value, forKey: key)
   }
-  
+
   func getBool(forKey key: String) -> Bool {
     UserDefaults.standard.bool(forKey: key)
   }

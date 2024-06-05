@@ -28,7 +28,6 @@ struct LoginView: View {
           .aspectRatio(contentMode: .fit)
           .padding(.bottom, 16)
 
-
         TextField("Email", text: $viewModel.email)
           .focused($focusField, equals: .email)
           .textFieldStyle(CourierTextFieldStyle())
