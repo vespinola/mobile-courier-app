@@ -50,7 +50,7 @@ final class Coordinator: ObservableObject {
 
   // MARK: Views
 
-  @MainActor @ViewBuilder
+  @ViewBuilder
   func build(page: Page) -> some View {
     switch page {
     case .login:

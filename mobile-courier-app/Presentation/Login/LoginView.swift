@@ -84,6 +84,7 @@ struct LoginView: View {
         RippleSpinnerView()
       }
     }
+    .toast(message: $viewModel.toastMessage)
   }
 }
 

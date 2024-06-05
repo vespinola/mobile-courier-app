@@ -7,7 +7,6 @@
 
 import Foundation
 
-@MainActor
 final class LoginViewModel: ObservableObject {
   private enum Constants {
     static let rememberedUserKey = "rememberedUser"
@@ -18,6 +17,7 @@ final class LoginViewModel: ObservableObject {
   @Published var email: String = ""
   @Published var isToggled = false
   @Published var isLoading = false
+  @Published var toastMessage: String? = nil
 
   private let storage: Storage
 
@@ -35,15 +35,16 @@ final class LoginViewModel: ObservableObject {
     self.isToggled = storage.getBool(forKey: Constants.rememberedUserKey)
   }
 
-
+  @MainActor
   func doLogin() async -> Bool {
     do {
       isLoading = true
-      let _ = try await authRepository.performLogin(email: email, password: password)
+      _ = try await authRepository.performLogin(email: email, password: password)
       isLoading = false
       return true
     } catch {
       isLoading = false
+      toastMessage = error.localizedDescription
       return false
     }
   }
