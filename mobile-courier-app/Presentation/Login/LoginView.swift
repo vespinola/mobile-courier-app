@@ -23,12 +23,11 @@ struct LoginView: View {
         Spacer()
         Image("logo")
           .resizable()
+          .renderingMode(.template)
+          .foregroundStyle(.accent)
           .aspectRatio(contentMode: .fit)
-          .foregroundColor(.red)
-          .padding(16)
-          .background(.accent)
-          .cornerRadius(8)
-          .clipped()
+          .padding(.bottom, 16)
+
 
         TextField("Email", text: $viewModel.email)
           .focused($focusField, equals: .email)
