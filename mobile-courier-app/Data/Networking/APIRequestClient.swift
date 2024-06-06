@@ -36,7 +36,6 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
 //      endpoint.mockFile =
 //      #endif
 
-
       let configuration = URLSessionConfiguration.default
       configuration.timeoutIntervalForRequest = 10
       configuration.timeoutIntervalForResource = 10
@@ -57,8 +56,7 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
       decoder.keyDecodingStrategy = .convertFromSnakeCase
       let decodedData = try decoder.decode(T.self, from: data)
       return decodedData
-    } 
-    catch {
+    } catch {
       if (error as NSError).code == NSURLErrorTimedOut {
         throw APIErrorMessage.timeout
       }

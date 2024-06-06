@@ -8,7 +8,5 @@
 import Foundation
 
 final class AuthRepositoryMock: AuthRepositoryProtocol {
-  func performLogin(email: String, password: String) async throws -> LoginEntity {
-    .init(username: "Openwindow", accessToken: "accesstoken")
-  }
+  func performLogin(email: String, password: String) async throws { }
 }

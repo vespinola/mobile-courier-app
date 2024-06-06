@@ -28,7 +28,7 @@ extension AuthEndpoints: Endpoint {
       return .get
     }
   }
-  
+
   var path: String {
     switch self {
     case .login(email: _, password: _):
@@ -37,23 +37,23 @@ extension AuthEndpoints: Endpoint {
       return ""
     }
   }
-  
-  var body: [AnyHashable : Any]? {
+
+  var body: [AnyHashable: Any]? {
     switch self {
     case .login(email: let email, password: let pass):
       return [
-        "username" : email,
-        "password" : pass
+        "username": email,
+        "password": pass
       ]
     default:
       return nil
     }
   }
 
-  var queryParams: [String : String]? {
+  var queryParams: [String: String]? {
     nil
   }
-  
+
   var authToken: String? {
     nil
   }

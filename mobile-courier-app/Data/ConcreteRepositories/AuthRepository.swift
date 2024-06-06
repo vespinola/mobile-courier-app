@@ -14,12 +14,12 @@ struct AuthRepository: AuthRepositoryProtocol {
     self.apiRequestClient = apiRequestClient
   }
 
-  func performLogin(email: String, password: String) async throws -> LoginEntity {
+  func performLogin(email: String, password: String) async throws {
     let model: LoginModel = try await apiRequestClient.performRequest(
       endpoint: AuthEndpoints.login(email: email, password: password),
       decoder: JSONDecoder()
     )
 
-    return model.asEntity()
+    AppData.token = model.accessToken
   }
 }
