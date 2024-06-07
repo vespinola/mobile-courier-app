@@ -55,3 +55,41 @@ struct ClienteModel: Codable {
     case nombreAutorizado = "nombreautorizado", pagoAnualidad, password, ruc, tarifa, username
   }
 }
+
+extension AddressesModel {
+  func asEntity() -> AddressesEntity {
+    .init(
+      enviosAereos: enviosAereos.asEntity(),
+      viaMaritima: viaMaritima.asEntity()
+    )
+  }
+}
+
+extension EnviosModel {
+  func asEntity() -> EnviosEntity {
+    .init(
+      ciudad: ciudad,
+      cliente: cliente.asEntity(),
+      direccion: direccion,
+      empresa: empresa,
+      pais: pais,
+      telefono: telefono
+    )
+  }
+}
+
+extension ClienteModel {
+  func asEntity() -> ClienteEntity {
+    .init(
+      id: id,
+      autorizaEmail: autorizaEmail,
+      ciautorizado: ciautorizado,
+      ciudad: ciudad,
+      clienteCelular: clienteCelular,
+      clienteCi: clienteCi,
+      clienteTelefono: clienteTelefono,
+      ruc: ruc,
+      tarifa: tarifa
+    )
+  }
+}
