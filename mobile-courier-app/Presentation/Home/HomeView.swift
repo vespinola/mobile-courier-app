@@ -16,16 +16,16 @@ struct HomeView: View {
 
   var body: some View {
     TabView {
-      ProfileView()
+      coordinator.build(page: .profile)
         .tabItem {
           Label("Home", systemImage: "house")
         }
 
-      ProfileView()
+      EmptyView()
         .tabItem {
           Label("Withdrawn", systemImage: "bag")
         }
-      ProfileView()
+      EmptyView()
         .tabItem {
           Label("Profile", systemImage: "person")
         }

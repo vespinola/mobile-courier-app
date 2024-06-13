@@ -11,8 +11,7 @@ import Foundation
 final class AuthRepositorySpy: AuthRepositoryProtocol {
   private(set) var performLoginCalled: Bool = false
 
-  func performLogin(email: String, password: String) async throws -> LoginEntity {
+  func performLogin(email: String, password: String) async throws {
     performLoginCalled = true
-    return .init(username: "username", accessToken: "")
   }
 }

@@ -29,7 +29,7 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
     guard let urlRequest = try? endpoint.asRequest() else {
       throw APIErrorMessage.invalidRequest
     }
-    
+
     do {
 //
 //      #if DEBUG

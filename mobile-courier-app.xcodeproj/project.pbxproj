@@ -35,7 +35,11 @@
 		1B9274D22C115E53008F4FA3 /* AddressRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9274D12C115E53008F4FA3 /* AddressRepositoryProtocol.swift */; };
 		1B9274D42C115EA4008F4FA3 /* AddressesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9274D32C115EA4008F4FA3 /* AddressesEntity.swift */; };
 		1B99600F2C12992F00976BBC /* AddressRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B99600E2C12992F00976BBC /* AddressRespository.swift */; };
+		1B9960112C129BFB00976BBC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9960102C129BFB00976BBC /* ProfileViewModel.swift */; };
 		1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */; };
+		1BC0717A2C140C6A006EC08E /* ProfileViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC071792C140C6A006EC08E /* ProfileViewModelMock.swift */; };
+		1BC0717C2C140CA9006EC08E /* AddressesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0717B2C140CA9006EC08E /* AddressesRepositoryMock.swift */; };
+		1BC0717E2C140F86006EC08E /* EnviosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0717D2C140F86006EC08E /* EnviosView.swift */; };
 		1BD17E632C0EB438009B6C67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD17E622C0EB438009B6C67 /* Coordinator.swift */; };
 		1BE58CA62C05727500C7DF63 /* AuthRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CA52C05727500C7DF63 /* AuthRepositoryMock.swift */; };
 		1BE58CA82C0572B400C7DF63 /* StorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CA72C0572B400C7DF63 /* StorageMock.swift */; };
@@ -46,6 +50,7 @@
 		1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */; };
 		1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */; };
 		1BE63F712BE980D60016A26E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F702BE980D60016A26E /* Storage.swift */; };
+		1BEE841F2C17D6FF00B8A367 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE841E2C17D6FF00B8A367 /* RowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +103,11 @@
 		1B9274D12C115E53008F4FA3 /* AddressRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepositoryProtocol.swift; sourceTree = "<group>"; };
 		1B9274D32C115EA4008F4FA3 /* AddressesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesEntity.swift; sourceTree = "<group>"; };
 		1B99600E2C12992F00976BBC /* AddressRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRespository.swift; sourceTree = "<group>"; };
+		1B9960102C129BFB00976BBC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		1BC071792C140C6A006EC08E /* ProfileViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelMock.swift; sourceTree = "<group>"; };
+		1BC0717B2C140CA9006EC08E /* AddressesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesRepositoryMock.swift; sourceTree = "<group>"; };
+		1BC0717D2C140F86006EC08E /* EnviosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviosView.swift; sourceTree = "<group>"; };
 		1BD17E622C0EB438009B6C67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BE58CA52C05727500C7DF63 /* AuthRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryMock.swift; sourceTree = "<group>"; };
 		1BE58CA72C0572B400C7DF63 /* StorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMock.swift; sourceTree = "<group>"; };
@@ -110,6 +119,7 @@
 		1BE63F6E2BE972A60016A26E /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
 		1BE63F702BE980D60016A26E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		1BE63F722BE98ADD0016A26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1BEE841E2C17D6FF00B8A367 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				1B8500142C100DF1006E96A0 /* ProfileView.swift */,
+				1B9960102C129BFB00976BBC /* ProfileViewModel.swift */,
+				1BC0717D2C140F86006EC08E /* EnviosView.swift */,
+				1BEE841E2C17D6FF00B8A367 /* RowView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -366,6 +379,8 @@
 				1BE58CA52C05727500C7DF63 /* AuthRepositoryMock.swift */,
 				1BE58CA72C0572B400C7DF63 /* StorageMock.swift */,
 				1BE58CA92C05731B00C7DF63 /* LoginViewModelMock.swift */,
+				1BC071792C140C6A006EC08E /* ProfileViewModelMock.swift */,
+				1BC0717B2C140CA9006EC08E /* AddressesRepositoryMock.swift */,
 			);
 			path = Previews;
 			sourceTree = "<group>";
@@ -567,14 +582,18 @@
 				1B85000E2C10033D006E96A0 /* ToastView.swift in Sources */,
 				1B8500102C1004D0006E96A0 /* ToastModifier.swift in Sources */,
 				1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */,
+				1B9960112C129BFB00976BBC /* ProfileViewModel.swift in Sources */,
 				1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */,
 				1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */,
 				1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */,
+				1BEE841F2C17D6FF00B8A367 /* RowView.swift in Sources */,
+				1BC0717E2C140F86006EC08E /* EnviosView.swift in Sources */,
 				1B9274D22C115E53008F4FA3 /* AddressRepositoryProtocol.swift in Sources */,
 				1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */,
 				1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */,
 				1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */,
 				1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */,
+				1BC0717C2C140CA9006EC08E /* AddressesRepositoryMock.swift in Sources */,
 				1B9274D42C115EA4008F4FA3 /* AddressesEntity.swift in Sources */,
 				1B8500152C100DF1006E96A0 /* ProfileView.swift in Sources */,
 				1B85E8EA2BFC4E85003040CC /* AuthRepository.swift in Sources */,
@@ -582,6 +601,7 @@
 				1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */,
 				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
 				1B5EBFFE2C081DDA003BC2D9 /* AuthData.swift in Sources */,
+				1BC0717A2C140C6A006EC08E /* ProfileViewModelMock.swift in Sources */,
 				1BE58CA62C05727500C7DF63 /* AuthRepositoryMock.swift in Sources */,
 				1BE58CB32C0585C400C7DF63 /* HomeView.swift in Sources */,
 				1BD17E632C0EB438009B6C67 /* Coordinator.swift in Sources */,

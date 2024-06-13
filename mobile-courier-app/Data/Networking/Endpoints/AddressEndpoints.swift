@@ -15,13 +15,13 @@ extension AddressEndpoints: Endpoint {
   var mockFile: String? {
     ""
   }
-  
+
   var requestType: RequestType {
     .get
   }
 
   var path: String {
-    "direccion"
+    "/frontliner-middleware/api/direccion"
   }
 
   var body: [AnyHashable: Any]? {

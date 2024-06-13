@@ -10,6 +10,7 @@ import SwiftUI
 enum Page: String, Identifiable {
   case login
   case home
+  case profile
 
   var id: String {
     self.rawValue
@@ -61,6 +62,10 @@ final class Coordinator: ObservableObject {
         authRepository: authRepo,
         storage: storage)
       )
+    case .profile:
+      let apiClient = APIRequestClient()
+      let addressRepo = AddressRespository(apiRequestClient: apiClient)
+      ProfileView(viewModel: ProfileViewModel(addressesRepository: addressRepo))
     case .home:
       HomeView()
     }

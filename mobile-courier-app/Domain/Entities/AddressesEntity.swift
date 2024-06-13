@@ -14,7 +14,7 @@ struct AddressesEntity: Codable {
 
 struct EnviosEntity: Codable {
   let ciudad: String
-  let cliente: ClienteEntity
+  var cliente: ClienteEntity?
   let direccion: String
   let empresa: String
   let pais: String
@@ -31,4 +31,19 @@ struct ClienteEntity: Codable {
   let clienteTelefono: String
   let ruc: String
   let tarifa: Double
+  let userName: String
+}
+
+extension AddressesEntity {
+  var documentNumber: String {
+    enviosAereos.cliente?.clienteCi ?? "-"
+  }
+
+  var phoneNumber: String {
+    enviosAereos.cliente?.clienteTelefono ?? "-"
+  }
+
+  var email: String {
+    enviosAereos.cliente?.userName ?? "-"
+  }
 }
