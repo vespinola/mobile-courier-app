@@ -21,6 +21,7 @@ struct MainView: View {
         }
     }
     .environmentObject(coordinator)
+    .environmentObject(AppData.shared)
   }
 }
 

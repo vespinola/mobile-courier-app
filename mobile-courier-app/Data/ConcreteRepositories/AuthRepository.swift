@@ -20,6 +20,6 @@ struct AuthRepository: AuthRepositoryProtocol {
       decoder: JSONDecoder()
     )
 
-    AppData.token = model.accessToken
+    AppData.shared.updateToken(model.accessToken)
   }
 }

@@ -45,7 +45,7 @@ extension Endpoint {
   }
 
   var authToken: String? {
-    guard let token = AppData.token else { return nil }
+    guard let token = AppData.shared.getToken() else { return nil }
     return "Bearer \(token)"
   }
 }

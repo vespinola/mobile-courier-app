@@ -65,19 +65,3 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
     }
   }
 }
-
-fileprivate class CustomSessionDelegate: NSObject, URLSessionDelegate {
-  func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-    // Check if the challenge is a server trust challenge
-    guard challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust,
-          let serverTrust = challenge.protectionSpace.serverTrust else {
-      // If it's not a server trust challenge, perform default handling
-      completionHandler(.performDefaultHandling, nil)
-      return
-    }
-
-    // Bypass SSL certificate validation by always trusting the server
-    let credential = URLCredential(trust: serverTrust)
-    completionHandler(.useCredential, credential)
-  }
-}

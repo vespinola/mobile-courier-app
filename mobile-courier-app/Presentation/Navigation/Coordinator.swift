@@ -57,11 +57,7 @@ final class Coordinator: ObservableObject {
     case .login:
       let apiClient = APIRequestClient()
       let authRepo = AuthRepository(apiRequestClient: apiClient)
-      let storage = UserDefaultsStorage()
-      LoginView(viewModel: LoginViewModel(
-        authRepository: authRepo,
-        storage: storage)
-      )
+      LoginView(viewModel: LoginViewModel(authRepository: authRepo))
     case .profile:
       let apiClient = APIRequestClient()
       let addressRepo = AddressRespository(apiRequestClient: apiClient)

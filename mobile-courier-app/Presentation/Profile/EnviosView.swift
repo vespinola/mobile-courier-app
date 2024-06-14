@@ -33,14 +33,13 @@ struct EnviosView: View {
 #Preview {
   EnviosView(
     envios:
-      .init(
-        ciudad: "Boston",
-        direccion: "164 NW STE 32",
-        empresa: "",
-        pais: "Argentina",
-        telefono: "(301) 123-1234"
-      ), 
+        .init(
+          ciudad: "Boston",
+          direccion: "164 NW STE 32",
+          empresa: "",
+          pais: "Argentina",
+          telefono: "(301) 123-1234"
+        ),
     title: "Envíos Marítimos"
   )
 }
-

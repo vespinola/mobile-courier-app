@@ -52,14 +52,6 @@ struct LoginView: View {
             }
           }
 
-        Toggle("Remember me", isOn: $viewModel.isToggled)
-          .onChange(of: viewModel.isToggled) { newValue in
-            viewModel.saveUserPreferences(isOn: newValue)
-          }
-          .disabled(viewModel.email.isEmpty)
-
-        Spacer()
-
         Button("Log In") {
           Task {
             guard await viewModel.doLogin() else { return }
@@ -75,6 +67,8 @@ struct LoginView: View {
         .foregroundStyle(.white)
         .cornerRadius(16)
         .disabled(!viewModel.buttonIsEnabled)
+
+        Spacer()
       }
       .padding(20)
 

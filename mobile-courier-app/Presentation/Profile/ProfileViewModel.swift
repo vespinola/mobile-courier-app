@@ -40,7 +40,3 @@ final class ProfileViewModel: ObservableObject {
     }
   }
 }
-
-extension ProfileViewModel {
-  
-}

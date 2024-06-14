@@ -19,6 +19,9 @@ struct AddressRespository: AddressRepositoryProtocol {
       endpoint: AddressEndpoints.addresses,
       decoder: JSONDecoder()
     )
+
+    AppData.shared.setUsername(model.enviosAereos.cliente.clienteNombre)
+
     return model.asEntity()
   }
 }

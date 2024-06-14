@@ -15,8 +15,10 @@ struct HomeView: View {
   }
 
   var body: some View {
+    HeaderView()
+
     TabView {
-      coordinator.build(page: .profile)
+      EmptyView()
         .tabItem {
           Label("Home", systemImage: "house")
         }
@@ -25,7 +27,7 @@ struct HomeView: View {
         .tabItem {
           Label("Withdrawn", systemImage: "bag")
         }
-      EmptyView()
+      coordinator.build(page: .profile)
         .tabItem {
           Label("Profile", systemImage: "person")
         }
