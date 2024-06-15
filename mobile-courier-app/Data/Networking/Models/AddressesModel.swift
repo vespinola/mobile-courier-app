@@ -89,7 +89,7 @@ extension ClienteModel {
       clienteCi: clienteCi,
       clienteTelefono: clienteTelefono,
       ruc: ruc,
-      tarifa: tarifa, 
+      tarifa: tarifa,
       userName: username
     )
   }

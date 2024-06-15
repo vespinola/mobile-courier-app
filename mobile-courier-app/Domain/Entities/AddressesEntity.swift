@@ -40,7 +40,7 @@ extension AddressesEntity {
   }
 
   var phoneNumber: String {
-    enviosAereos.cliente?.clienteTelefono ?? "-"
+    enviosAereos.cliente?.clienteCelular ?? "-"
   }
 
   var email: String {
