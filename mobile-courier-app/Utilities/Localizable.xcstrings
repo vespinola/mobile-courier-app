@@ -22,10 +22,24 @@
       }
     },
     "Hi, %@!" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hola, %@!"
+          }
+        }
+      }
     },
     "Home" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
+        }
+      }
     },
     "Log In" : {
       "extractionState" : "manual",
@@ -62,7 +76,14 @@
       }
     },
     "Profile" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfil"
+          }
+        }
+      }
     },
     "Remember me" : {
       "extractionState" : "manual",
@@ -82,7 +103,34 @@
       }
     },
     "Withdrawn" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retirados"
+          }
+        }
+      }
+    },
+    "You have no packages" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usted no tienes paquetes"
+          }
+        }
+      }
+    },
+    "Your packages will be displayed here when they arrive at your mailbox" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sus paquetes serán mostrados aquí cuando lleguen a su casilla"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

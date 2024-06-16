@@ -20,7 +20,7 @@ final class LoginViewModelTests: XCTestCase {
     storageSpy = StorageSpy()
     authRepoSpy = AuthRepositorySpy()
 
-    sut = LoginViewModel(authRepository: authRepoSpy, storage: storageSpy)
+    sut = LoginViewModel(authRepository: authRepoSpy)
   }
 
   override func tearDownWithError() throws {
@@ -33,14 +33,7 @@ final class LoginViewModelTests: XCTestCase {
   }
 
   func testLoadingState() async {
-    await sut.doLogin()
+    _ = await sut.doLogin()
     XCTAssertTrue(authRepoSpy.performLoginCalled)
-  }
-
-  func testStorage() async {
-    await sut.saveUserPreferences(isOn: true)
-    XCTAssertTrue(storageSpy.setStringCalled)
-    await sut.saveUserPreferences(isOn: false)
-    XCTAssertTrue(storageSpy.deleteCalled)
   }
 }
