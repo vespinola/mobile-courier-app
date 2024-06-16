@@ -15,6 +15,7 @@ struct LoginView: View {
 
   @ObservedObject var viewModel: LoginViewModel
   @FocusState private var focusField: Field?
+  @EnvironmentObject var coordinator: Coordinator
 
   public var body: some View {
     ZStack {
@@ -22,12 +23,10 @@ struct LoginView: View {
         Spacer()
         Image("logo")
           .resizable()
+          .renderingMode(.template)
+          .foregroundStyle(.accent)
           .aspectRatio(contentMode: .fit)
-          .foregroundColor(.red)
-          .padding(16)
-          .background(.accent)
-          .cornerRadius(8)
-          .clipped()
+          .padding(.bottom, 16)
 
         TextField("Email", text: $viewModel.email)
           .focused($focusField, equals: .email)
@@ -47,23 +46,16 @@ struct LoginView: View {
           .textContentType(.password)
           .onSubmit {
             focusField = nil
-
             Task {
-              await viewModel.doLogin()
+              guard await viewModel.doLogin() else { return }
+              coordinator.push(.home)
             }
           }
 
-        Toggle("Remember me", isOn: $viewModel.isToggled)
-          .onChange(of: viewModel.isToggled) { newValue in
-            viewModel.saveUserPreferences(isOn: newValue)
-          }
-          .disabled(viewModel.email.isEmpty)
-
-        Spacer()
-
         Button("Log In") {
           Task {
-            await viewModel.doLogin()
+            guard await viewModel.doLogin() else { return }
+            coordinator.push(.home)
           }
         }
         .frame(maxWidth: .infinity, minHeight: 44)
@@ -75,6 +67,8 @@ struct LoginView: View {
         .foregroundStyle(.white)
         .cornerRadius(16)
         .disabled(!viewModel.buttonIsEnabled)
+
+        Spacer()
       }
       .padding(20)
 
@@ -82,6 +76,7 @@ struct LoginView: View {
         RippleSpinnerView()
       }
     }
+    .toast(message: $viewModel.toastMessage)
   }
 }
 

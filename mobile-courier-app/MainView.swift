@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+  @StateObject private var coordinator = Coordinator()
+
+  var body: some View {
+    NavigationStack(path: $coordinator.path) {
+      coordinator.build(page: .login)
+        .navigationDestination(for: Page.self) { page in
+          coordinator.build(page: page)
         }
-        .padding()
+        .sheet(item: $coordinator.sheet) { sheet in
+          coordinator.build(sheet: sheet)
+        }
     }
+    .environmentObject(coordinator)
+    .environmentObject(AppData.shared)
+  }
 }
 
 #Preview {
-    MainView()
+  MainView()
 }

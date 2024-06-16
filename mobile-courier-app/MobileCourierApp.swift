@@ -9,12 +9,9 @@ import SwiftUI
 
 @main
 struct MobileCourierApp: App {
-  let authRepository = AuthRepository(apiRequestClient: APIRequestClient.instance)
-  let storage = UserDefaultsStorage()
-
   var body: some Scene {
     WindowGroup {
-      LoginView(viewModel: LoginViewModel(authRepository: authRepository, storage: storage))
+      MainView()
     }
   }
 }

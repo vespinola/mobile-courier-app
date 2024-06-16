@@ -29,13 +29,12 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
     guard let urlRequest = try? endpoint.asRequest() else {
       throw APIErrorMessage.invalidRequest
     }
-    
+
     do {
 //
 //      #if DEBUG
 //      endpoint.mockFile =
 //      #endif
-
 
       let configuration = URLSessionConfiguration.default
       configuration.timeoutIntervalForRequest = 10
@@ -57,29 +56,12 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
       decoder.keyDecodingStrategy = .convertFromSnakeCase
       let decodedData = try decoder.decode(T.self, from: data)
       return decodedData
-    } 
-    catch {
+    } catch {
       if (error as NSError).code == NSURLErrorTimedOut {
         throw APIErrorMessage.timeout
       }
 
       throw error
     }
-  }
-}
-
-fileprivate class CustomSessionDelegate: NSObject, URLSessionDelegate {
-  func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-    // Check if the challenge is a server trust challenge
-    guard challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust,
-          let serverTrust = challenge.protectionSpace.serverTrust else {
-      // If it's not a server trust challenge, perform default handling
-      completionHandler(.performDefaultHandling, nil)
-      return
-    }
-
-    // Bypass SSL certificate validation by always trusting the server
-    let credential = URLCredential(trust: serverTrust)
-    completionHandler(.useCredential, credential)
   }
 }

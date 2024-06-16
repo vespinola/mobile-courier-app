@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "Email" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -18,7 +21,10 @@
         }
       }
     },
-    "Hello, world!" : {
+    "Hi, %@!" : {
+
+    },
+    "Home" : {
 
     },
     "Log In" : {
@@ -55,6 +61,9 @@
         }
       }
     },
+    "Profile" : {
+
+    },
     "Remember me" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -71,6 +80,9 @@
           }
         }
       }
+    },
+    "Withdrawn" : {
+
     }
   },
   "version" : "1.0"

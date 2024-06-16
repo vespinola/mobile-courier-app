@@ -7,19 +7,11 @@
 
 import Foundation
 
-@MainActor
 final class LoginViewModel: ObservableObject {
-  private enum Constants {
-    static let rememberedUserKey = "rememberedUser"
-    static let rememberedUsernameKey = "rememberedUsername"
-  }
-
   @Published var password: String = ""
   @Published var email: String = ""
-  @Published var isToggled = false
   @Published var isLoading = false
-
-  private let storage: Storage
+  @Published var toastMessage: String?
 
   var buttonIsEnabled: Bool {
     !password.isEmpty && !email.isEmpty
@@ -27,34 +19,21 @@ final class LoginViewModel: ObservableObject {
 
   private let authRepository: AuthRepositoryProtocol
 
-  init(authRepository: AuthRepositoryProtocol, storage: Storage) {
+  init(authRepository: AuthRepositoryProtocol) {
     self.authRepository = authRepository
-    self.storage = storage
-
-    self.email = storage.getString(forKey: Constants.rememberedUsernameKey) ?? ""
-    self.isToggled = storage.getBool(forKey: Constants.rememberedUserKey)
   }
 
-  func doLogin() async {
+  @MainActor
+  func doLogin() async -> Bool {
     do {
       isLoading = true
-      let loginEntity = try await authRepository.performLogin(email: email, password: password)
+      try await authRepository.performLogin(email: email, password: password)
       isLoading = false
+      return true
     } catch {
       isLoading = false
+      toastMessage = error.localizedDescription
+      return false
     }
-  }
-
-  func saveUserPreferences(isOn: Bool) {
-    if isOn {
-      storage.setBool(isOn, forKey: Constants.rememberedUserKey)
-      storage.setString(email, forKey: Constants.rememberedUsernameKey)
-    } else {
-      storage.delete(forKey: Constants.rememberedUserKey)
-      storage.delete(forKey: Constants.rememberedUsernameKey)
-    }
-
-    self.email = storage.getString(forKey: Constants.rememberedUsernameKey) ?? ""
-    self.isToggled = storage.getBool(forKey: Constants.rememberedUserKey)
   }
 }

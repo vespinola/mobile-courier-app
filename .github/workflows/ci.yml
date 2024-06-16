@@ -1,12 +1,24 @@
 name: CI
 
 on:
-  issue_comment:
-    types: [created]
+  push:
+    branches:
+      - main
+      - develop
+      - "feature/*"
+  pull_request:
+    branches: 
+      - main
+      - develop
+      - "feature/*"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
-    if: ${{ github.event.issue.pull_request != null && github.event.comment.body == '/build' }}
     runs-on: macos-latest
 
     steps:

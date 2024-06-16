@@ -43,6 +43,11 @@ extension Endpoint {
 
     return internalHeaders
   }
+
+  var authToken: String? {
+    guard let token = AppData.shared.getToken() else { return nil }
+    return "Bearer \(token)"
+  }
 }
 
 extension Endpoint {
@@ -61,6 +66,10 @@ extension Endpoint {
 
     if let body = body {
       urlRequest.httpBody = try serializer.data(withJSONObject: body)
+    }
+
+    if let authToken = authToken {
+      urlRequest.allHTTPHeaderFields?["authorization"] = authToken
     }
 
     return urlRequest
