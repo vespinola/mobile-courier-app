@@ -38,7 +38,7 @@ extension Endpoint {
     ]
 
     if let authToken = authToken {
-      internalHeaders["Authorization"] = "Bearer \(authToken)"
+      internalHeaders["Authorization"] = authToken
     }
 
     return internalHeaders

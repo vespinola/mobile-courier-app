@@ -27,16 +27,14 @@ final class ProfileViewModel: ObservableObject {
   }
 
   @MainActor
-  func getAddresses() async -> AddressesEntity? {
+  func getAddresses() async {
     do {
       isLoading = true
       addresses = try await addressesRepository.getAddress()
       isLoading = false
-      return addresses
     } catch {
       isLoading = false
       toastMessage = error.localizedDescription
-      return nil
     }
   }
 }

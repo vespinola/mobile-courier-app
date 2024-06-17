@@ -18,12 +18,12 @@ struct HomeView: View {
     HeaderView()
 
     TabView {
-      PackagesView()
+      coordinator.build(page: .package)
         .tabItem {
           Label("Home", systemImage: "house")
         }
 
-      PackagesView()
+      coordinator.build(page: .package)
         .tabItem {
           Label("Withdrawn", systemImage: "bag")
         }

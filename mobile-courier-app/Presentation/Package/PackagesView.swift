@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct PackagesView: View {
+  @ObservedObject var viewModel: PackagesViewModel
+
   var body: some View {
-    PackagePlaceholderView()
+    VStack {
+      if let groupedPackagesEntity = viewModel.groupedPackagesEntity {
+        ScrollView {
+          ForEach(groupedPackagesEntity) { currentGroupedPackages in
+            PackageRowView(groupedPackage: currentGroupedPackages)
+          }
+        }
+
+      } else {
+        PackagePlaceholderView()
+      }
+    }
+    .onAppear {
+      Task {
+        await viewModel.getPackages()
+      }
+    }
+
+    if viewModel.isLoading {
+      RippleSpinnerView()
+    }
   }
 }
 
 #Preview {
-  PackagesView()
+  PackagesView(viewModel: .previewInstance())
 }

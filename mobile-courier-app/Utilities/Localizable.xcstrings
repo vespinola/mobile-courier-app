@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%lld" : {
+
+    },
     "Email" : {
       "extractionState" : "manual",
       "localizations" : {

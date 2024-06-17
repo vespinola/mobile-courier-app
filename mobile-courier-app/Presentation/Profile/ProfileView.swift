@@ -35,5 +35,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-  ProfileView(viewModel: ProfileViewModel.previewInstance())
+  ProfileView(viewModel: .previewInstance())
 }
