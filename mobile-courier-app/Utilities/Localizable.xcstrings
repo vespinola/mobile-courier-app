@@ -4,7 +4,7 @@
     "" : {
 
     },
-    "%lld" : {
+    "%lld paquetes" : {
 
     },
     "Email" : {
@@ -60,6 +60,9 @@
           }
         }
       }
+    },
+    "N° %lld" : {
+
     },
     "Password" : {
       "extractionState" : "manual",

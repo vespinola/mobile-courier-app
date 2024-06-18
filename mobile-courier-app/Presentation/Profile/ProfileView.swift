@@ -31,6 +31,7 @@ struct ProfileView: View {
         RippleSpinnerView()
       }
     }
+    .toast(message: $viewModel.toastMessage)
   }
 }
 

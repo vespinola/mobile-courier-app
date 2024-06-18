@@ -13,12 +13,12 @@ struct GroupedPackageEntity: Identifiable {
   var embarqueCodigo: Int
   var paquetes: [PackageEntity]
 
-  var cost: Decimal? {
-    paquetes.first?.guaraniesCost
+  var cost: Decimal {
+    paquetes.first?.guaraniesCost ?? .zero
   }
 
-  var weight: Decimal? {
-    paquetes.first?.paquetePeso
+  var weight: Decimal {
+    paquetes.first?.paquetePeso ?? .zero
   }
 }
 

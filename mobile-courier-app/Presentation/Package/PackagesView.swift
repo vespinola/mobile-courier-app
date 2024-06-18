@@ -11,16 +11,21 @@ struct PackagesView: View {
   @ObservedObject var viewModel: PackagesViewModel
 
   var body: some View {
-    VStack {
-      if let groupedPackagesEntity = viewModel.groupedPackagesEntity {
-        ScrollView {
-          ForEach(groupedPackagesEntity) { currentGroupedPackages in
-            PackageRowView(groupedPackage: currentGroupedPackages)
+    ZStack {
+      VStack {
+        if let groupedPackagesEntity = viewModel.groupedPackagesEntity {
+          if groupedPackagesEntity.isEmpty {
+            PackagePlaceholderView()
+          } else {
+            List(groupedPackagesEntity) { row in
+              GroupedPackageRowView(groupedPackage: row)
+            }
           }
         }
+      }
 
-      } else {
-        PackagePlaceholderView()
+      if viewModel.isLoading, viewModel.groupedPackagesEntity != nil {
+        RippleSpinnerView()
       }
     }
     .onAppear {
@@ -28,10 +33,7 @@ struct PackagesView: View {
         await viewModel.getPackages()
       }
     }
-
-    if viewModel.isLoading {
-      RippleSpinnerView()
-    }
+    .toast(message: $viewModel.toastMessage)
   }
 }
 
