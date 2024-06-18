@@ -20,11 +20,12 @@ struct PackagesView: View {
             List(groupedPackagesEntity) { row in
               GroupedPackageRowView(groupedPackage: row)
             }
+            .listStyle(.plain)
           }
         }
       }
 
-      if viewModel.isLoading, viewModel.groupedPackagesEntity != nil {
+      if viewModel.isLoading {
         RippleSpinnerView()
       }
     }

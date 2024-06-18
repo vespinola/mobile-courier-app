@@ -15,7 +15,7 @@ struct GroupedPackageRowView: View {
     VStack(spacing: 8) {
       HStack(alignment: .top) {
         VStack {
-          Text("N° \(groupedPackage.id)")
+          Text("N° \(groupedPackage.formattedId)")
             .padding(4)
             .foregroundStyle(.white)
             .background(
@@ -27,20 +27,20 @@ struct GroupedPackageRowView: View {
         Spacer()
 
         VStack(alignment: .trailing) {
-          Text("Gs. \(groupedPackage.cost)")
+          Text("Gs. \(groupedPackage.formattedTotalCost)")
             .foregroundStyle(.accent)
             .fontWeight(.bold)
-          Text("\(groupedPackage.weight) Kg")
+          Text("\(groupedPackage.totalWeight) Kg")
         }
       }
 
       HStack {
-        Text(groupedPackage.paquetes.first?.paqueteFechaRetiro ?? "")
+        Text(groupedPackage.formattedDate)
           .frame(maxWidth: .infinity, alignment: .leading)
 
         Spacer()
 
-        Text("\(groupedPackage.paquetes.count) paquetes")
+        Text("\(groupedPackage.paquetes.count) packages")
       }
 
     }

@@ -25,6 +25,7 @@ struct ProfileView: View {
             EnviosView(envios: addresses.viaMaritima, title: "Maritime Route")
           }
         }
+        .listStyle(.plain)
       }
 
       if viewModel.isLoading {
