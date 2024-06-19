@@ -8,7 +8,13 @@
 import Foundation
 
 struct PackagesRepositoryMock: PackagesRepositoryProtocol {
-  func getPackagesRetrieved() async throws -> [GroupedPackageEntity] {
+  func getPackagesForWithdrawl() async throws -> [GroupedPackageEntity] {
+    [
+      .init(embarqueCodigo: 2223, paquetes: [ .mock ])
+    ]
+  }
+
+  func getWithdrawnPackages() async throws -> [GroupedPackageEntity] {
     [
       .init(embarqueCodigo: 2143, paquetes: [ .mock ])
     ]

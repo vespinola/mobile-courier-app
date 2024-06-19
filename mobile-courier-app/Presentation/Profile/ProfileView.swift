@@ -14,17 +14,14 @@ struct ProfileView: View {
     ZStack {
       if let addresses = viewModel.addresses {
         List {
-          Section {
-            RowView(title: "Document Number", subtitle: addresses.documentNumber)
-            RowView(title: "Phone Number", subtitle: addresses.phoneNumber)
-            RowView(title: "Email", subtitle: addresses.email)
-          }
+          RowView(title: "Document Number", subtitle: addresses.documentNumber)
+          RowView(title: "Phone Number", subtitle: addresses.phoneNumber)
+          RowView(title: "Email", subtitle: addresses.email)
 
-          Section {
-            EnviosView(envios: addresses.enviosAereos, title: "Air shipments")
-            EnviosView(envios: addresses.viaMaritima, title: "Maritime Route")
-          }
+          EnviosView(envios: addresses.enviosAereos, title: "Air shipments")
+          EnviosView(envios: addresses.viaMaritima, title: "Maritime Route")
         }
+        .listRowSeparator(.hidden)
         .listStyle(.plain)
       }
 

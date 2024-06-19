@@ -8,5 +8,6 @@
 import Foundation
 
 protocol PackagesRepositoryProtocol {
-  func getPackagesRetrieved() async throws -> [GroupedPackageEntity]
+  func getWithdrawnPackages() async throws -> [GroupedPackageEntity]
+  func getPackagesForWithdrawl() async throws -> [GroupedPackageEntity]
 }

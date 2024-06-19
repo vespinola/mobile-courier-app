@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0557F52BE9074100367124 /* AuthEndpoints.swift */; };
 		1B07BC8D2BFD677900D8B149 /* RippleSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07BC8C2BFD677900D8B149 /* RippleSpinnerView.swift */; };
-		1B2DDEF22C1E7C95003EC97C /* PackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF12C1E7C95003EC97C /* PackagesView.swift */; };
+		1B2DDEF22C1E7C95003EC97C /* WithdrawnPackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF12C1E7C95003EC97C /* WithdrawnPackagesView.swift */; };
 		1B2DDEF42C1E7DD4003EC97C /* PackagePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF32C1E7DD4003EC97C /* PackagePlaceholderView.swift */; };
-		1B2DDEF62C1E9202003EC97C /* PackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF52C1E9202003EC97C /* PackagesViewModel.swift */; };
+		1B2DDEF62C1E9202003EC97C /* WithdrawnPackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF52C1E9202003EC97C /* WithdrawnPackagesViewModel.swift */; };
 		1B2DDEF82C1E93B6003EC97C /* PackagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF72C1E93B6003EC97C /* PackagesModel.swift */; };
 		1B2DDEFA2C1E951A003EC97C /* PackageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEF92C1E951A003EC97C /* PackageEntity.swift */; };
 		1B2DDEFC2C1E956C003EC97C /* PackagesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEFB2C1E956C003EC97C /* PackagesRepositoryProtocol.swift */; };
 		1B2DDEFE2C1E95D3003EC97C /* PackagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEFD2C1E95D3003EC97C /* PackagesRepository.swift */; };
 		1B2DDF002C1E96B8003EC97C /* PackageEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDEFF2C1E96B8003EC97C /* PackageEndpoints.swift */; };
-		1B2DDF022C1E9AC8003EC97C /* PackagesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDF012C1E9AC8003EC97C /* PackagesViewModelMock.swift */; };
+		1B2DDF022C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDF012C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift */; };
 		1B2DDF042C1E9B12003EC97C /* PackagesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDF032C1E9B12003EC97C /* PackagesRepositoryMock.swift */; };
 		1B2DDF062C1E9F85003EC97C /* GroupedPackageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDF052C1E9F85003EC97C /* GroupedPackageRowView.swift */; };
 		1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */; };
@@ -34,6 +34,9 @@
 		1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */; };
 		1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EFB82BE729D20066F447 /* Endpoint.swift */; };
 		1B5EBFFE2C081DDA003BC2D9 /* AuthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5EBFFD2C081DDA003BC2D9 /* AuthData.swift */; };
+		1B6590E02C22853400D46A27 /* PackagesForWithdrawalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */; };
+		1B6590E22C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */; };
+		1B6590E42C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6590E32C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift */; };
 		1B6E3D892C211EEF002619C9 /* SinglePackageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E3D882C211EEF002619C9 /* SinglePackageRowView.swift */; };
 		1B821F192C1AA50600ED1795 /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B821F182C1AA50600ED1795 /* CustomSessionDelegate.swift */; };
 		1B85000E2C10033D006E96A0 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85000D2C10033D006E96A0 /* ToastView.swift */; };
@@ -87,15 +90,15 @@
 /* Begin PBXFileReference section */
 		1B0557F52BE9074100367124 /* AuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoints.swift; sourceTree = "<group>"; };
 		1B07BC8C2BFD677900D8B149 /* RippleSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleSpinnerView.swift; sourceTree = "<group>"; };
-		1B2DDEF12C1E7C95003EC97C /* PackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesView.swift; sourceTree = "<group>"; };
+		1B2DDEF12C1E7C95003EC97C /* WithdrawnPackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawnPackagesView.swift; sourceTree = "<group>"; };
 		1B2DDEF32C1E7DD4003EC97C /* PackagePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagePlaceholderView.swift; sourceTree = "<group>"; };
-		1B2DDEF52C1E9202003EC97C /* PackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesViewModel.swift; sourceTree = "<group>"; };
+		1B2DDEF52C1E9202003EC97C /* WithdrawnPackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawnPackagesViewModel.swift; sourceTree = "<group>"; };
 		1B2DDEF72C1E93B6003EC97C /* PackagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesModel.swift; sourceTree = "<group>"; };
 		1B2DDEF92C1E951A003EC97C /* PackageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageEntity.swift; sourceTree = "<group>"; };
 		1B2DDEFB2C1E956C003EC97C /* PackagesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesRepositoryProtocol.swift; sourceTree = "<group>"; };
 		1B2DDEFD2C1E95D3003EC97C /* PackagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesRepository.swift; sourceTree = "<group>"; };
 		1B2DDEFF2C1E96B8003EC97C /* PackageEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageEndpoints.swift; sourceTree = "<group>"; };
-		1B2DDF012C1E9AC8003EC97C /* PackagesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesViewModelMock.swift; sourceTree = "<group>"; };
+		1B2DDF012C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawnPackagesViewModelMock.swift; sourceTree = "<group>"; };
 		1B2DDF032C1E9B12003EC97C /* PackagesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesRepositoryMock.swift; sourceTree = "<group>"; };
 		1B2DDF052C1E9F85003EC97C /* GroupedPackageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageRowView.swift; sourceTree = "<group>"; };
 		1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-courier-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,9 @@
 		1B58EFAD2BE6C2BE0066F447 /* CourierTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierTextFieldStyle.swift; sourceTree = "<group>"; };
 		1B58EFB82BE729D20066F447 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1B5EBFFD2C081DDA003BC2D9 /* AuthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthData.swift; sourceTree = "<group>"; };
+		1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalView.swift; sourceTree = "<group>"; };
+		1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalViewModel.swift; sourceTree = "<group>"; };
+		1B6590E32C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalViewModelMock.swift; sourceTree = "<group>"; };
 		1B6E3D882C211EEF002619C9 /* SinglePackageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePackageRowView.swift; sourceTree = "<group>"; };
 		1B821F182C1AA50600ED1795 /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		1B85000D2C10033D006E96A0 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -189,10 +195,12 @@
 		1B2DDEF02C1E652A003EC97C /* Package */ = {
 			isa = PBXGroup;
 			children = (
-				1B2DDEF12C1E7C95003EC97C /* PackagesView.swift */,
-				1B2DDEF52C1E9202003EC97C /* PackagesViewModel.swift */,
+				1B2DDEF12C1E7C95003EC97C /* WithdrawnPackagesView.swift */,
+				1B2DDEF52C1E9202003EC97C /* WithdrawnPackagesViewModel.swift */,
 				1B2DDF052C1E9F85003EC97C /* GroupedPackageRowView.swift */,
 				1B6E3D882C211EEF002619C9 /* SinglePackageRowView.swift */,
+				1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */,
+				1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */,
 			);
 			path = Package;
 			sourceTree = "<group>";
@@ -429,8 +437,9 @@
 				1BE58CA92C05731B00C7DF63 /* LoginViewModelMock.swift */,
 				1BC071792C140C6A006EC08E /* ProfileViewModelMock.swift */,
 				1BC0717B2C140CA9006EC08E /* AddressesRepositoryMock.swift */,
-				1B2DDF012C1E9AC8003EC97C /* PackagesViewModelMock.swift */,
+				1B2DDF012C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift */,
 				1B2DDF032C1E9B12003EC97C /* PackagesRepositoryMock.swift */,
+				1B6590E32C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift */,
 			);
 			path = Previews;
 			sourceTree = "<group>";
@@ -628,6 +637,7 @@
 				1BE58CA82C0572B400C7DF63 /* StorageMock.swift in Sources */,
 				1B8B0A442C1BDDE600D1A7AC /* HeaderView.swift in Sources */,
 				1B85E8E22BFC4DAE003040CC /* LoginModel.swift in Sources */,
+				1B6590E02C22853400D46A27 /* PackagesForWithdrawalView.swift in Sources */,
 				1B9274CB2C1156C6008F4FA3 /* AppData.swift in Sources */,
 				1BE58CAA2C05731B00C7DF63 /* LoginViewModelMock.swift in Sources */,
 				1BE63F712BE980D60016A26E /* Storage.swift in Sources */,
@@ -635,8 +645,9 @@
 				1B85000E2C10033D006E96A0 /* ToastView.swift in Sources */,
 				1B2DDEF82C1E93B6003EC97C /* PackagesModel.swift in Sources */,
 				1B8500102C1004D0006E96A0 /* ToastModifier.swift in Sources */,
-				1B2DDEF62C1E9202003EC97C /* PackagesViewModel.swift in Sources */,
+				1B2DDEF62C1E9202003EC97C /* WithdrawnPackagesViewModel.swift in Sources */,
 				1B2DDF002C1E96B8003EC97C /* PackageEndpoints.swift in Sources */,
+				1B6590E42C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift in Sources */,
 				1B58EFA52BE6BFBB0066F447 /* LoginViewModel.swift in Sources */,
 				1B9960112C129BFB00976BBC /* ProfileViewModel.swift in Sources */,
 				1B58EFAE2BE6C2BE0066F447 /* CourierTextFieldStyle.swift in Sources */,
@@ -650,7 +661,8 @@
 				1B2DDF042C1E9B12003EC97C /* PackagesRepositoryMock.swift in Sources */,
 				1B2DDEFA2C1E951A003EC97C /* PackageEntity.swift in Sources */,
 				1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */,
-				1B2DDEF22C1E7C95003EC97C /* PackagesView.swift in Sources */,
+				1B2DDEF22C1E7C95003EC97C /* WithdrawnPackagesView.swift in Sources */,
+				1B6590E22C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift in Sources */,
 				1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */,
 				1BC0717C2C140CA9006EC08E /* AddressesRepositoryMock.swift in Sources */,
 				1B821F192C1AA50600ED1795 /* CustomSessionDelegate.swift in Sources */,
@@ -660,7 +672,7 @@
 				1B9274CD2C1158E0008F4FA3 /* AddressEndpoints.swift in Sources */,
 				1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */,
 				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
-				1B2DDF022C1E9AC8003EC97C /* PackagesViewModelMock.swift in Sources */,
+				1B2DDF022C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift in Sources */,
 				1B2DDEFE2C1E95D3003EC97C /* PackagesRepository.swift in Sources */,
 				1B5EBFFE2C081DDA003BC2D9 /* AuthData.swift in Sources */,
 				1BC0717A2C140C6A006EC08E /* ProfileViewModelMock.swift in Sources */,

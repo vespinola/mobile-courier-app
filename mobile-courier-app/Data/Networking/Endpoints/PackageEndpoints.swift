@@ -8,7 +8,8 @@
 import Foundation
 
 enum PackageEndpoints {
-  case retrieved
+  case withdrawn
+  case forWithdrawl
 }
 
 extension PackageEndpoints: Endpoint {
@@ -21,7 +22,12 @@ extension PackageEndpoints: Endpoint {
   }
 
   var path: String {
-    "/frontliner-middleware/api/paquetesRetirados"
+    switch self {
+    case .withdrawn:
+      "/frontliner-middleware/api/paquetesRetirados"
+    case .forWithdrawl:
+      "/frontliner-middleware/api/paquetesPendientes"
+    }
   }
 
   var body: [AnyHashable: Any]? {

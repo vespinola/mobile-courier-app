@@ -1,14 +1,14 @@
 //
-//  PackagesView.swift
+//  PackagesForWithdrawalView.swift
 //  mobile-courier-app
 //
-//  Created by Vladimir Espinola on 2024-06-15.
+//  Created by Vladimir Espinola on 2024-06-18.
 //
 
 import SwiftUI
 
-struct PackagesView: View {
-  @ObservedObject var viewModel: PackagesViewModel
+struct PackagesForWithdrawalView: View {
+  @ObservedObject var viewModel: PackagesForWithdrawalViewModel
 
   var body: some View {
     ZStack {
@@ -39,5 +39,5 @@ struct PackagesView: View {
 }
 
 #Preview {
-  PackagesView(viewModel: .previewInstance())
+  PackagesForWithdrawalView(viewModel: .previewInstance())
 }

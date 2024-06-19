@@ -1,13 +1,13 @@
 //
-//  PackagesViewModel.swift
+//  PackagesForWithdrawalViewModel.swift
 //  mobile-courier-app
 //
-//  Created by Vladimir Espinola on 2024-06-15.
+//  Created by Vladimir Espinola on 2024-06-18.
 //
 
 import Foundation
 
-final class PackagesViewModel: ObservableObject {
+final class PackagesForWithdrawalViewModel: ObservableObject {
   @Published var isLoading: Bool = false
   @Published var toastMessage: String?
   @Published var groupedPackagesEntity: [GroupedPackageEntity]?
@@ -22,7 +22,7 @@ final class PackagesViewModel: ObservableObject {
   func getPackages() async {
     do {
       isLoading = true
-      groupedPackagesEntity = try await packagesRepository.getPackagesRetrieved()
+      groupedPackagesEntity = try await packagesRepository.getPackagesForWithdrawl()
       isLoading = false
     } catch {
       isLoading = false
