@@ -11,6 +11,7 @@ enum Page: String, Identifiable {
   case login
   case home
   case profile
+  case package
 
   var id: String {
     self.rawValue
@@ -53,17 +54,20 @@ final class Coordinator: ObservableObject {
 
   @ViewBuilder
   func build(page: Page) -> some View {
+    let apiClient = APIRequestClient()
+
     switch page {
     case .login:
-      let apiClient = APIRequestClient()
       let authRepo = AuthRepository(apiRequestClient: apiClient)
-      LoginView(viewModel: LoginViewModel(authRepository: authRepo))
+      LoginView(viewModel: .init(authRepository: authRepo))
     case .profile:
-      let apiClient = APIRequestClient()
       let addressRepo = AddressRespository(apiRequestClient: apiClient)
-      ProfileView(viewModel: ProfileViewModel(addressesRepository: addressRepo))
+      ProfileView(viewModel: .init(addressesRepository: addressRepo))
     case .home:
       HomeView()
+    case .package:
+      let packagesRepo = PackagesRepository(apiRequestClient: apiClient)
+      PackagesView(viewModel: .init(packagesRepository: packagesRepo))
     }
   }
 

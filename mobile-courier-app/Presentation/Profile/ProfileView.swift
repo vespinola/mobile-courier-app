@@ -25,15 +25,17 @@ struct ProfileView: View {
             EnviosView(envios: addresses.viaMaritima, title: "Maritime Route")
           }
         }
+        .listStyle(.plain)
       }
 
       if viewModel.isLoading {
         RippleSpinnerView()
       }
     }
+    .toast(message: $viewModel.toastMessage)
   }
 }
 
 #Preview {
-  ProfileView(viewModel: ProfileViewModel.previewInstance())
+  ProfileView(viewModel: .previewInstance())
 }

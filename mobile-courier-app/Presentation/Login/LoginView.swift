@@ -82,6 +82,6 @@ struct LoginView: View {
 
 #Preview {
   LoginView(
-    viewModel: LoginViewModel.previewInstance()
+    viewModel: .previewInstance()
   )
 }
