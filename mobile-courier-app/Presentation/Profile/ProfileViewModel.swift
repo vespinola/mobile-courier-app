@@ -12,17 +12,13 @@ final class ProfileViewModel: ObservableObject {
   @Published var toastMessage: String?
   @Published var addresses: AddressesEntity?
 
-  private lazy var dispatchQueue: DispatchQueue = .main
-
   private let addressesRepository: AddressRepositoryProtocol
 
   init(addressesRepository: AddressRepositoryProtocol) {
     self.addressesRepository = addressesRepository
 
-    dispatchQueue.asyncAfter(deadline: .now() + 0.3) {
-      Task {
-        await self.getAddresses()
-      }
+    Task {
+      await self.getAddresses()
     }
   }
 

@@ -16,12 +16,17 @@ struct RowView: View {
       Text(title)
         .fontWeight(.bold)
         .foregroundStyle(.accent)
-        .padding(.bottom, 4)
+        .padding(.bottom, 2)
       Text(subtitle)
         .font(.caption)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    .padding([.leading, .trailing])
+    .padding(.init(
+      top: 8,
+      leading: 20,
+      bottom: .zero,
+      trailing: 20)
+    )
   }
 }
 

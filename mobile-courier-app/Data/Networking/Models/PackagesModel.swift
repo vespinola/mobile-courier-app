@@ -14,7 +14,7 @@ struct PackagesModel: Codable {
 struct PackageModel: Codable {
   let estado: String
   let embarqueEstado: String
-  let paqueteFechaRetiro: String
+  var paqueteFechaRetiro: String?
   let embarqueMedio: String
   let tarifaPrecioCli: Decimal
   let paqueteDescripcion: String
@@ -48,7 +48,7 @@ extension PackageModel {
     .init(
       estado: estado,
       embarqueEstado: embarqueEstado,
-      paqueteFechaRetiro: paqueteFechaRetiro,
+      paqueteFechaRetiro: paqueteFechaRetiro ?? "",
       embarqueMedio: embarqueMedio,
       tarifaPrecioCli: tarifaPrecioCli,
       paqueteDescripcion: paqueteDescripcion,

@@ -37,6 +37,8 @@
 		1B6590E02C22853400D46A27 /* PackagesForWithdrawalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */; };
 		1B6590E22C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */; };
 		1B6590E42C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6590E32C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift */; };
+		1B6D75172C23BE5E0067BB56 /* GroupedPackageReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D75162C23BE5E0067BB56 /* GroupedPackageReadyView.swift */; };
+		1B6D75192C23BFB30067BB56 /* RoundedIndicatorViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D75182C23BFB30067BB56 /* RoundedIndicatorViewModifier.swift */; };
 		1B6E3D892C211EEF002619C9 /* SinglePackageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E3D882C211EEF002619C9 /* SinglePackageRowView.swift */; };
 		1B821F192C1AA50600ED1795 /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B821F182C1AA50600ED1795 /* CustomSessionDelegate.swift */; };
 		1B85000E2C10033D006E96A0 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B85000D2C10033D006E96A0 /* ToastView.swift */; };
@@ -56,7 +58,7 @@
 		1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */; };
 		1BC0717A2C140C6A006EC08E /* ProfileViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC071792C140C6A006EC08E /* ProfileViewModelMock.swift */; };
 		1BC0717C2C140CA9006EC08E /* AddressesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0717B2C140CA9006EC08E /* AddressesRepositoryMock.swift */; };
-		1BC0717E2C140F86006EC08E /* EnviosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0717D2C140F86006EC08E /* EnviosView.swift */; };
+		1BC0717E2C140F86006EC08E /* ShipmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0717D2C140F86006EC08E /* ShipmentRowView.swift */; };
 		1BD17E632C0EB438009B6C67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD17E622C0EB438009B6C67 /* Coordinator.swift */; };
 		1BE58CA62C05727500C7DF63 /* AuthRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CA52C05727500C7DF63 /* AuthRepositoryMock.swift */; };
 		1BE58CA82C0572B400C7DF63 /* StorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CA72C0572B400C7DF63 /* StorageMock.swift */; };
@@ -122,6 +124,8 @@
 		1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalView.swift; sourceTree = "<group>"; };
 		1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalViewModel.swift; sourceTree = "<group>"; };
 		1B6590E32C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalViewModelMock.swift; sourceTree = "<group>"; };
+		1B6D75162C23BE5E0067BB56 /* GroupedPackageReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageReadyView.swift; sourceTree = "<group>"; };
+		1B6D75182C23BFB30067BB56 /* RoundedIndicatorViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedIndicatorViewModifier.swift; sourceTree = "<group>"; };
 		1B6E3D882C211EEF002619C9 /* SinglePackageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePackageRowView.swift; sourceTree = "<group>"; };
 		1B821F182C1AA50600ED1795 /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		1B85000D2C10033D006E96A0 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -141,7 +145,7 @@
 		1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1BC071792C140C6A006EC08E /* ProfileViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelMock.swift; sourceTree = "<group>"; };
 		1BC0717B2C140CA9006EC08E /* AddressesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesRepositoryMock.swift; sourceTree = "<group>"; };
-		1BC0717D2C140F86006EC08E /* EnviosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviosView.swift; sourceTree = "<group>"; };
+		1BC0717D2C140F86006EC08E /* ShipmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentRowView.swift; sourceTree = "<group>"; };
 		1BD17E622C0EB438009B6C67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1BE58CA52C05727500C7DF63 /* AuthRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryMock.swift; sourceTree = "<group>"; };
 		1BE58CA72C0572B400C7DF63 /* StorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMock.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 		1B07BC8B2BFD676100D8B149 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1B58EFAC2BE6C2A70066F447 /* Styles */,
+				1B58EFA72BE6BFDF0066F447 /* Modifiers */,
 				1B07BC8C2BFD677900D8B149 /* RippleSpinnerView.swift */,
 				1B85000D2C10033D006E96A0 /* ToastView.swift */,
 				1B8B0A432C1BDDE600D1A7AC /* HeaderView.swift */,
@@ -192,17 +198,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1B2DDEF02C1E652A003EC97C /* Package */ = {
+		1B2DDEF02C1E652A003EC97C /* WithdrawnPackages */ = {
 			isa = PBXGroup;
 			children = (
 				1B2DDEF12C1E7C95003EC97C /* WithdrawnPackagesView.swift */,
 				1B2DDEF52C1E9202003EC97C /* WithdrawnPackagesViewModel.swift */,
 				1B2DDF052C1E9F85003EC97C /* GroupedPackageRowView.swift */,
 				1B6E3D882C211EEF002619C9 /* SinglePackageRowView.swift */,
-				1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */,
-				1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */,
 			);
-			path = Package;
+			path = WithdrawnPackages;
 			sourceTree = "<group>";
 		};
 		1B58EF6A2BE6BBE90066F447 = {
@@ -283,8 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */,
-				1B58EFAC2BE6C2A70066F447 /* Styles */,
-				1B58EFA72BE6BFDF0066F447 /* Modifiers */,
 				1BE63F702BE980D60016A26E /* Storage.swift */,
 			);
 			path = Utilities;
@@ -295,6 +297,7 @@
 			children = (
 				1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */,
 				1B85000F2C1004D0006E96A0 /* ToastModifier.swift */,
+				1B6D75182C23BFB30067BB56 /* RoundedIndicatorViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -319,12 +322,22 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		1B6D75152C23BDA40067BB56 /* PackagesForWithdrawal */ = {
+			isa = PBXGroup;
+			children = (
+				1B6590DF2C22853400D46A27 /* PackagesForWithdrawalView.swift */,
+				1B6590E12C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift */,
+				1B6D75162C23BE5E0067BB56 /* GroupedPackageReadyView.swift */,
+			);
+			path = PackagesForWithdrawal;
+			sourceTree = "<group>";
+		};
 		1B8500132C100DE2006E96A0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				1B8500142C100DF1006E96A0 /* ProfileView.swift */,
 				1B9960102C129BFB00976BBC /* ProfileViewModel.swift */,
-				1BC0717D2C140F86006EC08E /* EnviosView.swift */,
+				1BC0717D2C140F86006EC08E /* ShipmentRowView.swift */,
 				1BEE841E2C17D6FF00B8A367 /* RowView.swift */,
 			);
 			path = Profile;
@@ -392,7 +405,8 @@
 		1B85E8EB2BFC4EAB003040CC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1B2DDEF02C1E652A003EC97C /* Package */,
+				1B6D75152C23BDA40067BB56 /* PackagesForWithdrawal */,
+				1B2DDEF02C1E652A003EC97C /* WithdrawnPackages */,
 				1B8500132C100DE2006E96A0 /* Profile */,
 				1BD17E612C0EB42B009B6C67 /* Navigation */,
 				1BE58CB12C0585B400C7DF63 /* Home */,
@@ -654,7 +668,7 @@
 				1B58EFA32BE6BF9A0066F447 /* LoginView.swift in Sources */,
 				1B0557F62BE9074100367124 /* AuthEndpoints.swift in Sources */,
 				1BEE841F2C17D6FF00B8A367 /* RowView.swift in Sources */,
-				1BC0717E2C140F86006EC08E /* EnviosView.swift in Sources */,
+				1BC0717E2C140F86006EC08E /* ShipmentRowView.swift in Sources */,
 				1B9274D22C115E53008F4FA3 /* AddressRepositoryProtocol.swift in Sources */,
 				1B58EF792BE6BBE90066F447 /* MainView.swift in Sources */,
 				1BE63F6D2BE9193E0016A26E /* APIRequestClient.swift in Sources */,
@@ -662,6 +676,7 @@
 				1B2DDEFA2C1E951A003EC97C /* PackageEntity.swift in Sources */,
 				1BE63F6F2BE972A60016A26E /* AuthRepositoryProtocol.swift in Sources */,
 				1B2DDEF22C1E7C95003EC97C /* WithdrawnPackagesView.swift in Sources */,
+				1B6D75172C23BE5E0067BB56 /* GroupedPackageReadyView.swift in Sources */,
 				1B6590E22C22856F00D46A27 /* PackagesForWithdrawalViewModel.swift in Sources */,
 				1B58EFA92BE6C0070066F447 /* BorderedViewModifier.swift in Sources */,
 				1BC0717C2C140CA9006EC08E /* AddressesRepositoryMock.swift in Sources */,
@@ -677,6 +692,7 @@
 				1B5EBFFE2C081DDA003BC2D9 /* AuthData.swift in Sources */,
 				1BC0717A2C140C6A006EC08E /* ProfileViewModelMock.swift in Sources */,
 				1B6E3D892C211EEF002619C9 /* SinglePackageRowView.swift in Sources */,
+				1B6D75192C23BFB30067BB56 /* RoundedIndicatorViewModifier.swift in Sources */,
 				1BE58CA62C05727500C7DF63 /* AuthRepositoryMock.swift in Sources */,
 				1BE58CB32C0585C400C7DF63 /* HomeView.swift in Sources */,
 				1B2DDF062C1E9F85003EC97C /* GroupedPackageRowView.swift in Sources */,

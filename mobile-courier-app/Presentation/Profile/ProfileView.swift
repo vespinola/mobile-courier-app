@@ -13,16 +13,9 @@ struct ProfileView: View {
   var body: some View {
     ZStack {
       if let addresses = viewModel.addresses {
-        List {
-          RowView(title: "Document Number", subtitle: addresses.documentNumber)
-          RowView(title: "Phone Number", subtitle: addresses.phoneNumber)
-          RowView(title: "Email", subtitle: addresses.email)
-
-          EnviosView(envios: addresses.enviosAereos, title: "Air shipments")
-          EnviosView(envios: addresses.viaMaritima, title: "Maritime Route")
+        ScrollView {
+          self.content(addressEntity: addresses)
         }
-        .listRowSeparator(.hidden)
-        .listStyle(.plain)
       }
 
       if viewModel.isLoading {
@@ -30,6 +23,19 @@ struct ProfileView: View {
       }
     }
     .toast(message: $viewModel.toastMessage)
+  }
+
+  @ViewBuilder
+  private func content(addressEntity: AddressesEntity) -> some View {
+    VStack {
+      RowView(title: "Document Number", subtitle: addressEntity.documentNumber)
+      RowView(title: "Phone Number", subtitle: addressEntity.phoneNumber)
+      RowView(title: "Email", subtitle: addressEntity.email)
+        .padding(.bottom, 32)
+
+      ShipmentRowView(shipment: addressEntity.enviosAereos, title: "Air shipments")
+      ShipmentRowView(shipment: addressEntity.viaMaritima, title: "Maritime Route")
+    }
   }
 }
 

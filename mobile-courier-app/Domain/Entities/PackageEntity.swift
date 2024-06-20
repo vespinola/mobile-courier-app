@@ -7,6 +7,15 @@
 
 import Foundation
 
+enum PackageStatus {
+  case inLocker        // En casilla
+  case onTheWay        // En camino
+  case processing      // Procesando
+  case readyForPickup  // Listo para retirar
+  case inconsistent    // Inconsistente
+  case unknown         // -1
+}
+
 struct GroupedPackageEntity: Identifiable {
   var id: Int { embarqueCodigo }
 
@@ -63,8 +72,26 @@ struct GroupedPackageEntity: Identifiable {
     formatter.allowsFloats = false
     formatter.groupingSeparator = ""
 
-    let formattedValue = NSDecimalNumber(integerLiteral: embarqueCodigo)
+    let formattedValue = NSDecimalNumber(value: embarqueCodigo)
     return formatter.string(from: formattedValue) ?? "0"
+  }
+
+  var packageCurrentStatus: PackageStatus {
+    guard let shippingStatus = paquetes.first?.embarqueEstado,
+          let status = paquetes.first?.estado else {
+      return .unknown
+    }
+    if shippingStatus.caseInsensitiveCompare("ORIGEN") == .orderedSame {
+      return .inLocker
+    } else if shippingStatus.caseInsensitiveCompare("TRANSITO") == .orderedSame {
+      return .onTheWay
+    } else if shippingStatus.caseInsensitiveCompare("UBICANDO") == .orderedSame && status.caseInsensitiveCompare("A") == .orderedSame {
+      return .processing
+    } else if (shippingStatus.caseInsensitiveCompare("UBICANDO") == .orderedSame || shippingStatus.caseInsensitiveCompare("ASUNCION") == .orderedSame) && status.caseInsensitiveCompare("B") == .orderedSame {
+      return .readyForPickup
+    }
+
+    return status.caseInsensitiveCompare("C") == .orderedSame ? .inconsistent : .unknown
   }
 }
 
