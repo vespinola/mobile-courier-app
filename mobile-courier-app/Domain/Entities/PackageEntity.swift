@@ -7,11 +7,22 @@
 
 import Foundation
 
+enum ShipmentStatus: String, CaseIterable, Identifiable {
+  case readyForPickup = "Ready for Pickup"
+  case processing = "Processing"
+  case onTheWay = "On the Way"
+  case inLocker = "In Locker"
+  case inconsistent = "Inconsistent"
+  case unknown = "Unknown Status"
+
+  var id: String { self.rawValue }
+}
+
 struct GroupedPackageEntity: Identifiable {
   var id: Int { embarqueCodigo }
 
   var embarqueCodigo: Int
-  var paquetes: [PackageEntity]
+  var paquetes: Set<PackageEntity>
 
   var totalCost: Decimal {
     let thousand: Decimal = 1000
@@ -63,12 +74,36 @@ struct GroupedPackageEntity: Identifiable {
     formatter.allowsFloats = false
     formatter.groupingSeparator = ""
 
-    let formattedValue = NSDecimalNumber(integerLiteral: embarqueCodigo)
+    let formattedValue = NSDecimalNumber(value: embarqueCodigo)
     return formatter.string(from: formattedValue) ?? "0"
+  }
+
+  var packageCurrentStatus: ShipmentStatus {
+    guard let shippingStatus = paquetes.first?.embarqueEstado,
+          let status = paquetes.first?.estado else {
+      return .unknown
+    }
+    if shippingStatus.caseInsensitiveCompare("ORIGEN") == .orderedSame {
+      return .inLocker
+    } else if shippingStatus.caseInsensitiveCompare("TRANSITO") == .orderedSame {
+      return .onTheWay
+    } else if shippingStatus.caseInsensitiveCompare("UBICANDO") == .orderedSame && status.caseInsensitiveCompare("A") == .orderedSame {
+      return .processing
+    } else if (shippingStatus.caseInsensitiveCompare("UBICANDO") == .orderedSame || shippingStatus.caseInsensitiveCompare("ASUNCION") == .orderedSame) && status.caseInsensitiveCompare("B") == .orderedSame {
+      return .readyForPickup
+    }
+
+    return status.caseInsensitiveCompare("C") == .orderedSame ? .inconsistent : .unknown
   }
 }
 
-struct PackageEntity: Codable, Identifiable {
+extension Array where Element == GroupedPackageEntity {
+  func filterGroupedPackages(by shipmentStatus: ShipmentStatus) -> [Element] {
+    filter { $0.packageCurrentStatus == shipmentStatus }
+  }
+}
+
+struct PackageEntity: Codable, Identifiable, Hashable {
   let estado: String
   let embarqueEstado: String
   let paqueteFechaRetiro: String

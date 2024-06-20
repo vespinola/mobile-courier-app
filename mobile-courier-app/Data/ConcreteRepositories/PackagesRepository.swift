@@ -14,9 +14,18 @@ struct PackagesRepository: PackagesRepositoryProtocol {
     self.apiRequestClient = apiRequestClient
   }
 
-  func getPackagesRetrieved() async throws -> [GroupedPackageEntity] {
+  func getWithdrawnPackages() async throws -> [GroupedPackageEntity] {
     let model: PackagesModel = try await apiRequestClient.performRequest(
-      endpoint: PackageEndpoints.retrieved,
+      endpoint: PackageEndpoints.withdrawn,
+      decoder: JSONDecoder()
+    )
+
+    return model.asEntity()
+  }
+
+  func getPackagesForWithdrawl() async throws -> [GroupedPackageEntity] {
+    let model: PackagesModel = try await apiRequestClient.performRequest(
+      endpoint: PackageEndpoints.forWithdrawl,
       decoder: JSONDecoder()
     )
 

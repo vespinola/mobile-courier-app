@@ -7,6 +7,9 @@
     "%lld packages" : {
 
     },
+    "At the branch" : {
+
+    },
     "Email" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -120,9 +123,6 @@
           }
         }
       }
-    },
-    "Withdrawn Packages" : {
-
     },
     "You have no packages" : {
       "localizations" : {

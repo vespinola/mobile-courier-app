@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension PackagesViewModel {
-  static func previewInstance() -> PackagesViewModel {
+extension WithdrawnPackagesViewModel {
+  static func previewInstance() -> WithdrawnPackagesViewModel {
     .init(packagesRepository: PackagesRepositoryMock())
   }
 }

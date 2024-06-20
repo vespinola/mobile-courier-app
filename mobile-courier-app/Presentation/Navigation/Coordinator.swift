@@ -11,7 +11,8 @@ enum Page: String, Identifiable {
   case login
   case home
   case profile
-  case package
+  case withdrawnPackages
+  case packagesForWithdrawl
 
   var id: String {
     self.rawValue
@@ -65,9 +66,12 @@ final class Coordinator: ObservableObject {
       ProfileView(viewModel: .init(addressesRepository: addressRepo))
     case .home:
       HomeView()
-    case .package:
+    case .withdrawnPackages:
       let packagesRepo = PackagesRepository(apiRequestClient: apiClient)
-      PackagesView(viewModel: .init(packagesRepository: packagesRepo))
+      WithdrawnPackagesView(viewModel: .init(packagesRepository: packagesRepo))
+    case .packagesForWithdrawl:
+      let packagesRepo = PackagesRepository(apiRequestClient: apiClient)
+      PackagesForWithdrawalView(viewModel: .init(packagesRepository: packagesRepo))
     }
   }
 
