@@ -7,20 +7,22 @@
 
 import Foundation
 
-enum PackageStatus {
-  case inLocker        // En casilla
-  case onTheWay        // En camino
-  case processing      // Procesando
-  case readyForPickup  // Listo para retirar
-  case inconsistent    // Inconsistente
-  case unknown         // -1
+enum ShipmentStatus: String, CaseIterable, Identifiable {
+  case readyForPickup = "Ready for Pickup"
+  case processing = "Processing"
+  case onTheWay = "On the Way"
+  case inLocker = "In Locker"
+  case inconsistent = "Inconsistent"
+  case unknown = "Unknown Status"
+
+  var id: String { self.rawValue }
 }
 
 struct GroupedPackageEntity: Identifiable {
   var id: Int { embarqueCodigo }
 
   var embarqueCodigo: Int
-  var paquetes: [PackageEntity]
+  var paquetes: Set<PackageEntity>
 
   var totalCost: Decimal {
     let thousand: Decimal = 1000
@@ -76,7 +78,7 @@ struct GroupedPackageEntity: Identifiable {
     return formatter.string(from: formattedValue) ?? "0"
   }
 
-  var packageCurrentStatus: PackageStatus {
+  var packageCurrentStatus: ShipmentStatus {
     guard let shippingStatus = paquetes.first?.embarqueEstado,
           let status = paquetes.first?.estado else {
       return .unknown
@@ -95,7 +97,13 @@ struct GroupedPackageEntity: Identifiable {
   }
 }
 
-struct PackageEntity: Codable, Identifiable {
+extension Array where Element == GroupedPackageEntity {
+  func filterGroupedPackages(by shipmentStatus: ShipmentStatus) -> [Element] {
+    filter { $0.packageCurrentStatus == shipmentStatus }
+  }
+}
+
+struct PackageEntity: Codable, Identifiable, Hashable {
   let estado: String
   let embarqueEstado: String
   let paqueteFechaRetiro: String

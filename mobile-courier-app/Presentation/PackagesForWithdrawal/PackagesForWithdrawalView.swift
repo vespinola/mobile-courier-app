@@ -33,14 +33,22 @@ struct PackagesForWithdrawalView: View {
     if groupedPackages.isEmpty {
       PackagePlaceholderView()
     } else {
-      packagesList(groupedPackages)
+      packageList(groupedPackages)
     }
   }
 
   @ViewBuilder
-  private func packagesList(_ groupedPackages: [GroupedPackageEntity]) -> some View {
-    List(groupedPackages) { row in
-      getGroupedPackageView(for: row)
+  private func packageList(_ groupedPackages: [GroupedPackageEntity]) -> some View {
+    List {
+      ForEach(ShipmentStatus.allCases) { status in
+        if !groupedPackages.filterGroupedPackages(by: status).isEmpty {
+          Section(header: Text(status.rawValue)) {
+            ForEach(groupedPackages.filter { $0.packageCurrentStatus == status }) { currentGroupedPackage in
+              getGroupedPackageView(for: currentGroupedPackage)
+            }
+          }
+        }
+      }
     }
     .listStyle(.plain)
   }

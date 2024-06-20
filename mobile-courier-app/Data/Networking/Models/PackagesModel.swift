@@ -72,7 +72,7 @@ extension PackagesModel {
       .map {
         GroupedPackageEntity(
           embarqueCodigo: $0.key,
-          paquetes: $0.value.map { $0.asEntity() }
+          paquetes: Set($0.value.map { $0.asEntity() })
         )
       }
   }

@@ -39,4 +39,6 @@ struct HomeView: View {
 
 #Preview {
   HomeView()
+    .environmentObject(Coordinator())
+    .environmentObject(AppData())
 }

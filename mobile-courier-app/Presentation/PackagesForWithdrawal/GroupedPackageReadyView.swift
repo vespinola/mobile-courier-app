@@ -59,7 +59,9 @@ struct GroupedPackageReadyView: View {
   GroupedPackageReadyView(
     groupedPackage: .init(
       embarqueCodigo: 2000,
-      paquetes: [.mock]
+      paquetes: [
+        .mock
+      ]
     )
   )
 }
