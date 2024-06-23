@@ -9,6 +9,6 @@ import Foundation
 
 extension LoginViewModel {
   static func previewInstance() -> LoginViewModel {
-    .init(authRepository: AuthRepositoryMock())
+    .init(authRepository: AuthRepositoryMock(), storage: StorageMock())
   }
 }

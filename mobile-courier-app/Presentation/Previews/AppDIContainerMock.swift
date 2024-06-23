@@ -11,26 +11,21 @@ final class AppDIContainerMock: DIContainerProtocol {
   private var services: [String: Any] = [:]
 
   init() {
-    // Repositories
-    register(AuthRepositoryMock(), for: AuthRepositoryProtocol.self)
-    register(AddressesRepositoryMock(), for: AddressRepositoryProtocol.self)
-    register(PackagesRepositoryMock(), for: PackagesRepositoryProtocol.self)
-
     // ViewModels
     register(
-      LoginViewModel(authRepository: resolve(AuthRepositoryProtocol.self)),
+      LoginViewModel.previewInstance(),
       for: LoginViewModel.self
     )
     register(
-      HomeViewModel(addressesRepository: resolve(AddressRepositoryProtocol.self)),
+      HomeViewModel.previewInstance(),
       for: HomeViewModel.self
     )
     register(
-      WithdrawnPackagesViewModel(packagesRepository: resolve(PackagesRepositoryProtocol.self)),
+      WithdrawnPackagesViewModel.previewInstance(),
       for: WithdrawnPackagesViewModel.self
     )
     register(
-      PackagesForWithdrawalViewModel(packagesRepository: resolve(PackagesRepositoryProtocol.self)),
+      PackagesForWithdrawalViewModel.previewInstance(),
       for: PackagesForWithdrawalViewModel.self
     )
   }

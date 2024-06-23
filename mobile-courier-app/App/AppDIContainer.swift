@@ -16,9 +16,14 @@ final class AppDIContainer: DIContainerProtocol {
     register(AddressRespository(), for: AddressRepositoryProtocol.self)
     register(PackagesRepository(), for: PackagesRepositoryProtocol.self)
 
+    //Helpers
+    register(UserDefaultsStorage(), for: Storage.self)
+
     // ViewModels
     register(
-      LoginViewModel(authRepository: resolve(AuthRepositoryProtocol.self)),
+      LoginViewModel(
+        authRepository: resolve(AuthRepositoryProtocol.self),
+        storage: resolve(Storage.self)),
       for: LoginViewModel.self
     )
     register(

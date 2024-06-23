@@ -18,9 +18,14 @@ final class LoginViewModel: ObservableObject {
   }
 
   private let authRepository: AuthRepositoryProtocol
+  private let storage: Storage
 
-  init(authRepository: AuthRepositoryProtocol) {
+  init(authRepository: AuthRepositoryProtocol, storage: Storage) {
     self.authRepository = authRepository
+    self.storage = storage
+
+    guard let savedEmail = storage.getString(forKey: "userEmail"), !savedEmail.isEmpty else { return }
+    self.email = savedEmail
   }
 
   @MainActor
@@ -28,6 +33,7 @@ final class LoginViewModel: ObservableObject {
     do {
       isLoading = true
       try await authRepository.performLogin(email: email, password: password)
+      storage.setString(email, forKey: "userEmail")
       isLoading = false
       return true
     } catch {
