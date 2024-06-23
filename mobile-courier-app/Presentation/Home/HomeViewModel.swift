@@ -1,14 +1,13 @@
 //
-//  ProfileViewModel.swift
+//  HomeViewModel.swift
 //  mobile-courier-app
 //
-//  Created by Vladimir Espinola on 2024-06-06.
+//  Created by Vladimir Espinola on 2024-06-22.
 //
 
 import Foundation
 
-final class ProfileViewModel: ObservableObject {
-  @Published var isLoading: Bool = false
+final class HomeViewModel: ObservableObject {
   @Published var toastMessage: String?
   @Published var addresses: AddressesEntity?
 
@@ -16,20 +15,14 @@ final class ProfileViewModel: ObservableObject {
 
   init(addressesRepository: AddressRepositoryProtocol) {
     self.addressesRepository = addressesRepository
-
-    Task {
-      await self.getAddresses()
-    }
   }
 
   @MainActor
   func getAddresses() async {
+    guard addresses == nil else { return }
     do {
-      isLoading = true
       addresses = try await addressesRepository.getAddress()
-      isLoading = false
     } catch {
-      isLoading = false
       toastMessage = error.localizedDescription
     }
   }

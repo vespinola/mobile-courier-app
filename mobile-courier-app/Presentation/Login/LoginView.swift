@@ -46,17 +46,11 @@ struct LoginView: View {
           .textContentType(.password)
           .onSubmit {
             focusField = nil
-            Task {
-              guard await viewModel.doLogin() else { return }
-              coordinator.push(.home)
-            }
+            navigateToLogin()
           }
 
         Button("Log In") {
-          Task {
-            guard await viewModel.doLogin() else { return }
-            coordinator.push(.home)
-          }
+          navigateToLogin()
         }
         .frame(maxWidth: .infinity, minHeight: 44)
         .background(
@@ -77,6 +71,13 @@ struct LoginView: View {
       }
     }
     .toast(message: $viewModel.toastMessage)
+  }
+
+  private func navigateToLogin() {
+    Task {
+      guard await viewModel.doLogin() else { return }
+      coordinator.push(.home)
+    }
   }
 }
 

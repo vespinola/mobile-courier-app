@@ -50,6 +50,9 @@
         }
       }
     },
+    "Loading..." : {
+
+    },
     "Log In" : {
       "extractionState" : "manual",
       "localizations" : {

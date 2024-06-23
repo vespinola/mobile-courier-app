@@ -10,7 +10,7 @@ import Foundation
 struct PackagesRepository: PackagesRepositoryProtocol {
   private var apiRequestClient: APIRequestClientProtocol
 
-  init(apiRequestClient: APIRequestClientProtocol) {
+  init(apiRequestClient: APIRequestClientProtocol = APIRequestClient()) {
     self.apiRequestClient = apiRequestClient
   }
 

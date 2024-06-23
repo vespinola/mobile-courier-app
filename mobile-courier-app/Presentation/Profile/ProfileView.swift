@@ -8,21 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
-  @ObservedObject var viewModel: ProfileViewModel
+  @EnvironmentObject var addresses: AddressesEntity
 
   var body: some View {
-    ZStack {
-      if let addresses = viewModel.addresses {
-        ScrollView {
-          self.content(addressEntity: addresses)
-        }
-      }
-
-      if viewModel.isLoading {
-        RippleSpinnerView()
-      }
+    ScrollView {
+      content(addressEntity: addresses)
     }
-    .toast(message: $viewModel.toastMessage)
   }
 
   @ViewBuilder
@@ -40,5 +31,6 @@ struct ProfileView: View {
 }
 
 #Preview {
-  ProfileView(viewModel: .previewInstance())
+  ProfileView()
+    .environmentObject(AddressesEntity.mock)
 }

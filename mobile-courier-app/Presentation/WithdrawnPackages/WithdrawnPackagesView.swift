@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WithdrawnPackagesView: View {
   @ObservedObject var viewModel: WithdrawnPackagesViewModel
+  @EnvironmentObject var coordinator: Coordinator
 
   var body: some View {
     ZStack {
@@ -20,10 +21,17 @@ struct WithdrawnPackagesView: View {
         RippleSpinnerView()
       }
     }
+    .sheet(item: $coordinator.sheet) { sheet in
+      coordinator.build(sheet: sheet)
+    }
     .onAppear {
+      print("haha")
       Task {
         await viewModel.getPackages()
       }
+    }
+    .onDisappear {
+      print("hoho")
     }
     .toast(message: $viewModel.toastMessage)
   }
@@ -40,7 +48,16 @@ struct WithdrawnPackagesView: View {
   @ViewBuilder
   private func packagesList(_ groupedPackages: [GroupedPackageEntity]) -> some View {
     List(groupedPackages) { row in
-      GroupedPackageRowView(groupedPackage: row)
+      Button {
+        coordinator.present(sheet: .shipmentDetail(groupedPackage: row))
+      } label: {
+        GroupedPackageRowView(groupedPackage: row)
+      }
+      .buttonStyle(.plain)
+      .listRowBackground(EmptyView())
+      .listRowSeparator(.hidden)
+      .listRowSpacing(.zero)
+      .listRowInsets(.none)
     }
     .listStyle(.plain)
   }
@@ -48,4 +65,5 @@ struct WithdrawnPackagesView: View {
 
 #Preview {
   WithdrawnPackagesView(viewModel: .previewInstance())
+    .environmentObject(Coordinator(diContainer: AppDIContainer()))
 }

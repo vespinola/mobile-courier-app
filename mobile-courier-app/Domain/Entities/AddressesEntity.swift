@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct AddressesEntity: Codable {
+final class AddressesEntity: ObservableObject {
   let enviosAereos: EnviosEntity
   let viaMaritima: EnviosEntity
+
+  init(enviosAereos: EnviosEntity, viaMaritima: EnviosEntity) {
+    self.enviosAereos = enviosAereos
+    self.viaMaritima = viaMaritima
+  }
 }
 
-struct EnviosEntity: Codable {
+struct EnviosEntity {
   let ciudad: String
   var cliente: ClienteEntity?
   let direccion: String
@@ -21,7 +26,7 @@ struct EnviosEntity: Codable {
   let telefono: String
 }
 
-struct ClienteEntity: Codable {
+struct ClienteEntity {
   let id: Int
   let autorizaEmail: Int
   let ciautorizado: String

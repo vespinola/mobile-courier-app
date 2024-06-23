@@ -9,36 +9,54 @@ import SwiftUI
 
 struct HomeView: View {
   @EnvironmentObject var coordinator: Coordinator
+  @ObservedObject var viewModel: HomeViewModel
 
-  init() {
-    UITabBar.appearance().backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
-  }
+  @State var selectedTab = 0
 
   var body: some View {
     HeaderView()
 
-    TabView {
+    TabView(selection: $selectedTab) {
       coordinator.build(page: .packagesForWithdrawl)
         .tabItem {
           Label("Home", systemImage: "house")
         }
+        .tag(0)
 
       coordinator.build(page: .withdrawnPackages)
         .tabItem {
           Label("Withdrawn", systemImage: "bag")
         }
-      coordinator.build(page: .profile)
+        .tag(1)
+
+      getProfileChildView(addresses: viewModel.addresses)
         .tabItem {
           Label("Profile", systemImage: "person")
         }
+        .tag(2)
     }
     .navigationTitle("")
     .toolbar(.hidden)
+    .toast(message: $viewModel.toastMessage)
+    .onAppear {
+      Task {
+        await viewModel.getAddresses()
+      }
+    }
+  }
+
+  @ViewBuilder
+  private func getProfileChildView(addresses: AddressesEntity?) -> some View {
+    if let addresses = addresses {
+      coordinator.build(page: .profile)
+        .environmentObject(addresses)
+    } else {
+      Text("Loading...")
+    }
   }
 }
 
 #Preview {
-  HomeView()
-    .environmentObject(Coordinator())
-    .environmentObject(AppData())
+  HomeView(viewModel: .previewInstance())
+    .environmentObject(Coordinator(diContainer: AppDIContainer()))
 }

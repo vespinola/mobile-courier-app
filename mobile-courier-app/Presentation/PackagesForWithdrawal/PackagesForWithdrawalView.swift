@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PackagesForWithdrawalView: View {
   @ObservedObject var viewModel: PackagesForWithdrawalViewModel
+  @EnvironmentObject var coordinator: Coordinator
 
   var body: some View {
     ZStack {
@@ -65,4 +66,5 @@ struct PackagesForWithdrawalView: View {
 
 #Preview {
   PackagesForWithdrawalView(viewModel: .previewInstance())
+    .environmentObject(Coordinator(diContainer: AppDIContainer()))
 }
