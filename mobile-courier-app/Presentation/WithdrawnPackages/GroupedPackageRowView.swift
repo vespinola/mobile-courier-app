@@ -20,7 +20,7 @@ struct GroupedPackageRowView: View {
         Spacer()
 
         VStack(alignment: .trailing) {
-          Text("Gs. \(groupedPackage.formattedTotalCost)")
+          Text("Gs \(groupedPackage.formattedTotalCost)")
             .foregroundStyle(.accent)
             .fontWeight(.bold)
           Text("\(groupedPackage.totalWeight) Kg")

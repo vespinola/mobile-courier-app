@@ -40,7 +40,7 @@ struct HeaderView: View {
 }
 
 #Preview {
-  let appData = AppData()
+  let appData = AppData.mock
   appData.username = "John Doe"
   return HeaderView()
     .environmentObject(appData)

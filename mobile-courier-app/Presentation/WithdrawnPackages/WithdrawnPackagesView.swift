@@ -55,5 +55,5 @@ struct WithdrawnPackagesView: View {
 
 #Preview {
   WithdrawnPackagesView(viewModel: .previewInstance())
-    .environmentObject(Coordinator(diContainer: AppDIContainer()))
+    .environmentObject(Coordinator(diContainer: AppDIContainerMock()))
 }

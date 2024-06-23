@@ -23,6 +23,9 @@
 		1B4047192C2782B300101DF4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047182C2782B300101DF4 /* HomeViewModel.swift */; };
 		1B40471B2C27854200101DF4 /* AddressEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40471A2C27854200101DF4 /* AddressEntityMock.swift */; };
 		1B40471D2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40471C2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift */; };
+		1B4047242C27DF9600101DF4 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047232C27DF9600101DF4 /* ConfigurationView.swift */; };
+		1B4047282C27E04600101DF4 /* AppDIContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047272C27E04600101DF4 /* AppDIContainerMock.swift */; };
+		1B40472A2C27E99D00101DF4 /* AppDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047292C27E99D00101DF4 /* AppDataMock.swift */; };
 		1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */; };
 		1B58EF792BE6BBE90066F447 /* CoordinatorRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* CoordinatorRootView.swift */; };
 		1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */; };
@@ -110,7 +113,10 @@
 		1B4047182C2782B300101DF4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B40471A2C27854200101DF4 /* AddressEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntityMock.swift; sourceTree = "<group>"; };
 		1B40471C2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageStyleModifier.swift; sourceTree = "<group>"; };
-		1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-courier-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B4047232C27DF9600101DF4 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		1B4047272C27E04600101DF4 /* AppDIContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainerMock.swift; sourceTree = "<group>"; };
+		1B4047292C27E99D00101DF4 /* AppDataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataMock.swift; sourceTree = "<group>"; };
+		1B58EF732BE6BBE90066F447 /* JustACourierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustACourierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierApp.swift; sourceTree = "<group>"; };
 		1B58EF782BE6BBE90066F447 /* CoordinatorRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRootView.swift; sourceTree = "<group>"; };
 		1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -216,6 +222,14 @@
 			path = WithdrawnPackages;
 			sourceTree = "<group>";
 		};
+		1B40471E2C27DF3100101DF4 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				1B4047232C27DF9600101DF4 /* ConfigurationView.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		1B58EF6A2BE6BBE90066F447 = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +244,7 @@
 		1B58EF742BE6BBE90066F447 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */,
+				1B58EF732BE6BBE90066F447 /* JustACourierApp.app */,
 				1B58EF842BE6BBEA0066F447 /* mobile-courier-appTests.xctest */,
 				1B58EF8E2BE6BBEA0066F447 /* mobile-courier-appUITests.xctest */,
 			);
@@ -430,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				1B58EF782BE6BBE90066F447 /* CoordinatorRootView.swift */,
+				1B40471E2C27DF3100101DF4 /* Configurations */,
 				1B6D751A2C23DF820067BB56 /* ShipmentDetail */,
 				1B6D75152C23BDA40067BB56 /* PackagesForWithdrawal */,
 				1B2DDEF02C1E652A003EC97C /* WithdrawnPackages */,
@@ -472,6 +487,7 @@
 		1BE58CA42C05725500C7DF63 /* Previews */ = {
 			isa = PBXGroup;
 			children = (
+				1B4047272C27E04600101DF4 /* AppDIContainerMock.swift */,
 				1BE58CA52C05727500C7DF63 /* AuthRepositoryMock.swift */,
 				1BE58CA72C0572B400C7DF63 /* StorageMock.swift */,
 				1BE58CA92C05731B00C7DF63 /* LoginViewModelMock.swift */,
@@ -481,6 +497,7 @@
 				1B2DDF032C1E9B12003EC97C /* PackagesRepositoryMock.swift */,
 				1B6590E32C228DD700D46A27 /* PackagesForWithdrawalViewModelMock.swift */,
 				1B40471A2C27854200101DF4 /* AddressEntityMock.swift */,
+				1B4047292C27E99D00101DF4 /* AppDataMock.swift */,
 			);
 			path = Previews;
 			sourceTree = "<group>";
@@ -531,7 +548,7 @@
 			packageProductDependencies = (
 			);
 			productName = "mobile-courier-app";
-			productReference = 1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */;
+			productReference = 1B58EF732BE6BBE90066F447 /* JustACourierApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1B58EF832BE6BBEA0066F447 /* mobile-courier-appTests */ = {
@@ -672,9 +689,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B99600F2C12992F00976BBC /* AddressRespository.swift in Sources */,
+				1B4047242C27DF9600101DF4 /* ConfigurationView.swift in Sources */,
 				1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */,
 				1B2DDEF42C1E7DD4003EC97C /* PackagePlaceholderView.swift in Sources */,
 				1B07BC8D2BFD677900D8B149 /* RippleSpinnerView.swift in Sources */,
+				1B4047282C27E04600101DF4 /* AppDIContainerMock.swift in Sources */,
 				1B9274D02C115AF1008F4FA3 /* AddressesModel.swift in Sources */,
 				1BE58CA82C0572B400C7DF63 /* StorageMock.swift in Sources */,
 				1B8B0A442C1BDDE600D1A7AC /* HeaderView.swift in Sources */,
@@ -721,6 +740,7 @@
 				1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */,
 				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
 				1B2DDF022C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift in Sources */,
+				1B40472A2C27E99D00101DF4 /* AppDataMock.swift in Sources */,
 				1B2DDEFE2C1E95D3003EC97C /* PackagesRepository.swift in Sources */,
 				1B5EBFFE2C081DDA003BC2D9 /* AuthData.swift in Sources */,
 				1BC0717A2C140C6A006EC08E /* HomeViewModelMock.swift in Sources */,
@@ -912,7 +932,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JustACourierApp;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -953,7 +973,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = JustACourierApp;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

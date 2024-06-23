@@ -1,20 +1,20 @@
 //
-//  AppDIContainer.swift
+//  AppDIContainerMock.swift
 //  mobile-courier-app
 //
-//  Created by Vladimir Espinola on 2024-06-21.
+//  Created by Vladimir Espinola on 2024-06-23.
 //
 
 import Foundation
 
-final class AppDIContainer: DIContainerProtocol {
+final class AppDIContainerMock: DIContainerProtocol {
   private var services: [String: Any] = [:]
 
   init() {
     // Repositories
-    register(AuthRepository(), for: AuthRepositoryProtocol.self)
-    register(AddressRespository(), for: AddressRepositoryProtocol.self)
-    register(PackagesRepository(), for: PackagesRepositoryProtocol.self)
+    register(AuthRepositoryMock(), for: AuthRepositoryProtocol.self)
+    register(AddressesRepositoryMock(), for: AddressRepositoryProtocol.self)
+    register(PackagesRepositoryMock(), for: PackagesRepositoryProtocol.self)
 
     // ViewModels
     register(

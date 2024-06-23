@@ -34,6 +34,12 @@ struct HomeView: View {
           Label("Profile", systemImage: "person")
         }
         .tag(2)
+
+      coordinator.build(page: .configurations)
+        .tabItem {
+          Label("Settings", systemImage: "gear")
+        }
+        .tag(3)
     }
     .navigationTitle("")
     .toolbar(.hidden)
@@ -61,5 +67,6 @@ struct HomeView: View {
 
 #Preview {
   HomeView(viewModel: .previewInstance())
-    .environmentObject(Coordinator(diContainer: AppDIContainer()))
+    .environmentObject(Coordinator(diContainer: AppDIContainerMock()))
+    .environmentObject(AppData.mock)
 }

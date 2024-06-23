@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct MobileCourierApp: App {
+  @AppStorage("isDarkMode") var isDarkMode: Bool = true
+
   @StateObject var coordinator = Coordinator(diContainer: AppDIContainer())
   @StateObject var appData = AppData.shared
 
@@ -21,6 +23,8 @@ struct MobileCourierApp: App {
       CoordinatorRootView()
         .environmentObject(coordinator)
         .environmentObject(appData)
+        .environment(\.colorScheme, isDarkMode ? .dark : .light)
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
   }
 }

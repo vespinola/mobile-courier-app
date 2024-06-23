@@ -29,7 +29,7 @@ struct GroupedPackageReadyView: View {
 
         Spacer()
 
-        Text("Gs. \(groupedPackage.formattedTotalCost)")
+        Text("Gs \(groupedPackage.formattedTotalCost)")
           .foregroundStyle(.accent)
           .font(.title2)
           .fontWeight(.bold)
