@@ -15,7 +15,7 @@ struct MobileCourierApp: App {
   init() {
     UITabBar.appearance().backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
   }
-  
+
   var body: some Scene {
     WindowGroup {
       CoordinatorRootView()

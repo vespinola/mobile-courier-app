@@ -37,6 +37,9 @@ struct HomeView: View {
     }
     .navigationTitle("")
     .toolbar(.hidden)
+    .sheet(item: $coordinator.sheet) { sheet in
+      coordinator.build(sheet: sheet)
+    }
     .toast(message: $viewModel.toastMessage)
     .onAppear {
       Task {

@@ -22,6 +22,7 @@
 		1B2DDF062C1E9F85003EC97C /* GroupedPackageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2DDF052C1E9F85003EC97C /* GroupedPackageRowView.swift */; };
 		1B4047192C2782B300101DF4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047182C2782B300101DF4 /* HomeViewModel.swift */; };
 		1B40471B2C27854200101DF4 /* AddressEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40471A2C27854200101DF4 /* AddressEntityMock.swift */; };
+		1B40471D2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40471C2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift */; };
 		1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */; };
 		1B58EF792BE6BBE90066F447 /* CoordinatorRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* CoordinatorRootView.swift */; };
 		1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */; };
@@ -108,6 +109,7 @@
 		1B2DDF052C1E9F85003EC97C /* GroupedPackageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageRowView.swift; sourceTree = "<group>"; };
 		1B4047182C2782B300101DF4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1B40471A2C27854200101DF4 /* AddressEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntityMock.swift; sourceTree = "<group>"; };
+		1B40471C2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageStyleModifier.swift; sourceTree = "<group>"; };
 		1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobile-courier-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierApp.swift; sourceTree = "<group>"; };
 		1B58EF782BE6BBE90066F447 /* CoordinatorRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRootView.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				1B58EFA82BE6C0070066F447 /* BorderedViewModifier.swift */,
 				1B85000F2C1004D0006E96A0 /* ToastModifier.swift */,
 				1B6D75182C23BFB30067BB56 /* RoundedIndicatorViewModifier.swift */,
+				1B40471C2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				1B6590E02C22853400D46A27 /* PackagesForWithdrawalView.swift in Sources */,
 				1B9274CB2C1156C6008F4FA3 /* AppData.swift in Sources */,
 				1BE58CAA2C05731B00C7DF63 /* LoginViewModelMock.swift in Sources */,
+				1B40471D2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift in Sources */,
 				1BE63F712BE980D60016A26E /* Storage.swift in Sources */,
 				1B2DDEFC2C1E956C003EC97C /* PackagesRepositoryProtocol.swift in Sources */,
 				1B85000E2C10033D006E96A0 /* ToastView.swift in Sources */,

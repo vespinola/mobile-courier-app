@@ -18,7 +18,7 @@ struct ProfileView: View {
 
   @ViewBuilder
   private func content(addressEntity: AddressesEntity) -> some View {
-    VStack {
+    LazyVStack {
       RowView(title: "Document Number", subtitle: addressEntity.documentNumber)
       RowView(title: "Phone Number", subtitle: addressEntity.phoneNumber)
       RowView(title: "Email", subtitle: addressEntity.email)

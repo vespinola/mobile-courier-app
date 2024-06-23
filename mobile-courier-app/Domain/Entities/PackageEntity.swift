@@ -22,7 +22,7 @@ struct GroupedPackageEntity: Identifiable {
   var id: Int { embarqueCodigo }
 
   var embarqueCodigo: Int
-  var paquetes: Set<PackageEntity>
+  var paquetes: [PackageEntity]
 
   var totalCost: Decimal {
     let thousand: Decimal = 1000
@@ -42,14 +42,8 @@ struct GroupedPackageEntity: Identifiable {
   }
 
   var formattedTotalCost: String {
-    let formatter = NumberFormatter()
-    formatter.numberStyle = .decimal
-    formatter.minimumFractionDigits = .zero
-    formatter.allowsFloats = false
-    formatter.groupingSeparator = "."
-
     let formattedValue = NSDecimalNumber(decimal: totalCost)
-    return formatter.string(from: formattedValue) ?? "0"
+    return numberFormatter.string(from: formattedValue) ?? "0"
   }
 
   var formattedDate: String {
@@ -95,6 +89,15 @@ struct GroupedPackageEntity: Identifiable {
 
     return status.caseInsensitiveCompare("C") == .orderedSame ? .inconsistent : .unknown
   }
+
+  private var numberFormatter: NumberFormatter {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    formatter.minimumFractionDigits = .zero
+    formatter.allowsFloats = false
+    formatter.groupingSeparator = "."
+    return formatter
+  }
 }
 
 extension Array where Element == GroupedPackageEntity {
@@ -122,5 +125,23 @@ struct PackageEntity: Codable, Identifiable, Hashable {
 extension PackageEntity {
   var guaraniesCost: Decimal {
     tarifaPrecioCli * cotizacion * paquetePeso
+  }
+
+  var formattedCost: String {
+    let thousand: Decimal = 1000
+    let divided = guaraniesCost / thousand
+    let rounded = NSDecimalNumber(decimal: divided).rounding(accordingToBehavior: nil)
+    let multiplied = rounded.multiplying(by: thousand as NSDecimalNumber) as Decimal
+    let formattedValue = NSDecimalNumber(decimal: multiplied)
+    return numberFormatter.string(from: formattedValue) ?? "0"
+  }
+
+  private var numberFormatter: NumberFormatter {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    formatter.minimumFractionDigits = .zero
+    formatter.allowsFloats = false
+    formatter.groupingSeparator = "."
+    return formatter
   }
 }

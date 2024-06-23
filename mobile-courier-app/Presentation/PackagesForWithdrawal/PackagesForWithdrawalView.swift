@@ -46,6 +46,12 @@ struct PackagesForWithdrawalView: View {
           Section(header: Text(status.rawValue)) {
             ForEach(groupedPackages.filter { $0.packageCurrentStatus == status }) { currentGroupedPackage in
               getGroupedPackageView(for: currentGroupedPackage)
+                .groupedPackageRowStyle()
+                .onTapGesture {
+                  coordinator.present(
+                    sheet: .shipmentDetail(groupedPackage: currentGroupedPackage)
+                  )
+                }
             }
           }
         }

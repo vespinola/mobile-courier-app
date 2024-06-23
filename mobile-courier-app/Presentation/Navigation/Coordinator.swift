@@ -91,7 +91,7 @@ final class Coordinator: ObservableObject {
     switch sheet {
     case .shipmentDetail(let groupedPackage):
         ShipmentDetailView(groupedPackage: groupedPackage)
-          .presentationDetents([.fraction(0.3), .fraction(0.6)])
+          .presentationDetents([.fraction(0.5), .fraction(0.8)])
     }
   }
 }

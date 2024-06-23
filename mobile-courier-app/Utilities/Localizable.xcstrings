@@ -27,6 +27,9 @@
         }
       }
     },
+    "Gs %@" : {
+
+    },
     "Gs. %@" : {
 
     },
@@ -73,6 +76,9 @@
     "N° %@" : {
 
     },
+    "Packages" : {
+
+    },
     "Password" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -116,6 +122,12 @@
           }
         }
       }
+    },
+    "Shipment %@" : {
+
+    },
+    "Total" : {
+
     },
     "Withdrawn" : {
       "localizations" : {
