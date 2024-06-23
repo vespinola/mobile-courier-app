@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension ProfileViewModel {
-  static func previewInstance() -> ProfileViewModel {
+extension HomeViewModel {
+  static func previewInstance() -> HomeViewModel {
     .init(addressesRepository: AddressesRepositoryMock())
   }
 }

@@ -27,6 +27,9 @@
         }
       }
     },
+    "Gs %@" : {
+
+    },
     "Gs. %@" : {
 
     },
@@ -50,6 +53,9 @@
         }
       }
     },
+    "Loading..." : {
+
+    },
     "Log In" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -68,6 +74,9 @@
       }
     },
     "N° %@" : {
+
+    },
+    "Packages" : {
 
     },
     "Password" : {
@@ -113,6 +122,12 @@
           }
         }
       }
+    },
+    "Shipment %@" : {
+
+    },
+    "Total" : {
+
     },
     "Withdrawn" : {
       "localizations" : {

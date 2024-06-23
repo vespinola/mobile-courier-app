@@ -20,6 +20,8 @@ final class PackagesForWithdrawalViewModel: ObservableObject {
 
   @MainActor
   func getPackages() async {
+    guard groupedPackagesEntity == nil else { return }
+
     do {
       isLoading = true
       groupedPackagesEntity = try await packagesRepository.getPackagesForWithdrawl()

@@ -19,17 +19,26 @@ enum Page: String, Identifiable {
   }
 }
 
-enum Sheet: String, Identifiable {
-  case pageDetail
+enum Sheet: Identifiable {
+  case shipmentDetail(groupedPackage: GroupedPackageEntity)
 
   var id: String {
-    self.rawValue
+    switch self {
+    case .shipmentDetail:
+      return "shipmentDetail"
+    }
   }
 }
 
 final class Coordinator: ObservableObject {
   @Published var path = NavigationPath()
   @Published var sheet: Sheet?
+
+  private var diContainer: DIContainerProtocol
+
+  init(diContainer: DIContainerProtocol) {
+    self.diContainer = diContainer
+  }
 
   func push(_ page: Page) {
     path.append(page)
@@ -55,31 +64,34 @@ final class Coordinator: ObservableObject {
 
   @ViewBuilder
   func build(page: Page) -> some View {
-    let apiClient = APIRequestClient()
-
     switch page {
     case .login:
-      let authRepo = AuthRepository(apiRequestClient: apiClient)
-      LoginView(viewModel: .init(authRepository: authRepo))
+      LoginView(
+        viewModel: diContainer.resolve(LoginViewModel.self)
+      )
     case .profile:
-      let addressRepo = AddressRespository(apiRequestClient: apiClient)
-      ProfileView(viewModel: .init(addressesRepository: addressRepo))
+      ProfileView()
     case .home:
-      HomeView()
+      HomeView(
+        viewModel: diContainer.resolve(HomeViewModel.self)
+      )
     case .withdrawnPackages:
-      let packagesRepo = PackagesRepository(apiRequestClient: apiClient)
-      WithdrawnPackagesView(viewModel: .init(packagesRepository: packagesRepo))
+        WithdrawnPackagesView(
+          viewModel: diContainer.resolve(WithdrawnPackagesViewModel.self)
+        )
     case .packagesForWithdrawl:
-      let packagesRepo = PackagesRepository(apiRequestClient: apiClient)
-      PackagesForWithdrawalView(viewModel: .init(packagesRepository: packagesRepo))
+      PackagesForWithdrawalView(
+        viewModel: diContainer.resolve(PackagesForWithdrawalViewModel.self)
+      )
     }
   }
 
   @ViewBuilder
   func build(sheet: Sheet) -> some View {
     switch sheet {
-    case .pageDetail:
-      EmptyView()
+    case .shipmentDetail(let groupedPackage):
+        ShipmentDetailView(groupedPackage: groupedPackage)
+          .presentationDetents([.fraction(0.5), .fraction(0.8)])
     }
   }
 }

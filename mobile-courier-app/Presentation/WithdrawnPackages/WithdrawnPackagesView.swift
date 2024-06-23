@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WithdrawnPackagesView: View {
   @ObservedObject var viewModel: WithdrawnPackagesViewModel
+  @EnvironmentObject var coordinator: Coordinator
 
   var body: some View {
     ZStack {
@@ -41,6 +42,12 @@ struct WithdrawnPackagesView: View {
   private func packagesList(_ groupedPackages: [GroupedPackageEntity]) -> some View {
     List(groupedPackages) { row in
       GroupedPackageRowView(groupedPackage: row)
+        .groupedPackageRowStyle()
+        .onTapGesture {
+          coordinator.present(
+            sheet: .shipmentDetail(groupedPackage: row)
+          )
+        }
     }
     .listStyle(.plain)
   }
@@ -48,4 +55,5 @@ struct WithdrawnPackagesView: View {
 
 #Preview {
   WithdrawnPackagesView(viewModel: .previewInstance())
+    .environmentObject(Coordinator(diContainer: AppDIContainer()))
 }

@@ -49,9 +49,6 @@ struct GroupedPackageReadyView: View {
         .fill(Color.surface)
     )
     .clipped()
-    .listRowSeparator(.hidden)
-    .listRowSpacing(.zero)
-    .listRowInsets(.none)
   }
 }
 

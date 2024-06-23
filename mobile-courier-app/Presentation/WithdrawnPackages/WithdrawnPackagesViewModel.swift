@@ -20,6 +20,7 @@ final class WithdrawnPackagesViewModel: ObservableObject {
 
   @MainActor
   func getPackages() async {
+    guard groupedPackagesEntity == nil else { return }
     do {
       isLoading = true
       groupedPackagesEntity = try await packagesRepository.getWithdrawnPackages()

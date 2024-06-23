@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PackagesForWithdrawalView: View {
   @ObservedObject var viewModel: PackagesForWithdrawalViewModel
+  @EnvironmentObject var coordinator: Coordinator
 
   var body: some View {
     ZStack {
@@ -45,6 +46,12 @@ struct PackagesForWithdrawalView: View {
           Section(header: Text(status.rawValue)) {
             ForEach(groupedPackages.filter { $0.packageCurrentStatus == status }) { currentGroupedPackage in
               getGroupedPackageView(for: currentGroupedPackage)
+                .groupedPackageRowStyle()
+                .onTapGesture {
+                  coordinator.present(
+                    sheet: .shipmentDetail(groupedPackage: currentGroupedPackage)
+                  )
+                }
             }
           }
         }
@@ -65,4 +72,5 @@ struct PackagesForWithdrawalView: View {
 
 #Preview {
   PackagesForWithdrawalView(viewModel: .previewInstance())
+    .environmentObject(Coordinator(diContainer: AppDIContainer()))
 }
