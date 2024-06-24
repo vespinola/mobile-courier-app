@@ -11,16 +11,20 @@ struct HeaderView: View {
   @EnvironmentObject var appData: AppData
 
   var body: some View {
-    ZStack {
+    HStack {
       HStack {
         Image("shortLogo")
           .resizable()
           .renderingMode(.template)
           .foregroundStyle(.white)
           .aspectRatio(contentMode: .fit)
-          .padding(16)
-          .opacity(0.4)
-        Spacer()
+          .padding(.init(
+            top: 16,
+            leading: 16,
+            bottom: 16,
+            trailing: .zero)
+          )
+          .frame(height: 60)
       }
 
       if let username = appData.username?.capitalized {
@@ -29,12 +33,12 @@ struct HeaderView: View {
             .font(.title3)
             .fontWeight(.bold)
             .foregroundStyle(.white)
-          Spacer()
         }
-        .padding(.leading, 60)
       }
+
+      Spacer()
     }
-    .frame(maxWidth: .infinity, maxHeight: 60)
+    .frame(maxWidth: .infinity)
     .background(.accent)
   }
 }

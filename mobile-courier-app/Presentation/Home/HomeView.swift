@@ -14,8 +14,26 @@ struct HomeView: View {
   @State var selectedTab = 0
 
   var body: some View {
-    HeaderView()
+    VStack(spacing: .zero) {
+      HeaderView()
 
+      getTabView()
+        .navigationTitle("")
+        .toolbar(.hidden)
+        .sheet(item: $coordinator.sheet) { sheet in
+          coordinator.build(sheet: sheet)
+        }
+        .toast(message: $viewModel.toastMessage)
+        .onAppear {
+          Task {
+            await viewModel.getAddresses()
+          }
+        }
+    }
+  }
+
+  @ViewBuilder
+  private func getTabView() -> some View {
     TabView(selection: $selectedTab) {
       coordinator.build(page: .packagesForWithdrawl)
         .tabItem {
@@ -40,17 +58,6 @@ struct HomeView: View {
           Label("Settings", systemImage: "gear")
         }
         .tag(3)
-    }
-    .navigationTitle("")
-    .toolbar(.hidden)
-    .sheet(item: $coordinator.sheet) { sheet in
-      coordinator.build(sheet: sheet)
-    }
-    .toast(message: $viewModel.toastMessage)
-    .onAppear {
-      Task {
-        await viewModel.getAddresses()
-      }
     }
   }
 
