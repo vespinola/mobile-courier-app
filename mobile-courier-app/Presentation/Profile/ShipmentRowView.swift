@@ -29,7 +29,7 @@ struct ShipmentRowView: View {
     .padding(.init(
       top: .zero,
       leading: 20,
-      bottom: 16,
+      bottom: .zero,
       trailing: 20)
     )
   }

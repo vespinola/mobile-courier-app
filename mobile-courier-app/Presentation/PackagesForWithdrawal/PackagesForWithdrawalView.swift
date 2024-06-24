@@ -43,7 +43,7 @@ struct PackagesForWithdrawalView: View {
     List {
       ForEach(ShipmentStatus.allCases) { status in
         if !groupedPackages.filterGroupedPackages(by: status).isEmpty {
-          Section(header: Text(status.rawValue)) {
+          Section(header: Text(status.localized)) {
             ForEach(groupedPackages.filter { $0.packageCurrentStatus == status }) { currentGroupedPackage in
               getGroupedPackageView(for: currentGroupedPackage)
                 .groupedPackageRowStyle()
@@ -72,5 +72,5 @@ struct PackagesForWithdrawalView: View {
 
 #Preview {
   PackagesForWithdrawalView(viewModel: .previewInstance())
-    .environmentObject(Coordinator(diContainer: AppDIContainer()))
+    .environmentObject(Coordinator(diContainer: AppDIContainerMock()))
 }

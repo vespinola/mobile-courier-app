@@ -13,6 +13,7 @@ enum Page: String, Identifiable {
   case profile
   case withdrawnPackages
   case packagesForWithdrawl
+  case configurations
 
   var id: String {
     self.rawValue
@@ -83,6 +84,8 @@ final class Coordinator: ObservableObject {
       PackagesForWithdrawalView(
         viewModel: diContainer.resolve(PackagesForWithdrawalViewModel.self)
       )
+    case .configurations:
+      ConfigurationView()
     }
   }
 

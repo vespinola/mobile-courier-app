@@ -16,9 +16,14 @@ final class AppDIContainer: DIContainerProtocol {
     register(AddressRespository(), for: AddressRepositoryProtocol.self)
     register(PackagesRepository(), for: PackagesRepositoryProtocol.self)
 
+    //Helpers
+    register(UserDefaultsStorage(), for: Storage.self)
+
     // ViewModels
     register(
-      LoginViewModel(authRepository: resolve(AuthRepositoryProtocol.self)),
+      LoginViewModel(
+        authRepository: resolve(AuthRepositoryProtocol.self),
+        storage: resolve(Storage.self)),
       for: LoginViewModel.self
     )
     register(
@@ -39,7 +44,7 @@ final class AppDIContainer: DIContainerProtocol {
     let key = String(describing: type)
     services[key] = service
   }
-  
+
   func resolve<T>(_ type: T.Type) -> T {
     let key = String(describing: type)
     guard let service = services[key] as? T else {

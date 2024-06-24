@@ -5,10 +5,34 @@
 
     },
     "%lld packages" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld paquetes"
+          }
+        }
+      }
     },
     "At the branch" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En sucursal"
+          }
+        }
+      }
+    },
+    "Dark Mode" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo Oscuro"
+          }
+        }
+      }
     },
     "Email" : {
       "extractionState" : "manual",
@@ -28,10 +52,14 @@
       }
     },
     "Gs %@" : {
-
-    },
-    "Gs. %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gs %@"
+          }
+        }
+      }
     },
     "Hi, %@!" : {
       "localizations" : {
@@ -53,8 +81,35 @@
         }
       }
     },
+    "In Locker" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En origen"
+          }
+        }
+      }
+    },
+    "Inconsistent" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inconsistente"
+          }
+        }
+      }
+    },
     "Loading..." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cargando..."
+          }
+        }
+      }
     },
     "Log In" : {
       "extractionState" : "manual",
@@ -73,11 +128,45 @@
         }
       }
     },
+    "Log out" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar sesión"
+          }
+        }
+      }
+    },
     "N° %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N° %@"
+          }
+        }
+      }
+    },
+    "On the Way" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En camino"
+          }
+        }
+      }
     },
     "Packages" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paquetes"
+          }
+        }
+      }
     },
     "Password" : {
       "extractionState" : "manual",
@@ -96,12 +185,32 @@
         }
       }
     },
+    "Processing" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Procesando"
+          }
+        }
+      }
+    },
     "Profile" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfil"
+          }
+        }
+      }
+    },
+    "Ready for Pickup" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo para retirar"
           }
         }
       }
@@ -123,11 +232,45 @@
         }
       }
     },
+    "Settings" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configuraciones"
+          }
+        }
+      }
+    },
     "Shipment %@" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embarque %@"
+          }
+        }
+      }
     },
     "Total" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Total"
+          }
+        }
+      }
+    },
+    "Unknown Status" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado desconocido"
+          }
+        }
+      }
     },
     "Withdrawn" : {
       "localizations" : {

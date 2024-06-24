@@ -16,6 +16,23 @@ enum ShipmentStatus: String, CaseIterable, Identifiable {
   case unknown = "Unknown Status"
 
   var id: String { self.rawValue }
+
+  var localized: String {
+    switch self {
+    case .readyForPickup:
+      return NSLocalizedString("Ready for Pickup", comment: "")
+    case .processing:
+      return NSLocalizedString("Processing", comment: "")
+    case .onTheWay:
+      return NSLocalizedString("On the Way", comment: "")
+    case .inLocker:
+      return NSLocalizedString("In Locker", comment: "")
+    case .inconsistent:
+      return NSLocalizedString("Inconsistent", comment: "")
+    case .unknown:
+      return NSLocalizedString("Unknown Status", comment: "")
+    }
+  }
 }
 
 struct GroupedPackageEntity: Identifiable {
