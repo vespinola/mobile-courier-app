@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B58EF722BE6BBE90066F447"
-               BuildableName = "mobile-courier-app.app"
+               BuildableName = "JustACourierApp.app"
                BlueprintName = "mobile-courier-app"
                ReferencedContainer = "container:mobile-courier-app.xcodeproj">
             </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B58EF722BE6BBE90066F447"
-            BuildableName = "mobile-courier-app.app"
+            BuildableName = "JustACourierApp.app"
             BlueprintName = "mobile-courier-app"
             ReferencedContainer = "container:mobile-courier-app.xcodeproj">
          </BuildableReference>
@@ -86,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B58EF722BE6BBE90066F447"
-            BuildableName = "mobile-courier-app.app"
+            BuildableName = "JustACourierApp.app"
             BlueprintName = "mobile-courier-app"
             ReferencedContainer = "container:mobile-courier-app.xcodeproj">
          </BuildableReference>

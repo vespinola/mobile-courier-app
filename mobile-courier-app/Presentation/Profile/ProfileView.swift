@@ -11,21 +11,22 @@ struct ProfileView: View {
   @EnvironmentObject var addresses: AddressesEntity
 
   var body: some View {
-    ScrollView {
-      content(addressEntity: addresses)
-    }
+    content(addressEntity: addresses)
   }
 
   @ViewBuilder
   private func content(addressEntity: AddressesEntity) -> some View {
-    LazyVStack {
-      RowView(title: "Document Number", subtitle: addressEntity.documentNumber)
-      RowView(title: "Phone Number", subtitle: addressEntity.phoneNumber)
-      RowView(title: "Email", subtitle: addressEntity.email)
-        .padding(.bottom, 32)
+    List {
+      Section {
+        RowView(title: "Document Number", subtitle: addressEntity.documentNumber)
+        RowView(title: "Phone Number", subtitle: addressEntity.phoneNumber)
+        RowView(title: "Email", subtitle: addressEntity.email)
+      }
 
-      ShipmentRowView(shipment: addressEntity.enviosAereos, title: "Air shipments")
-      ShipmentRowView(shipment: addressEntity.viaMaritima, title: "Maritime Route")
+      Section {
+        ShipmentRowView(shipment: addressEntity.enviosAereos, title: "Air shipments")
+        ShipmentRowView(shipment: addressEntity.viaMaritima, title: "Maritime Route")
+      }
     }
   }
 }
