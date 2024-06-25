@@ -28,6 +28,10 @@ final class AppDIContainerMock: DIContainerProtocol {
       PackagesForWithdrawalViewModel.previewInstance(),
       for: PackagesForWithdrawalViewModel.self
     )
+    register(
+      SettingsViewModel.previewInstance(),
+      for: SettingsViewModel.self
+    )
   }
 
   func register<T>(_ service: T, for type: T.Type) {

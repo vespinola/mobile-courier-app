@@ -85,7 +85,7 @@ final class Coordinator: ObservableObject {
         viewModel: diContainer.resolve(PackagesForWithdrawalViewModel.self)
       )
     case .configurations:
-      ConfigurationView()
+        SettingsView(viewModel: diContainer.resolve(SettingsViewModel.self))
     }
   }
 
