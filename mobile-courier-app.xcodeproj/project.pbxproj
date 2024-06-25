@@ -79,6 +79,12 @@
 		1BE63F712BE980D60016A26E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F702BE980D60016A26E /* Storage.swift */; };
 		1BEE841F2C17D6FF00B8A367 /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEE841E2C17D6FF00B8A367 /* RowView.swift */; };
 		1BFD1EAF2C2A688B002E4232 /* SettingsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EAE2C2A688B002E4232 /* SettingsViewModelMock.swift */; };
+		1BFD1EB12C2A7907002E4232 /* GroupedPackageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB02C2A7907002E4232 /* GroupedPackageEntity.swift */; };
+		1BFD1EB32C2A7927002E4232 /* ShipmentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB22C2A7927002E4232 /* ShipmentStatus.swift */; };
+		1BFD1EB62C2A79E4002E4232 /* NSDecimalNumber+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB52C2A79E4002E4232 /* NSDecimalNumber+Domain.swift */; };
+		1BFD1EB82C2A7D14002E4232 /* String+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB72C2A7D14002E4232 /* String+Domain.swift */; };
+		1BFD1EBA2C2A7E8E002E4232 /* Date+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB92C2A7E8E002E4232 /* Date+Domain.swift */; };
+		1BFD1EBD2C2A7EC7002E4232 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EBC2C2A7EC7002E4232 /* DateFormatType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +182,12 @@
 		1BE63F722BE98ADD0016A26E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1BEE841E2C17D6FF00B8A367 /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		1BFD1EAE2C2A688B002E4232 /* SettingsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelMock.swift; sourceTree = "<group>"; };
+		1BFD1EB02C2A7907002E4232 /* GroupedPackageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageEntity.swift; sourceTree = "<group>"; };
+		1BFD1EB22C2A7927002E4232 /* ShipmentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentStatus.swift; sourceTree = "<group>"; };
+		1BFD1EB52C2A79E4002E4232 /* NSDecimalNumber+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumber+Domain.swift"; sourceTree = "<group>"; };
+		1BFD1EB72C2A7D14002E4232 /* String+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Domain.swift"; sourceTree = "<group>"; };
+		1BFD1EB92C2A7E8E002E4232 /* Date+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Domain.swift"; sourceTree = "<group>"; };
+		1BFD1EBC2C2A7EC7002E4232 /* DateFormatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +421,8 @@
 		1B85E8E32BFC4DF9003040CC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				1BFD1EBB2C2A7EBA002E4232 /* Helpers */,
+				1BFD1EB42C2A79CB002E4232 /* Extensions */,
 				1B85E8E52BFC4E12003040CC /* Entities */,
 				1B85E8DF2BFC4D0B003040CC /* Repositories */,
 			);
@@ -431,6 +445,8 @@
 				1B85E8E62BFC4E24003040CC /* LoginEntity.swift */,
 				1B9274D32C115EA4008F4FA3 /* AddressesEntity.swift */,
 				1B2DDEF92C1E951A003EC97C /* PackageEntity.swift */,
+				1BFD1EB02C2A7907002E4232 /* GroupedPackageEntity.swift */,
+				1BFD1EB22C2A7927002E4232 /* ShipmentStatus.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -532,6 +548,24 @@
 				1B4047182C2782B300101DF4 /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		1BFD1EB42C2A79CB002E4232 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1BFD1EB52C2A79E4002E4232 /* NSDecimalNumber+Domain.swift */,
+				1BFD1EB72C2A7D14002E4232 /* String+Domain.swift */,
+				1BFD1EB92C2A7E8E002E4232 /* Date+Domain.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1BFD1EBB2C2A7EBA002E4232 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1BFD1EBC2C2A7EC7002E4232 /* DateFormatType.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -695,6 +729,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B99600F2C12992F00976BBC /* AddressRespository.swift in Sources */,
+				1BFD1EBD2C2A7EC7002E4232 /* DateFormatType.swift in Sources */,
 				1B4047242C27DF9600101DF4 /* SettingsView.swift in Sources */,
 				1B58EFB92BE729D20066F447 /* Endpoint.swift in Sources */,
 				1B2DDEF42C1E7DD4003EC97C /* PackagePlaceholderView.swift in Sources */,
@@ -703,11 +738,13 @@
 				1B9274D02C115AF1008F4FA3 /* AddressesModel.swift in Sources */,
 				1BE58CA82C0572B400C7DF63 /* StorageMock.swift in Sources */,
 				1BFD1EAF2C2A688B002E4232 /* SettingsViewModelMock.swift in Sources */,
+				1BFD1EBA2C2A7E8E002E4232 /* Date+Domain.swift in Sources */,
 				1B8B0A442C1BDDE600D1A7AC /* HeaderView.swift in Sources */,
 				1B85E8E22BFC4DAE003040CC /* LoginModel.swift in Sources */,
 				1B6590E02C22853400D46A27 /* PackagesForWithdrawalView.swift in Sources */,
 				1B9274CB2C1156C6008F4FA3 /* AppData.swift in Sources */,
 				1BE58CAA2C05731B00C7DF63 /* LoginViewModelMock.swift in Sources */,
+				1BFD1EB62C2A79E4002E4232 /* NSDecimalNumber+Domain.swift in Sources */,
 				1B40471D2C27C3CB00101DF4 /* GroupedPackageStyleModifier.swift in Sources */,
 				1BE63F712BE980D60016A26E /* Storage.swift in Sources */,
 				1B2DDEFC2C1E956C003EC97C /* PackagesRepositoryProtocol.swift in Sources */,
@@ -738,6 +775,7 @@
 				1BC0717C2C140CA9006EC08E /* AddressesRepositoryMock.swift in Sources */,
 				1B821F192C1AA50600ED1795 /* CustomSessionDelegate.swift in Sources */,
 				1B9274D42C115EA4008F4FA3 /* AddressesEntity.swift in Sources */,
+				1BFD1EB32C2A7927002E4232 /* ShipmentStatus.swift in Sources */,
 				1B40471B2C27854200101DF4 /* AddressEntityMock.swift in Sources */,
 				1B8500152C100DF1006E96A0 /* ProfileView.swift in Sources */,
 				1B6D751C2C23DF910067BB56 /* ShipmentDetailView.swift in Sources */,
@@ -746,6 +784,7 @@
 				1B5E849F2C267F9600EDFDE2 /* DIContainerProtocol.swift in Sources */,
 				1BA99DD32C2A6712003D38F8 /* SettingsViewModel.swift in Sources */,
 				1B85E8E72BFC4E24003040CC /* LoginEntity.swift in Sources */,
+				1BFD1EB12C2A7907002E4232 /* GroupedPackageEntity.swift in Sources */,
 				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
 				1B2DDF022C1E9AC8003EC97C /* WithdrawnPackagesViewModelMock.swift in Sources */,
 				1B40472A2C27E99D00101DF4 /* AppDataMock.swift in Sources */,
@@ -756,6 +795,7 @@
 				1BE58CA62C05727500C7DF63 /* AuthRepositoryMock.swift in Sources */,
 				1BE58CB32C0585C400C7DF63 /* HomeView.swift in Sources */,
 				1B2DDF062C1E9F85003EC97C /* GroupedPackageRowView.swift in Sources */,
+				1BFD1EB82C2A7D14002E4232 /* String+Domain.swift in Sources */,
 				1BD17E632C0EB438009B6C67 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,11 +955,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "mobile-courier-app/mobile_courier_app.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mobile-courier-app/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = LXE5SAW38H;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -943,7 +983,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.just.another.mobile-courier-app";
 				PRODUCT_NAME = JustACourierApp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = JustCourierAppAdHoc;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
