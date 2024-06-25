@@ -28,7 +28,7 @@ protocol Endpoint {
 
 extension Endpoint {
   var scheme: String { "https" }
-  var host: String { "frontliner.com.py" }
+  var host: String { "justacourier.com.py" }
   var port: Int { 8449 }
   var headers: [String: String] {
     var internalHeaders = [

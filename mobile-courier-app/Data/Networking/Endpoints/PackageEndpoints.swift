@@ -15,10 +15,10 @@ enum PackageEndpoints {
 extension PackageEndpoints: Endpoint {
   var mockFile: String? {
     switch self {
-      case .withdrawn:
-        "WithdrawnPackages"
-      case .forWithdrawl:
-        "PackagesForWithdrawl"
+    case .withdrawn:
+      "WithdrawnPackages"
+    case .forWithdrawl:
+      "PackagesForWithdrawl"
     }
   }
 
@@ -29,9 +29,9 @@ extension PackageEndpoints: Endpoint {
   var path: String {
     switch self {
     case .withdrawn:
-      "/frontliner-middleware/api/paquetesRetirados"
+      "/paquetesRetirados"
     case .forWithdrawl:
-      "/frontliner-middleware/api/paquetesPendientes"
+      "/paquetesPendientes"
     }
   }
 

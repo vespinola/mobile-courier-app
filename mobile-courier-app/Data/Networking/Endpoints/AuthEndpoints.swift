@@ -20,7 +20,7 @@ extension AuthEndpoints: Endpoint {
 
   var requestType: RequestType {
     switch self {
-    case .login(email: _, password: _):
+    case .login:
       return .post
     default:
       return .get
@@ -29,8 +29,8 @@ extension AuthEndpoints: Endpoint {
 
   var path: String {
     switch self {
-    case .login(email: _, password: _):
-      return "/frontliner-middleware/api/ingresar"
+    case .login:
+      return "/ingresar"
     default:
       return ""
     }

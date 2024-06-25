@@ -21,7 +21,7 @@ extension AddressEndpoints: Endpoint {
   }
 
   var path: String {
-    "/frontliner-middleware/api/direccion"
+    "/direccion"
   }
 
   var body: [AnyHashable: Any]? {
