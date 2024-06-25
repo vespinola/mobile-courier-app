@@ -25,7 +25,7 @@ struct GroupedPackageReadyView: View {
       }
 
       HStack {
-        Text("\(groupedPackage.paquetes.count) packages")
+        Text("\(groupedPackage.packages.count) packages")
 
         Spacer()
 
@@ -55,8 +55,8 @@ struct GroupedPackageReadyView: View {
 #Preview {
   GroupedPackageReadyView(
     groupedPackage: .init(
-      embarqueCodigo: 2000,
-      paquetes: [
+      shipmentCode: 2000,
+      packages: [
         .mock
       ]
     )

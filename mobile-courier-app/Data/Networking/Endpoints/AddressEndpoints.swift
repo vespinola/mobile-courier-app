@@ -13,7 +13,7 @@ enum AddressEndpoints {
 
 extension AddressEndpoints: Endpoint {
   var mockFile: String? {
-    ""
+    "Address"
   }
 
   var requestType: RequestType {
@@ -21,7 +21,7 @@ extension AddressEndpoints: Endpoint {
   }
 
   var path: String {
-    "/frontliner-middleware/api/direccion"
+    "/direccion"
   }
 
   var body: [AnyHashable: Any]? {

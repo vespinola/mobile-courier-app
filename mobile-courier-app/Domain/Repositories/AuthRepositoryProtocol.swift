@@ -9,4 +9,9 @@ import Foundation
 
 protocol AuthRepositoryProtocol {
   func performLogin(email: String, password: String) async throws
+  func performLogout()
+}
+
+extension AuthRepositoryProtocol {
+  func performLogout() { }
 }

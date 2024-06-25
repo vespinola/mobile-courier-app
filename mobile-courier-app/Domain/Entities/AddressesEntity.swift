@@ -8,47 +8,47 @@
 import Foundation
 
 final class AddressesEntity: ObservableObject {
-  let enviosAereos: EnviosEntity
-  let viaMaritima: EnviosEntity
+  let airShipments: ShipmentsEntity
+  let seaShipments: ShipmentsEntity
 
-  init(enviosAereos: EnviosEntity, viaMaritima: EnviosEntity) {
-    self.enviosAereos = enviosAereos
-    self.viaMaritima = viaMaritima
+  init(airShipments: ShipmentsEntity, seaShipments: ShipmentsEntity) {
+    self.airShipments = airShipments
+    self.seaShipments = seaShipments
   }
 }
 
-struct EnviosEntity {
-  let ciudad: String
-  var cliente: ClienteEntity?
-  let direccion: String
-  let empresa: String
-  let pais: String
-  let telefono: String
+struct ShipmentsEntity {
+  let city: String
+  var client: ClientEntity?
+  let address: String
+  let company: String
+  let country: String
+  let phone: String
 }
 
-struct ClienteEntity {
+struct ClientEntity {
   let id: Int
-  let autorizaEmail: Int
-  let ciautorizado: String
-  let ciudad: Int
-  let clienteCelular: String
-  let clienteCi: String
-  let clienteTelefono: String
-  let ruc: String
-  let tarifa: Double
+  let authorizeEmail: Int
+  let authorizedCi: String
+  let city: Int
+  let clientCellPhone: String
+  let clientCi: String
+  let clientPhone: String
+  let taxId: String
+  let rate: Double
   let userName: String
 }
 
 extension AddressesEntity {
   var documentNumber: String {
-    enviosAereos.cliente?.clienteCi ?? "-"
+    airShipments.client?.clientCi ?? "-"
   }
 
   var phoneNumber: String {
-    enviosAereos.cliente?.clienteCelular ?? "-"
+    airShipments.client?.clientCellPhone ?? "-"
   }
 
   var email: String {
-    enviosAereos.cliente?.userName ?? "-"
+    airShipments.client?.userName ?? "-"
   }
 }

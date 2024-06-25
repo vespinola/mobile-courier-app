@@ -16,7 +16,7 @@ final class AppDIContainer: DIContainerProtocol {
     register(AddressRespository(), for: AddressRepositoryProtocol.self)
     register(PackagesRepository(), for: PackagesRepositoryProtocol.self)
 
-    //Helpers
+    // Helpers
     register(UserDefaultsStorage(), for: Storage.self)
 
     // ViewModels
@@ -37,6 +37,10 @@ final class AppDIContainer: DIContainerProtocol {
     register(
       PackagesForWithdrawalViewModel(packagesRepository: resolve(PackagesRepositoryProtocol.self)),
       for: PackagesForWithdrawalViewModel.self
+    )
+    register(
+      SettingsViewModel(authRepository: resolve(AuthRepositoryProtocol.self)),
+      for: SettingsViewModel.self
     )
   }
 

@@ -45,7 +45,6 @@ struct LoginView: View {
           .submitLabel(.done)
           .textContentType(.password)
           .onSubmit {
-            focusField = nil
             navigateToLogin()
           }
 
@@ -74,6 +73,8 @@ struct LoginView: View {
   }
 
   private func navigateToLogin() {
+    focusField = nil
+
     Task {
       guard await viewModel.doLogin() else { return }
       coordinator.push(.home)

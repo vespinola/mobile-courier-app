@@ -8,71 +8,74 @@
 import Foundation
 
 struct PackagesModel: Codable {
-  let paquetes: [PackageModel]
+  let packages: [PackageModel]
+
+  enum CodingKeys: String, CodingKey {
+    case packages = "paquetes"
+  }
 }
 
 struct PackageModel: Codable {
-  let estado: String
-  let embarqueEstado: String
-  var paqueteFechaRetiro: String?
-  let embarqueMedio: String
-  let tarifaPrecioCli: Decimal
-  let paqueteDescripcion: String
-  let paqueteTracking: String
-  let cotizacion: Decimal
-  let embarqueFecha: String
-  let paquetePeso: Decimal
-  let embarqueCodigo: Int
+  let status: String
+  let shipmentStatus: String
+  var packagePickupDate: String?
+  let shipmentMethod: String
+  let clientPriceRate: Decimal
+  let packageDescription: String
+  let packageTrackingNumber: String
+  let quotation: Decimal
+  let shipmentDate: String
+  let packageWeight: Decimal
+  let shipmentCode: Int
   let id: Int
-  let paquetePrecio: Decimal
+  let packagePrice: Decimal
 
   enum CodingKeys: String, CodingKey {
-    case estado
-    case embarqueEstado = "embarqueestado"
-    case paqueteFechaRetiro = "paquetefecharetiro"
-    case embarqueMedio = "embarquemedio"
-    case tarifaPrecioCli = "tarifapreciocli"
-    case paqueteDescripcion = "paquetedescripcion"
-    case paqueteTracking = "paquetetracking"
-    case cotizacion
-    case embarqueFecha = "embarquefecha"
-    case paquetePeso = "paquetepeso"
-    case embarqueCodigo = "embarquecodigo"
+    case status = "estado"
+    case shipmentStatus = "embarqueestado"
+    case packagePickupDate = "paquetefecharetiro"
+    case shipmentMethod = "embarquemedio"
+    case clientPriceRate = "tarifapreciocli"
+    case packageDescription = "paquetedescripcion"
+    case packageTrackingNumber = "paquetetracking"
+    case quotation = "cotizacion"
+    case shipmentDate = "embarquefecha"
+    case packageWeight = "paquetepeso"
+    case shipmentCode = "embarquecodigo"
     case id
-    case paquetePrecio = "paqueteprecio"
+    case packagePrice = "paqueteprecio"
   }
 }
 
 extension PackageModel {
   func asEntity() -> PackageEntity {
-    .init(
-      estado: estado,
-      embarqueEstado: embarqueEstado,
-      paqueteFechaRetiro: paqueteFechaRetiro ?? "",
-      embarqueMedio: embarqueMedio,
-      tarifaPrecioCli: tarifaPrecioCli,
-      paqueteDescripcion: paqueteDescripcion,
-      paqueteTracking: paqueteTracking,
-      cotizacion: cotizacion,
-      embarqueFecha: embarqueFecha,
-      paquetePeso: paquetePeso,
-      embarqueCodigo: embarqueCodigo,
+    return PackageEntity(
+      status: status,
+      shipmentStatus: shipmentStatus,
+      packagePickupDate: packagePickupDate ?? "",
+      shipmentMethod: shipmentMethod,
+      clientPriceRate: clientPriceRate,
+      packageDescription: packageDescription,
+      packageTrackingNumber: packageTrackingNumber,
+      quotation: quotation,
+      shipmentDate: shipmentDate,
+      packageWeight: packageWeight,
+      shipmentCode: shipmentCode,
       id: id,
-      paquetePrecio: paquetePrecio
+      packagePrice: packagePrice
     )
   }
 }
-
 extension PackagesModel {
   func asEntity() -> [GroupedPackageEntity] {
-    Dictionary(grouping: paquetes, by: { $0.embarqueCodigo })
+    Dictionary(grouping: packages, by: { $0.shipmentCode })
       .sorted(by: {
         Int($0.key) > Int($1.key)
       })
       .map {
         GroupedPackageEntity(
-          embarqueCodigo: $0.key,
-          paquetes: $0.value.map { $0.asEntity() }
+          shipmentCode: $0.key,
+          packages: $0.value.map { $0.asEntity() }
         )
       }
   }

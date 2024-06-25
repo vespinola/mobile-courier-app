@@ -1,0 +1,32 @@
+{
+  "paquetes": [
+    {
+      "paquetedescripcion": "TOY",
+      "paquetetracking": "CNUSUP00000773583",
+      "estado": "B",
+      "cotizacion": 7585.0,
+      "embarqueestado": "ASUNCION",
+      "embarquefecha": "2024-06-11T04:00:00Z",
+      "paquetepeso": 0.2,
+      "embarquemedio": "Aereo",
+      "embarquecodigo": 2179,
+      "id": 1606577,
+      "tarifapreciocli": 22.5,
+      "paqueteprecio": 22.5
+    },
+    {
+      "paquetedescripcion": "ACC",
+      "paquetetracking": "420331869361289677032421065418",
+      "estado": "A",
+      "cotizacion": 7585.0,
+      "embarqueestado": "TRANSITO",
+      "embarquefecha": "2024-06-18T04:00:00Z",
+      "paquetepeso": 0.12,
+      "embarquemedio": "Aereo",
+      "embarquecodigo": 2182,
+      "id": 1610658,
+      "tarifapreciocli": 22.5,
+      "paqueteprecio": 22.5
+    }
+  ]
+}

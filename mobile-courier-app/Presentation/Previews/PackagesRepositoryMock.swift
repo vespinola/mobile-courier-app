@@ -10,10 +10,10 @@ import Foundation
 struct PackagesRepositoryMock: PackagesRepositoryProtocol {
   func getPackagesForWithdrawl() async throws -> [GroupedPackageEntity] {
     [
-      .init(embarqueCodigo: 2223, paquetes: [
+      .init(shipmentCode: 2223, packages: [
         .mock,
       ]),
-      .init(embarqueCodigo: 2221, paquetes: [
+      .init(shipmentCode: 2221, packages: [
         .atBranchMock
       ]),
     ]
@@ -21,7 +21,7 @@ struct PackagesRepositoryMock: PackagesRepositoryProtocol {
 
   func getWithdrawnPackages() async throws -> [GroupedPackageEntity] {
     [
-      .init(embarqueCodigo: 2143, paquetes: [ .mock ])
+      .init(shipmentCode: 2143, packages: [ .mock ])
     ]
   }
 }

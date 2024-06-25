@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShipmentRowView: View {
-  var shipment: EnviosEntity
+  var shipment: ShipmentsEntity
   var title: String
 
   var body: some View {
@@ -18,10 +18,10 @@ struct ShipmentRowView: View {
         .foregroundStyle(.accent)
         .padding(.bottom, 4)
       Group {
-        Text(shipment.direccion)
-        Text(shipment.ciudad)
-        Text(shipment.telefono)
-        Text(shipment.pais)
+        Text(shipment.address)
+        Text(shipment.city)
+        Text(shipment.phone)
+        Text(shipment.country)
       }
       .font(.caption)
       .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,11 +39,11 @@ struct ShipmentRowView: View {
   ShipmentRowView(
     shipment:
         .init(
-          ciudad: "Boston",
-          direccion: "164 NW STE 32",
-          empresa: "",
-          pais: "Argentina",
-          telefono: "(301) 123-1234"
+          city: "Boston",
+          address: "164 NW STE 32",
+          company: "",
+          country: "Argentina",
+          phone: "(301) 123-1234"
         ),
     title: "Envíos Marítimos"
   )

@@ -24,8 +24,8 @@ struct ProfileView: View {
         }
 
         Section {
-          ShipmentRowView(shipment: addressEntity.enviosAereos, title: "Air shipments")
-          ShipmentRowView(shipment: addressEntity.viaMaritima, title: "Maritime Route")
+          ShipmentRowView(shipment: addressEntity.airShipments, title: "Air Shipments")
+          ShipmentRowView(shipment: addressEntity.seaShipments, title: "Sea Shipments")
         }
       }
   }

@@ -23,14 +23,12 @@ protocol Endpoint {
   var authToken: String? { get }
   var port: Int { get }
 
-  #if DEBUG
   var mockFile: String? { get }
-  #endif
 }
 
 extension Endpoint {
   var scheme: String { "https" }
-  var host: String { "frontliner.com.py" }
+  var host: String { "justacourier.com.py" }
   var port: Int { 8449 }
   var headers: [String: String] {
     var internalHeaders = [

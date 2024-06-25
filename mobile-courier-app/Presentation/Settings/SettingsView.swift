@@ -1,5 +1,5 @@
 //
-//  ConfigurationView.swift
+//  SettingsView.swift
 //  mobile-courier-app
 //
 //  Created by Vladimir Espinola on 2024-06-23.
@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct ConfigurationView: View {
+struct SettingsView: View {
   @AppStorage("isDarkMode") var darkModeOn: Bool = false
   @EnvironmentObject var coordinator: Coordinator
+  @ObservedObject var viewModel: SettingsViewModel
 
   var body: some View {
     VStack {
@@ -20,6 +21,7 @@ struct ConfigurationView: View {
 
         Section {
           Button("Log out", role: .destructive) {
+            viewModel.doLogout()
             coordinator.popToRoot()
           }
         }
@@ -29,6 +31,6 @@ struct ConfigurationView: View {
 }
 
 #Preview {
-  ConfigurationView()
+  SettingsView(viewModel: .previewInstance())
     .environmentObject(Coordinator(diContainer: AppDIContainerMock()))
 }
