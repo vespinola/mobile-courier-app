@@ -20,7 +20,7 @@ struct AddressRespository: AddressRepositoryProtocol {
       decoder: JSONDecoder()
     )
 
-    AppData.shared.setUsername(model.enviosAereos.cliente.clienteNombre)
+    AppData.shared.setUsername(model.airShipments.client.clientFirstName)
 
     return model.asEntity()
   }

@@ -36,14 +36,14 @@ enum ShipmentStatus: String, CaseIterable, Identifiable {
 }
 
 struct GroupedPackageEntity: Identifiable {
-  var id: Int { embarqueCodigo }
+  var id: Int { shipmentCode }
 
-  var embarqueCodigo: Int
-  var paquetes: [PackageEntity]
+  var shipmentCode: Int
+  var packages: [PackageEntity]
 
   var totalCost: Decimal {
     let thousand: Decimal = 1000
-    let cost = paquetes.reduce(.zero) {
+    let cost = packages.reduce(.zero) {
       $0 + $1.guaraniesCost
     }
 
@@ -53,8 +53,8 @@ struct GroupedPackageEntity: Identifiable {
   }
 
   var totalWeight: Decimal {
-    paquetes.reduce(.zero) {
-      $0 + $1.paquetePeso
+    packages.reduce(.zero) {
+      $0 + $1.packageWeight
     }
   }
 
@@ -67,7 +67,7 @@ struct GroupedPackageEntity: Identifiable {
     let inputDateFormatter = DateFormatter()
     inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 
-    guard let firstDate = paquetes.first?.embarqueFecha,
+    guard let firstDate = packages.first?.shipmentDate,
           let date = inputDateFormatter.date(from: firstDate) else { return "" }
 
     let outputDateFormatter = DateFormatter()
@@ -85,13 +85,13 @@ struct GroupedPackageEntity: Identifiable {
     formatter.allowsFloats = false
     formatter.groupingSeparator = ""
 
-    let formattedValue = NSDecimalNumber(value: embarqueCodigo)
+    let formattedValue = NSDecimalNumber(value: shipmentCode)
     return formatter.string(from: formattedValue) ?? "0"
   }
 
   var packageCurrentStatus: ShipmentStatus {
-    guard let shippingStatus = paquetes.first?.embarqueEstado,
-          let status = paquetes.first?.estado else {
+    guard let shippingStatus = packages.first?.shipmentStatus,
+          let status = packages.first?.status else {
       return .unknown
     }
     if shippingStatus.caseInsensitiveCompare("ORIGEN") == .orderedSame {
@@ -123,25 +123,25 @@ extension Array where Element == GroupedPackageEntity {
   }
 }
 
-struct PackageEntity: Codable, Identifiable, Hashable {
-  let estado: String
-  let embarqueEstado: String
-  let paqueteFechaRetiro: String
-  let embarqueMedio: String
-  let tarifaPrecioCli: Decimal
-  let paqueteDescripcion: String
-  let paqueteTracking: String
-  let cotizacion: Decimal
-  let embarqueFecha: String
-  let paquetePeso: Decimal
-  let embarqueCodigo: Int
+struct PackageEntity: Identifiable, Hashable {
+  let status: String
+  let shipmentStatus: String
+  let packagePickupDate: String
+  let shipmentMethod: String
+  let clientPriceRate: Decimal
+  let packageDescription: String
+  let packageTrackingNumber: String
+  let quotation: Decimal
+  let shipmentDate: String
+  let packageWeight: Decimal
+  let shipmentCode: Int
   let id: Int
-  let paquetePrecio: Decimal
+  let packagePrice: Decimal
 }
 
 extension PackageEntity {
   var guaraniesCost: Decimal {
-    tarifaPrecioCli * cotizacion * paquetePeso
+    clientPriceRate * quotation * packageWeight
   }
 
   var formattedCost: String {

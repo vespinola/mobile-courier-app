@@ -9,62 +9,75 @@ import Foundation
 
 extension AddressesEntity {
   static var mock: AddressesEntity {
-    let cliente = ClienteEntity(
+    let client = ClientEntity(
       id: 12345,
-      autorizaEmail: 1,
-      ciautorizado: "1234567-3",
-      ciudad: 1,
-      clienteCelular: "0981123123",
-      clienteCi: "12345678",
-      clienteTelefono: "0982123321",
-      ruc: "1112223-4",
-      tarifa: 22.5,
-      userName: "test@gmail.com")
-    let enviosMaritimos = EnviosEntity(ciudad: "Asuncion", cliente: cliente, direccion: "Direccion", empresa: "empresa", pais: "Paraguay", telefono: "0982333111")
-    let enviosAeros = enviosMaritimos
-    return .init(enviosAereos: enviosAeros, viaMaritima: enviosMaritimos)
+      authorizeEmail: 1,
+      authorizedCi: "1234567-3",
+      city: 1,
+      clientCellPhone: "0981123123",
+      clientCi: "12345678",
+      clientPhone: "0982123321",
+      taxId: "1112223-4",
+      rate: 22.5,
+      userName: "test@gmail.com"
+    )
+
+    let seaShipments = ShipmentsEntity(
+      city: "Asuncion",
+      client: client,
+      address: "Direccion",
+      company: "empresa",
+      country: "Paraguay",
+      phone: "0982333111"
+    )
+
+    let airShipments = seaShipments
+
+    return .init(airShipments: airShipments, seaShipments: seaShipments)
   }
 }
 
 extension PackageEntity {
   static var mock: PackageEntity {
     .init(
-      estado: "c",
-      embarqueEstado: "c",
-      paqueteFechaRetiro: "2024-05-10T04:00:00Z",
-      embarqueMedio: "Air shipment",
-      tarifaPrecioCli: 22,
-      paqueteDescripcion: "It's a package",
-      paqueteTracking: "Tracking",
-      cotizacion: 7450,
-      embarqueFecha: "2024-05-10T04:00:00Z",
-      paquetePeso: 1.2,
-      embarqueCodigo: 2143,
+      status: "c",
+      shipmentStatus: "c",
+      packagePickupDate: "2024-05-10T04:00:00Z",
+      shipmentMethod: "Air shipment",
+      clientPriceRate: 22,
+      packageDescription: "It's a package",
+      packageTrackingNumber: "Tracking",
+      quotation: 7450,
+      shipmentDate: "2024-05-10T04:00:00Z",
+      packageWeight: 1.2,
+      shipmentCode: 2143,
       id: 1,
-      paquetePrecio: 5000)
+      packagePrice: 5000
+    )
   }
 
   static var atBranchMock: PackageEntity {
     .init(
-      estado: "B",
-      embarqueEstado: "ASUNCION",
-      paqueteFechaRetiro: "2024-05-10T04:00:00Z",
-      embarqueMedio: "Air shipment",
-      tarifaPrecioCli: 22,
-      paqueteDescripcion: "It's a package",
-      paqueteTracking: "Tracking",
-      cotizacion: 7450,
-      embarqueFecha: "2024-05-10T04:00:00Z",
-      paquetePeso: 1.2,
-      embarqueCodigo: 2142,
+      status: "B",
+      shipmentStatus: "ASUNCION",
+      packagePickupDate: "2024-05-10T04:00:00Z",
+      shipmentMethod: "Air shipment",
+      clientPriceRate: 22,
+      packageDescription: "It's a package",
+      packageTrackingNumber: "Tracking",
+      quotation: 7450,
+      shipmentDate: "2024-05-10T04:00:00Z",
+      packageWeight: 1.2,
+      shipmentCode: 2142,
       id: 1,
-      paquetePrecio: 5000)
+      packagePrice: 5000
+    )
   }
 }
 
 extension GroupedPackageEntity {
   static var mock: GroupedPackageEntity {
-    .init(embarqueCodigo: 2223, paquetes: [
+    .init(shipmentCode: 2223, packages: [
       .mock,
     ])
   }

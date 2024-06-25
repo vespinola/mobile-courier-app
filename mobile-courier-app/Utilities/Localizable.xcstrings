@@ -4,9 +4,6 @@
     "" : {
 
     },
-    "%lld" : {
-
-    },
     "%lld packages" : {
       "localizations" : {
         "es" : {
@@ -188,9 +185,6 @@
         }
       }
     },
-    "Please select a year" : {
-
-    },
     "Processing" : {
       "localizations" : {
         "es" : {
@@ -237,9 +231,6 @@
           }
         }
       }
-    },
-    "Select Year" : {
-
     },
     "Settings" : {
       "localizations" : {

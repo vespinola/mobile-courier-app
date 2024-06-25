@@ -57,22 +57,22 @@ struct ShipmentDetailView: View {
 
   @ViewBuilder
   private func getPackageList() -> some View {
-    List(groupedPackage.paquetes) { row in
+    List(groupedPackage.packages) { currentPackage in
       HStack {
         VStack(alignment: .leading) {
-          Text(row.paqueteDescripcion)
+          Text(currentPackage.packageDescription)
             .fontWeight(.bold)
-          Text(row.paqueteTracking)
+          Text(currentPackage.packageTrackingNumber)
             .font(.caption)
         }
 
         Spacer()
 
         VStack(alignment: .trailing) {
-          Text("Gs \(row.formattedCost)")
+          Text("Gs \(currentPackage.formattedCost)")
             .foregroundStyle(.accent)
             .fontWeight(.bold)
-          Text("\(row.paquetePeso) Kg")
+          Text("\(currentPackage.packageWeight) Kg")
             .font(.caption)
         }
       }

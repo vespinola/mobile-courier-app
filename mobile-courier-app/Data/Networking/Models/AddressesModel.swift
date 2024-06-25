@@ -8,88 +8,119 @@
 import Foundation
 
 struct AddressesModel: Codable {
-  let enviosAereos: EnviosModel
-  let viaMaritima: EnviosModel
+  let airShipments: ShipmentsModel
+  let seaShipments: ShipmentsModel
+
+  enum CodingKeys: String, CodingKey {
+    case airShipments = "enviosAereos"
+    case seaShipments = "viaMaritima"
+  }
 }
 
-struct EnviosModel: Codable {
-  let ciudad: String
-  let cliente: ClienteModel
-  let direccion: String
-  let empresa: String
-  let pais: String
-  let telefono: String
+struct ShipmentsModel: Codable {
+  let city: String
+  let client: ClientModel
+  let address: String
+  let company: String
+  let country: String
+  let phone: String
+
+  enum CodingKeys: String, CodingKey {
+    case city = "ciudad"
+    case client = "cliente"
+    case address = "direccion"
+    case company = "empresa"
+    case country = "pais"
+    case phone = "telefono"
+  }
 }
 
-struct ClienteModel: Codable {
+struct ClientModel: Codable {
   let classType: String
   let id: Int
-  let apellidoAutorizado: String
-  let autorizaEmail: Int
-  let ciautorizado: String
-  let ciudad: Int
-  let clienteApellido: String
-  let clienteCelular: String
-  let clienteCi: String
-  let clienteDireccion: String
-  let clienteNombre: String
-  let clienteObservacion: String
-  let clienteTelefono: String
-  let diaNac: Int
-  let estado: Int
-  let estante: String
-  let mesNac: Int
-  let nombreAutorizado: String
-  let pagoAnualidad: String?
+  let authorizedLastName: String
+  let authorizeEmail: Int
+  let authorizedCi: String
+  let city: Int
+  let clientLastName: String
+  let clientCellPhone: String
+  let clientCi: String
+  let clientAddress: String
+  let clientFirstName: String
+  let clientNotes: String
+  let clientPhone: String
+  let birthDay: Int
+  let status: Int
+  let shelf: String
+  let birthMonth: Int
+  let authorizedFirstName: String
+  let annualPayment: String?
   let password: String
-  let ruc: String
-  let tarifa: Double
+  let taxId: String
+  let rate: Double
   let username: String
 
   enum CodingKeys: String, CodingKey {
     case classType = "class"
-    case id, apellidoAutorizado = "apellidoautorizado", autorizaEmail = "autorizaemail", ciautorizado, ciudad
-    case clienteApellido = "clienteapellido", clienteCelular = "clientecelular", clienteCi = "clienteci"
-    case clienteDireccion = "clientedireccion", clienteNombre = "clientenombre", clienteObservacion = "clienteobservacion"
-    case clienteTelefono = "clientetelefono", diaNac = "dianac", estado, estante, mesNac = "mesnac"
-    case nombreAutorizado = "nombreautorizado", pagoAnualidad, password, ruc, tarifa, username
+    case id
+    case authorizedLastName = "apellidoautorizado"
+    case authorizeEmail = "autorizaemail"
+    case authorizedCi = "ciautorizado"
+    case city = "ciudad"
+    case clientLastName = "clienteapellido"
+    case clientCellPhone = "clientecelular"
+    case clientCi = "clienteci"
+    case clientAddress = "clientedireccion"
+    case clientFirstName = "clientenombre"
+    case clientNotes = "clienteobservacion"
+    case clientPhone = "clientetelefono"
+    case birthDay = "dianac"
+    case status = "estado"
+    case shelf = "estante"
+    case birthMonth = "mesnac"
+    case authorizedFirstName = "nombreautorizado"
+    case annualPayment = "pagoanualidad"
+    case password
+    case taxId = "ruc"
+    case rate = "tarifa"
+    case username
   }
 }
 
 extension AddressesModel {
   func asEntity() -> AddressesEntity {
     .init(
-      enviosAereos: enviosAereos.asEntity(),
-      viaMaritima: viaMaritima.asEntity()
+      airShipments: airShipments.asEntity(),
+      seaShipments: seaShipments.asEntity()
     )
   }
 }
 
-extension EnviosModel {
-  func asEntity() -> EnviosEntity {
+extension ShipmentsModel {
+  func asEntity() -> ShipmentsEntity {
     .init(
-      ciudad: ciudad,
-      cliente: cliente.asEntity(),
-      direccion: direccion,
-      empresa: empresa,
-      pais: pais,
-      telefono: telefono
+      city: city,
+      client: client.asEntity(),
+      address: address,
+      company: company,
+      country: country,
+      phone: phone
     )
   }
 }
 
-extension ClienteModel {
-  func asEntity() -> ClienteEntity {
+extension ClientModel {
+  func asEntity() -> ClientEntity {
     .init(
       id: id,
-      autorizaEmail: autorizaEmail,
-      ciautorizado: ciautorizado,
-      ciudad: ciudad,
-      clienteCelular: clienteCelular,
-      clienteCi: clienteCi,
-      clienteTelefono: clienteTelefono,
-      ruc: ruc,
-      tarifa: tarifa,
+      authorizeEmail: authorizeEmail,
+      authorizedCi: authorizedCi,
+      city: city,
+      clientCellPhone: clientCellPhone,
+      clientCi: clientCi,
+      clientPhone: clientPhone,
+      taxId: taxId,
+      rate: rate,
       userName: username
     )
   }

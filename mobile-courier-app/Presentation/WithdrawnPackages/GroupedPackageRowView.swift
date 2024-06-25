@@ -33,7 +33,7 @@ struct GroupedPackageRowView: View {
 
         Spacer()
 
-        Text("\(groupedPackage.paquetes.count) packages")
+        Text("\(groupedPackage.packages.count) packages")
       }
 
     }
@@ -56,8 +56,8 @@ struct GroupedPackageRowView: View {
 #Preview {
   GroupedPackageRowView(
     groupedPackage: .init(
-      embarqueCodigo: 2000,
-      paquetes: [.mock]
+      shipmentCode: 2000,
+      packages: [.mock]
     )
   )
 }
