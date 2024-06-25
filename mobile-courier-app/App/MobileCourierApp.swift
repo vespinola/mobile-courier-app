@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct MobileCourierApp: App {
-  @AppStorage("isDarkMode") var isDarkMode: Bool = true
+  @AppStorage("isDarkMode") var isDarkMode: Bool = false
 
   @StateObject var coordinator = Coordinator(diContainer: AppDIContainer())
   @StateObject var appData = AppData.shared
