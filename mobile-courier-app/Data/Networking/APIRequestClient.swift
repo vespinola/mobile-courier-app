@@ -26,16 +26,18 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
   private lazy var delegate: URLSessionDelegate? = CustomSessionDelegate()
 
   func performRequest<T: Decodable>(endpoint: Endpoint, decoder: JSONDecoder = JSONDecoder()) async throws -> T {
+    if let mockfile = endpoint.mockFile, let fileUrl = Bundle.main.url(forResource: mockfile, withExtension: "json") {
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
+      let decodedData = try decoder.decode(T.self, from: Data(contentsOf: fileUrl))
+      try? await Task.sleep(nanoseconds: 2 * 1_000_000_000)
+      return decodedData
+    }
+
     guard let urlRequest = try? endpoint.asRequest() else {
       throw APIErrorMessage.invalidRequest
     }
 
     do {
-//
-//      #if DEBUG
-//      endpoint.mockFile =
-//      #endif
-
       let configuration = URLSessionConfiguration.default
       configuration.timeoutIntervalForRequest = 10
       configuration.timeoutIntervalForResource = 10

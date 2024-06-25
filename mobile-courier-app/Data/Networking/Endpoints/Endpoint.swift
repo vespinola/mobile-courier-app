@@ -23,9 +23,7 @@ protocol Endpoint {
   var authToken: String? { get }
   var port: Int { get }
 
-  #if DEBUG
   var mockFile: String? { get }
-  #endif
 }
 
 extension Endpoint {

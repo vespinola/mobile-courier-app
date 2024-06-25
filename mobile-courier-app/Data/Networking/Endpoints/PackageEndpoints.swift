@@ -14,7 +14,12 @@ enum PackageEndpoints {
 
 extension PackageEndpoints: Endpoint {
   var mockFile: String? {
-    ""
+    switch self {
+      case .withdrawn:
+        "WithdrawnPackages"
+      case .forWithdrawl:
+        "PackagesForWithdrawl"
+    }
   }
 
   var requestType: RequestType {

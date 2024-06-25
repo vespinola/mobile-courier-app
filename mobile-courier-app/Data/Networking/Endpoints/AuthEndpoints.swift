@@ -14,11 +14,9 @@ enum AuthEndpoints {
 
 extension AuthEndpoints: Endpoint {
 
-  #if DEBUG
   var mockFile: String? {
-    "login-response"
+    "Login"
   }
-  #endif
 
   var requestType: RequestType {
     switch self {

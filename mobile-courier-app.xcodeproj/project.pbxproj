@@ -85,6 +85,10 @@
 		1BFD1EB82C2A7D14002E4232 /* String+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB72C2A7D14002E4232 /* String+Domain.swift */; };
 		1BFD1EBA2C2A7E8E002E4232 /* Date+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EB92C2A7E8E002E4232 /* Date+Domain.swift */; };
 		1BFD1EBD2C2A7EC7002E4232 /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFD1EBC2C2A7EC7002E4232 /* DateFormatType.swift */; };
+		1BFD1EC02C2A838D002E4232 /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD1EBF2C2A838D002E4232 /* Login.json */; };
+		1BFD1EC22C2A83D5002E4232 /* Address.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD1EC12C2A83D5002E4232 /* Address.json */; };
+		1BFD1EC42C2A841C002E4232 /* PackagesForWithdrawl.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD1EC32C2A841C002E4232 /* PackagesForWithdrawl.json */; };
+		1BFD1EC62C2A843A002E4232 /* WithdrawnPackages.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BFD1EC52C2A843A002E4232 /* WithdrawnPackages.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +192,10 @@
 		1BFD1EB72C2A7D14002E4232 /* String+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Domain.swift"; sourceTree = "<group>"; };
 		1BFD1EB92C2A7E8E002E4232 /* Date+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Domain.swift"; sourceTree = "<group>"; };
 		1BFD1EBC2C2A7EC7002E4232 /* DateFormatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatType.swift; sourceTree = "<group>"; };
+		1BFD1EBF2C2A838D002E4232 /* Login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
+		1BFD1EC12C2A83D5002E4232 /* Address.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Address.json; sourceTree = "<group>"; };
+		1BFD1EC32C2A841C002E4232 /* PackagesForWithdrawl.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PackagesForWithdrawl.json; sourceTree = "<group>"; };
+		1BFD1EC52C2A843A002E4232 /* WithdrawnPackages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WithdrawnPackages.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +359,7 @@
 		1B58EFAF2BE6E9D00066F447 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1BFD1EBE2C2A836F002E4232 /* MockFiles */,
 				1B9274CE2C1158E6008F4FA3 /* Endpoints */,
 				1B85E8E02BFC4D9F003040CC /* Models */,
 				1BE63F6C2BE9193E0016A26E /* APIRequestClient.swift */,
@@ -568,6 +577,17 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		1BFD1EBE2C2A836F002E4232 /* MockFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1BFD1EBF2C2A838D002E4232 /* Login.json */,
+				1BFD1EC12C2A83D5002E4232 /* Address.json */,
+				1BFD1EC32C2A841C002E4232 /* PackagesForWithdrawl.json */,
+				1BFD1EC52C2A843A002E4232 /* WithdrawnPackages.json */,
+			);
+			path = MockFiles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -680,8 +700,12 @@
 			files = (
 				1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */,
 				1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */,
+				1BFD1EC22C2A83D5002E4232 /* Address.json in Resources */,
+				1BFD1EC02C2A838D002E4232 /* Login.json in Resources */,
 				1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */,
+				1BFD1EC62C2A843A002E4232 /* WithdrawnPackages.json in Resources */,
 				1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */,
+				1BFD1EC42C2A841C002E4232 /* PackagesForWithdrawl.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

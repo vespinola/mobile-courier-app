@@ -13,7 +13,7 @@ enum AddressEndpoints {
 
 extension AddressEndpoints: Endpoint {
   var mockFile: String? {
-    ""
+    "Address"
   }
 
   var requestType: RequestType {
