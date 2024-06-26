@@ -20,7 +20,7 @@ final class LoginViewModelTests: XCTestCase {
     storageSpy = StorageSpy()
     authRepoSpy = AuthRepositorySpy()
 
-    sut = LoginViewModel(authRepository: authRepoSpy)
+    sut = LoginViewModel(authRepository: authRepoSpy, storage: storageSpy)
   }
 
   override func tearDownWithError() throws {
@@ -35,5 +35,6 @@ final class LoginViewModelTests: XCTestCase {
   func testLoadingState() async {
     _ = await sut.doLogin()
     XCTAssertTrue(authRepoSpy.performLoginCalled)
+    XCTAssertTrue(storageSpy.setStringCalled)
   }
 }
