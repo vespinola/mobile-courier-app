@@ -272,7 +272,7 @@
         }
       }
     },
-    "Shipping #%@" : {
+    "Shipment #%@" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
