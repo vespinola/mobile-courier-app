@@ -19,14 +19,15 @@ final class WithdrawnPackagesViewModel: ObservableObject {
   }
 
   @MainActor
-  func getPackages() async {
-    guard groupedPackagesEntity == nil else { return }
+  func getPackages(forceUpdate: Bool = false) async {
+    guard groupedPackagesEntity == nil || forceUpdate else { return }
+
+    defer { isLoading = false }
+
     do {
       isLoading = true
       groupedPackagesEntity = try await packagesRepository.getWithdrawnPackages()
-      isLoading = false
     } catch {
-      isLoading = false
       toastMessage = error.localizedDescription
     }
   }

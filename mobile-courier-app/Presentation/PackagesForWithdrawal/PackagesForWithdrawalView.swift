@@ -18,12 +18,19 @@ struct PackagesForWithdrawalView: View {
       }
     }
     .onAppear {
-      Task {
-        await viewModel.getPackages()
-      }
+      getPackages()
+    }
+    .refreshable {
+      getPackages(forceUpdate: true)
     }
     .showRippleSpinner(isLoading: $viewModel.isLoading)
     .toast(message: $viewModel.toastMessage)
+  }
+
+  private func getPackages(forceUpdate: Bool = false) {
+    Task {
+      await viewModel.getPackages(forceUpdate: forceUpdate)
+    }
   }
 
   @ViewBuilder
