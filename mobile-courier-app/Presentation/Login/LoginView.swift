@@ -18,57 +18,52 @@ struct LoginView: View {
   @EnvironmentObject var coordinator: Coordinator
 
   public var body: some View {
-    ZStack {
-      VStack(spacing: 16) {
-        Spacer()
-        Image("logo")
-          .resizable()
-          .renderingMode(.template)
-          .foregroundStyle(.accent)
-          .aspectRatio(contentMode: .fit)
-          .padding(.bottom, 16)
+    VStack(spacing: 16) {
+      Spacer()
+      Image("logo")
+        .resizable()
+        .renderingMode(.template)
+        .foregroundStyle(.accent)
+        .aspectRatio(contentMode: .fit)
+        .padding(.bottom, 16)
 
-        TextField("Email", text: $viewModel.email)
-          .focused($focusField, equals: .email)
-          .textFieldStyle(CourierTextFieldStyle())
-          .keyboardType(.emailAddress)
-          .autocorrectionDisabled()
-          .autocapitalization(.none)
-          .submitLabel(.next)
-          .onSubmit {
-            focusField = .password
-          }
+      TextField("Email", text: $viewModel.email)
+        .focused($focusField, equals: .email)
+        .textFieldStyle(CourierTextFieldStyle())
+        .keyboardType(.emailAddress)
+        .autocorrectionDisabled()
+        .autocapitalization(.none)
+        .submitLabel(.next)
+        .onSubmit {
+          focusField = .password
+        }
 
-        SecureField("Password", text: $viewModel.password)
-          .focused($focusField, equals: .password)
-          .textFieldStyle(CourierTextFieldStyle())
-          .submitLabel(.done)
-          .textContentType(.password)
-          .onSubmit {
-            navigateToLogin()
-          }
-
-        Button("Log In") {
+      SecureField("Password", text: $viewModel.password)
+        .focused($focusField, equals: .password)
+        .textFieldStyle(CourierTextFieldStyle())
+        .submitLabel(.done)
+        .textContentType(.password)
+        .onSubmit {
           navigateToLogin()
         }
-        .frame(maxWidth: .infinity, minHeight: 44)
-        .background(
-          viewModel.buttonIsEnabled
-          ? .accent
-          : .accent.opacity(0.6)
-        )
-        .foregroundStyle(.white)
-        .cornerRadius(16)
-        .disabled(!viewModel.buttonIsEnabled)
 
-        Spacer()
+      Button("Log In") {
+        navigateToLogin()
       }
-      .padding(20)
+      .frame(maxWidth: .infinity, minHeight: 44)
+      .background(
+        viewModel.buttonIsEnabled
+        ? .accent
+        : .accent.opacity(0.6)
+      )
+      .foregroundStyle(.white)
+      .cornerRadius(16)
+      .disabled(!viewModel.buttonIsEnabled)
 
-      if viewModel.isLoading {
-        RippleSpinnerView()
-      }
+      Spacer()
     }
+    .padding(20)
+    .showRippleSpinner(isLoading: $viewModel.isLoading)
     .toast(message: $viewModel.toastMessage)
   }
 
