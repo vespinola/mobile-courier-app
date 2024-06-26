@@ -37,7 +37,7 @@ struct ShipmentDetailView: View {
   @ViewBuilder
   private func getHeader() -> some View {
     HStack(alignment: .top) {
-      Text("Shipment \(groupedPackage.formattedId)")
+      Text("Shipment #\(groupedPackage.formattedId)")
         .foregroundStyle(.accent)
         .fontWeight(.bold)
       Spacer()

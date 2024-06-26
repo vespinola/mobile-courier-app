@@ -6,10 +6,40 @@
     },
     "%lld packages" : {
       "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld package"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "new",
+                  "value" : "%lld packages"
+                }
+              }
+            }
+          }
+        },
         "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld paquetes"
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld paquete"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld paquetes"
+                }
+              }
+            }
           }
         }
       }
@@ -242,12 +272,12 @@
         }
       }
     },
-    "Shipment %@" : {
+    "Shipment #%@" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Embarque %@"
+            "value" : "Embarque #%@"
           }
         }
       }
