@@ -16,16 +16,13 @@ struct WithdrawnPackagesView: View {
       if let groupedPackagesEntity = viewModel.groupedPackagesEntity {
         content(for: groupedPackagesEntity)
       }
-
-      if viewModel.isLoading {
-        RippleSpinnerView()
-      }
     }
     .onAppear {
       Task {
         await viewModel.getPackages()
       }
     }
+    .showRippleSpinner(isLoading: $viewModel.isLoading)
     .toast(message: $viewModel.toastMessage)
   }
 
