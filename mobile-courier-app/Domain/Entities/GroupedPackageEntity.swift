@@ -38,6 +38,10 @@ struct GroupedPackageEntity: Identifiable {
     packages.first?.formattedDate ?? ""
   }
 
+  var shipmentDate: Date? {
+    packages.first?.shipmentDate.getDateFrom(formatType: .server)
+  }
+
   var formattedId: String {
     NSDecimalNumber(value: shipmentCode).applyFormatForIdentifier()
   }
@@ -64,5 +68,14 @@ struct GroupedPackageEntity: Identifiable {
 extension Array where Element == GroupedPackageEntity {
   func filterGroupedPackages(by shipmentStatus: ShipmentStatus) -> [Element] {
     filter { $0.packageCurrentStatus == shipmentStatus }
+  }
+
+  func getYears() -> [String] {
+    let yearList: [Int] = compactMap { $0.shipmentDate }
+      .map { Calendar.current.component(.year, from: $0) }
+
+    return Set(yearList)
+      .sorted { $0 > $1 }
+      .map { String($0) }
   }
 }

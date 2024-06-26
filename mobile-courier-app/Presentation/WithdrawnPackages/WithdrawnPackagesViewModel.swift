@@ -11,6 +11,11 @@ final class WithdrawnPackagesViewModel: ObservableObject {
   @Published var isLoading: Bool = false
   @Published var toastMessage: String?
   @Published var groupedPackagesEntity: [GroupedPackageEntity]?
+  @Published var selectedYear: String?
+
+  var getYearsForFiltering: [String] {
+    groupedPackagesEntity?.getYears() ?? []
+  }
 
   private let packagesRepository: PackagesRepositoryProtocol
 
