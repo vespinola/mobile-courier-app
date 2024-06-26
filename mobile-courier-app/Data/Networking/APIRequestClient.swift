@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os
 
 enum APIErrorMessage: Error {
   case invalidRequest
@@ -21,7 +22,7 @@ protocol APIRequestClientProtocol {
 
 final class APIRequestClient: NSObject, APIRequestClientProtocol {
 
-  static var instance: APIRequestClient = .init()
+  private lazy var logger: Logger = .init()
 
   private lazy var delegate: URLSessionDelegate? = CustomSessionDelegate()
 
@@ -29,8 +30,12 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
     #if DEBUG
     if let mockfile = endpoint.mockFile, let fileUrl = Bundle.main.url(forResource: mockfile, withExtension: "json") {
       decoder.keyDecodingStrategy = .convertFromSnakeCase
-      let decodedData = try decoder.decode(T.self, from: Data(contentsOf: fileUrl))
+      let data = try Data(contentsOf: fileUrl, options: .uncached)
+      let decodedData = try decoder.decode(T.self, from: data)
       try? await Task.sleep(nanoseconds: 2 * 1_000_000_000)
+
+      logger.debug("\(mockfile): \(data.prettyPrintedJSONString ?? "")")
+
       return decodedData
     }
     #endif
@@ -59,6 +64,9 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
 
       decoder.keyDecodingStrategy = .convertFromSnakeCase
       let decodedData = try decoder.decode(T.self, from: data)
+
+      logger.debug("\(response.url?.absoluteString ?? ""): \(data.prettyPrintedJSONString ?? "")")
+
       return decodedData
     } catch {
       if (error as NSError).code == NSURLErrorTimedOut {
