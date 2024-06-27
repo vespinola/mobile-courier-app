@@ -17,3 +17,6 @@ nesting:
   function_level:
     warning: 5
     error: 10
+excluded:
+  - mobile-courier-appTests
+  - mobile-courier-appUITests
