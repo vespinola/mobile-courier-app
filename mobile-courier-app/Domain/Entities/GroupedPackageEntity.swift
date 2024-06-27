@@ -72,7 +72,7 @@ extension Array where Element == GroupedPackageEntity {
 
   func getYears() -> [String] {
     let yearList: [Int] = compactMap { $0.shipmentDate }
-      .map { Calendar.current.component(.year, from: $0) }
+      .map { $0.getYear() }
 
     return Set(yearList)
       .sorted { $0 > $1 }

@@ -47,21 +47,26 @@ struct PackagesForWithdrawalView: View {
     List {
       ForEach(ShipmentStatus.allCases) { status in
         if !groupedPackages.filterGroupedPackages(by: status).isEmpty {
-          Section(header: Text(status.localized)) {
-            ForEach(groupedPackages.filter { $0.packageCurrentStatus == status }) { currentGroupedPackage in
-              getGroupedPackageView(for: currentGroupedPackage)
-                .groupedPackageRowStyle()
-                .onTapGesture {
-                  coordinator.present(
-                    sheet: .shipmentDetail(groupedPackage: currentGroupedPackage)
-                  )
-                }
-            }
-          }
+          getSection(for: status, groupedPackages: groupedPackages)
         }
       }
     }
     .listStyle(.plain)
+  }
+
+  @ViewBuilder
+  private func getSection(for status: ShipmentStatus, groupedPackages: [GroupedPackageEntity]) -> some View {
+    Section(header: Text(status.localized)) {
+      ForEach(groupedPackages.filter { $0.packageCurrentStatus == status }) { currentGroupedPackage in
+        getGroupedPackageView(for: currentGroupedPackage)
+          .groupedPackageRowStyle()
+          .onTapGesture {
+            coordinator.present(
+              sheet: .shipmentDetail(groupedPackage: currentGroupedPackage)
+            )
+          }
+      }
+    }
   }
 
   @ViewBuilder

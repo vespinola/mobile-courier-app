@@ -13,7 +13,7 @@ struct WithdrawnPackagesView: View {
 
   var body: some View {
     ZStack {
-      if let groupedPackagesEntity = viewModel.groupedPackagesEntity {
+      if let groupedPackagesEntity = viewModel.filteredGroupedPackages {
         content(for: groupedPackagesEntity)
       }
     }
@@ -55,6 +55,7 @@ struct WithdrawnPackagesView: View {
           Text($0)
         }
       }
+      .pickerStyle(.menu)
     }
     .padding([.leading, .trailing, .top], 20)
   }
