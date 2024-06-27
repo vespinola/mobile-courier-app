@@ -20,7 +20,11 @@ struct AddressRespository: AddressRepositoryProtocol {
       decoder: JSONDecoder()
     )
 
-    AppData.shared.setUsername(model.airShipments.client.clientFirstName)
+    let firstName = model.airShipments.client.clientFirstName
+    let lastName = model.airShipments.client.clientLastName
+    let fullName = firstName + " " + lastName
+
+    AppData.shared.setUsername(fullName)
 
     return model.asEntity()
   }

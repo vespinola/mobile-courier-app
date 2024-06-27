@@ -13,7 +13,7 @@ struct WithdrawnPackagesView: View {
 
   var body: some View {
     ZStack {
-      if let groupedPackagesEntity = viewModel.groupedPackagesEntity {
+      if let groupedPackagesEntity = viewModel.filteredGroupedPackages {
         content(for: groupedPackagesEntity)
       }
     }
@@ -38,8 +38,26 @@ struct WithdrawnPackagesView: View {
     if groupedPackages.isEmpty {
       PackagePlaceholderView()
     } else {
-      packagesList(groupedPackages)
+      VStack {
+        getYearPicker()
+        packagesList(groupedPackages)
+      }
     }
+  }
+
+  @ViewBuilder
+  private func getYearPicker() -> some View {
+    HStack(alignment: .top) {
+      Text("Please select a year for filtering your shipments")
+      Spacer()
+      Picker("Select Year", selection: $viewModel.selectedYear) {
+        ForEach(viewModel.getYearsForFiltering, id: \.self) {
+          Text($0)
+        }
+      }
+      .pickerStyle(.menu)
+    }
+    .padding([.leading, .trailing, .top], 20)
   }
 
   @ViewBuilder

@@ -13,4 +13,8 @@ extension Date {
     dateFormatter.dateFormat = formatType.rawValue
     return dateFormatter.string(from: self)
   }
+
+  func getYear() -> Int {
+    Calendar.current.component(.year, from: self)
+  }
 }

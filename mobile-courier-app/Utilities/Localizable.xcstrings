@@ -215,6 +215,16 @@
         }
       }
     },
+    "Please select a year for filtering your shipments" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por favor, seleccione un año para filtrar sus pedidos"
+          }
+        }
+      }
+    },
     "Processing" : {
       "localizations" : {
         "es" : {
@@ -258,6 +268,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recordarme"
+          }
+        }
+      }
+    },
+    "Select Year" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seleccione un año"
           }
         }
       }
