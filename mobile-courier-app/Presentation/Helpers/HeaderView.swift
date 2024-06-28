@@ -25,6 +25,7 @@ struct HeaderView: View {
             trailing: .zero)
           )
           .frame(height: 60)
+          .accessibilityHidden(true)
       }
 
       if let username = appData.username?.capitalized {
@@ -33,6 +34,9 @@ struct HeaderView: View {
             .font(.title3)
             .fontWeight(.bold)
             .foregroundStyle(.white)
+            .accessibilityIdentifier(
+              AccessibilityIdentifiers.HeaderView.usernameLabel
+            )
         }
       }
 

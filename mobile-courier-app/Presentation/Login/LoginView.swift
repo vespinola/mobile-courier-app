@@ -26,6 +26,7 @@ struct LoginView: View {
         .foregroundStyle(.accent)
         .aspectRatio(contentMode: .fit)
         .padding(.bottom, 16)
+        .accessibilityHidden(true)
 
       TextField("Email", text: $viewModel.email)
         .focused($focusField, equals: .email)
@@ -37,6 +38,10 @@ struct LoginView: View {
         .onSubmit {
           focusField = .password
         }
+        .accessibilityIdentifier(
+          AccessibilityIdentifiers.Login.emailTextField
+        )
+        .accessibilityLabel("Email")
 
       SecureField("Password", text: $viewModel.password)
         .focused($focusField, equals: .password)
@@ -46,6 +51,10 @@ struct LoginView: View {
         .onSubmit {
           navigateToLogin()
         }
+        .accessibilityIdentifier(
+          AccessibilityIdentifiers.Login.passwordTextField
+        )
+        .accessibilityLabel("Password")
 
       Button("Log In") {
         navigateToLogin()
@@ -59,6 +68,9 @@ struct LoginView: View {
       .foregroundStyle(.white)
       .cornerRadius(16)
       .disabled(!viewModel.buttonIsEnabled)
+      .accessibilityIdentifier(
+        AccessibilityIdentifiers.Login.loginButton
+      )
 
       Spacer()
     }
