@@ -20,23 +20,36 @@ final class MobileCourierAppUITests: XCTestCase {
 
   override func tearDownWithError() throws {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    deleteApp()
+    try super.tearDownWithError()
   }
 
-  func testExample() throws {
-    // UI tests must launch the application that they test.
+  func testLogin_givenUserData_whenAuthenticate_shouldLandOnHome() throws {
     let app = XCUIApplication()
     app.launch()
 
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-  }
+    LoginScreen
+      .performLogin(email: "john.doe@mail.com", password: "123ABC123")
 
-  func testLaunchPerformance() throws {
-    if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-      // This measures how long it takes to launch your application.
-      measure(metrics: [XCTApplicationLaunchMetric()]) {
-        XCUIApplication().launch()
-      }
-    }
+    HomeScreen
+      .verifyUsername()
+      .verifyShipment(by: 2179)
+      .verifyShipment(by: 2182)
   }
 }
 
+extension MobileCourierAppUITests {
+  func deleteApp() {
+    let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+
+    let icon = springboard.icons["JustACourierApp"]
+
+    guard icon.exists else { return }
+
+    icon.press(forDuration: 1)
+
+    springboard.buttons["Remove App"].tapOnElement()
+    springboard.buttons["Delete App"].tapOnElement()
+    springboard.buttons["Delete"].tapOnElement()
+  }
+}

@@ -22,7 +22,7 @@ enum AccessibilityIdentifiers {
   }
 
   enum HeaderView {
-    static var usernameLabel: String { "Home-UsernameLabel" }
+    static var usernameLabel: String { "HeaderView-UsernameLabel" }
   }
 
   enum GroupedPackageRowView {

@@ -1,0 +1,37 @@
+name: Run UI Test Cases
+
+on:
+  pull_request:
+    branches:
+      - main
+      - "feature/*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ui-tests:
+    name: Run iOS UI Tests
+    runs-on: macOS-14
+    env:
+      DEVELOPER_DIR: "/Applications/Xcode_15.3.app/Contents/Developer"
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Reset Simulators
+        run: xcrun simctl erase all
+      - name: Run UI Tests
+        run: |
+          set -o pipefail
+          xcodebuild -project "mobile-courier-app.xcodeproj" -scheme "mobile-courier-appUITests" -destination "platform=iOS Simulator,OS=17.4,name=iPhone 15 Pro" -derivedDataPath build/ -resultBundlePath ui-test-results.xcresult test | xcpretty
+      - name: Compress UI Test Results
+        if: failure()
+        run: tar -czf ui-test-results.xcresult.tar.gz ui-test-results.xcresult
+      - name: Upload UI Test Results
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: ui-test-results
+          path: ui-test-results.xcresult.tar.gz

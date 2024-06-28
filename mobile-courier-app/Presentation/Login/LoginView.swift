@@ -68,15 +68,15 @@ struct LoginView: View {
       .foregroundStyle(.white)
       .cornerRadius(16)
       .disabled(!viewModel.buttonIsEnabled)
+      .accessibilityIdentifier(
+        AccessibilityIdentifiers.Login.loginButton
+      )
 
       Spacer()
     }
     .padding(20)
     .showRippleSpinner(isLoading: $viewModel.isLoading)
     .toast(message: $viewModel.toastMessage)
-    .accessibilityIdentifier(
-      AccessibilityIdentifiers.Login.loginButton
-    )
   }
 
   private func navigateToLogin() {
