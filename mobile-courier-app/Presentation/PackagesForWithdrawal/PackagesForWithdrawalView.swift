@@ -65,6 +65,13 @@ struct PackagesForWithdrawalView: View {
               sheet: .shipmentDetail(groupedPackage: currentGroupedPackage)
             )
           }
+          .accessibilityElement(children: .ignore)
+          .accessibilityLabel(currentGroupedPackage.accessibilityLabel)
+          .accessibilityIdentifier(
+            AccessibilityIdentifiers
+              .GroupedPackageRowView
+              .get(identifier: "\(currentGroupedPackage.id)")
+          )
       }
     }
   }

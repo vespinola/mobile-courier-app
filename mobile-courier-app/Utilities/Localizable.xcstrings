@@ -292,6 +292,16 @@
         }
       }
     },
+    "Shipment (shipmentCode) with a total cost of (totalCost), is (packageCurrentStatus.localized)." : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embarque (shipmentCode) con costo total de (totalCost), está (packageCurrentStatus.localized)."
+          }
+        }
+      }
+    },
     "Shipment #%@" : {
       "localizations" : {
         "es" : {

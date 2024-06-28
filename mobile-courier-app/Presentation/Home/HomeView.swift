@@ -38,24 +38,36 @@ struct HomeView: View {
       coordinator.build(page: .packagesForWithdrawl)
         .tabItem {
           Label("Home", systemImage: "house")
+            .accessibilityIdentifier(
+              AccessibilityIdentifiers.Home.homeTab
+            )
         }
         .tag(0)
 
       coordinator.build(page: .withdrawnPackages)
         .tabItem {
           Label("Withdrawn", systemImage: "bag")
+            .accessibilityIdentifier(
+              AccessibilityIdentifiers.Home.withdrawnTab
+            )
         }
         .tag(1)
 
       getProfileChildView(addresses: viewModel.addresses)
         .tabItem {
           Label("Profile", systemImage: "person")
+            .accessibilityIdentifier(
+              AccessibilityIdentifiers.Home.profileTab
+            )
         }
         .tag(2)
 
       coordinator.build(page: .configurations)
         .tabItem {
           Label("Settings", systemImage: "gear")
+            .accessibilityIdentifier(
+              AccessibilityIdentifiers.Home.settingsTab
+            )
         }
         .tag(3)
     }

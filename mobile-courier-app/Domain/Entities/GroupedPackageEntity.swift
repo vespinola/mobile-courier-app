@@ -63,6 +63,13 @@ struct GroupedPackageEntity: Identifiable {
 
     return status.caseInsensitiveCompare("C") == .orderedSame ? .inconsistent : .unknown
   }
+
+  var accessibilityLabel: String {
+    NSLocalizedString(
+      "Shipment \(shipmentCode) with a total cost of \(totalCost), is \(packageCurrentStatus.localized).",
+      comment: ""
+    )
+  }
 }
 
 extension Array where Element == GroupedPackageEntity {
