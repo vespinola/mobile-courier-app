@@ -12,8 +12,10 @@ struct LoginScreen: Screen {
 
   @discardableResult
   static func performLogin(email: String, password: String) -> Self.Type {
-    sleep(2)
+    emailTextField.tapOnElement()
     emailTextField.fillTextField(email)
+
+    passwordTextField.tapOnElement()
     passwordTextField.fillTextField(password)
     loginButton.tapOnElement()
     return self

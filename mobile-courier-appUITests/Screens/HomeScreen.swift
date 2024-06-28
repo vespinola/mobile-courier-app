@@ -18,7 +18,7 @@ struct HomeScreen: Screen {
 
   @discardableResult
   static func verifyShipment(by id: Int) -> Self.Type {
-    XCTAssertTrue(app.staticTexts["GroupedPackageRowView-\(id)"].elementExists())
+    XCTAssertTrue(app.otherElements["GroupedPackageRowView-\(id)"].elementExists())
     return self
   }
 }
