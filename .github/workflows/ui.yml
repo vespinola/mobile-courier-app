@@ -3,8 +3,10 @@ name: Run UI Test Cases
 on:
   pull_request:
     branches:
-      - main
-      - "feature/*"
+      - '**' #just for testing
+    # branches:
+    #   - main
+    #   - "feature/*"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
