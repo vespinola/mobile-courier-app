@@ -41,6 +41,12 @@ To get a local copy up and running, follow these simple steps:
 
 Build and run the project using Xcode. The app simulates a shipment courier service with various functionalities to demonstrate the above-mentioned skills.
 
+## Demo
+
+Here is a demo video of the app in action:
+
+![Video Demo](resources/recording.mp4)
+
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
