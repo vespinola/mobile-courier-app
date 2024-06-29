@@ -13,7 +13,6 @@ While I plan to continually enhance the project, this current version represents
 - **CI with GitHub Actions** (jobs for unit tests, UI tests, and Swiftlint linter)
 - **UI Automation with XCUITest** (using POM Pattern)
 - **Unit Tests with Doubles**
-- **Dependency Management with SPM** (I'm a little tired of using **Cocoapods** 😃)
 
 ## Features
 
