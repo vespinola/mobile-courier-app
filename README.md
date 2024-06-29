@@ -1,24 +1,24 @@
 # JustACourierApp
 
-JustACourierApp is an example project to demonstrate the skills I learn along the way working with multiple teams in this 8 years as an iOS Engineer.
+JustACourierApp is an example project to demonstrate the skills I've learned working with multiple teams as an iOS Engineer.
 
 ## Project Focus
 
-- **Dependency Injections**
+- **Dependency Injection**
 - **Navigation with Coordinator**
 - **SwiftUI** (custom styles, modifiers)
 - **Clean Architecture** (presentation, domain, data, and app layer folders)
 - **CI with GitHub Actions** (jobs for unit tests, UI tests, and Swiftlint linter)
 - **UI Automation with XCUITest** (using POM Pattern)
 - **Unit Tests with Doubles**
-- **Dependency Management with SPM**(I am little tire of using **Cocoapods** 😃)
+- **Dependency Management with SPM** (I'm a little tired of using **Cocoapods** 😃)
 
 ## Features
 
-1. **Dependency Injection**: Implements a flexible and testable architecture with Containers(actually one container).
+1. **Dependency Injection**: Implements a flexible and testable architecture with containers (currently one container).
 2. **Navigation Coordinator**: Manages navigation flow in a clean and organized way.
 3. **SwiftUI**: Utilizes custom styles and modifiers for a modern UI.
-4. **Clean Architecture**: Separates the project into presentation, domain, data, and app layers. The next step is to create differents repositories for each layer.
+4. **Clean Architecture**: Separates the project into presentation, domain, data, and app layers. The next step is to create different repositories for each layer.
 5. **Continuous Integration**: Uses GitHub Actions to automate unit tests, UI tests, and Swiftlint checks.
 6. **UI Automation**: Employs XCUITest with the Page Object Model (POM) pattern for robust UI testing.
 7. **Unit Tests**: Includes unit tests with doubles for thorough testing coverage.
@@ -50,3 +50,9 @@ Here is a demo of the app in action:
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## Contributor
+
+### Designer
+
+[![fvrodas](https://avatars.githubusercontent.com/u/629071?&v=4&s=16)](https://github.com/fvrodas)
