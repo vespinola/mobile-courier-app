@@ -1,6 +1,8 @@
 # JustACourierApp
 
-JustACourierApp is an example project to demonstrate the skills I've learned working with multiple teams as an iOS Engineer.
+JustACourierApp is an example project demonstrating the skills I’ve acquired while collaborating with various teams as an iOS Engineer. 
+
+While I plan to continually enhance the project, this current version represents my efforts during late-night sessions ☕️.
 
 ## Project Focus
 
