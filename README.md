@@ -43,9 +43,9 @@ Build and run the project using Xcode. The app simulates a shipment courier serv
 
 ## Demo
 
-Here is a demo video of the app in action:
+Here is a demo of the app in action:
 
-![Video Demo](resources/recording.mov)
+![Video Demo](resources/recording.gif)
 
 ## Contributing
 
