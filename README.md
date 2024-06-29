@@ -53,6 +53,7 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## Contributor
 
-### Designer
-
-[![fvrodas](https://avatars.githubusercontent.com/u/629071?&v=4&s=16)](https://github.com/fvrodas)
+| | |
+|-|-|
+|[![fvrodas](https://avatars.githubusercontent.com/u/2584406?v=4&s=46)](https://github.com/fvrodas)| Designer |
+| | |
