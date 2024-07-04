@@ -1,0 +1,15 @@
+{
+  "originHash" : "680a722577665b962cd5b5c030dd6a019bebf21ddb41ab0d62988d4308a66ae6",
+  "pins" : [
+    {
+      "identity" : "mobile-courier-app-domain",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vespinola/mobile-courier-app-domain.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "58511a002f3f07bac6ddc852afc218989304c864"
+      }
+    }
+  ],
+  "version" : 3
+}

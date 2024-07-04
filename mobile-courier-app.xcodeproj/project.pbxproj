@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,7 @@
 		1B4047242C27DF9600101DF4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047232C27DF9600101DF4 /* SettingsView.swift */; };
 		1B4047282C27E04600101DF4 /* AppDIContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047272C27E04600101DF4 /* AppDIContainerMock.swift */; };
 		1B40472A2C27E99D00101DF4 /* AppDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4047292C27E99D00101DF4 /* AppDataMock.swift */; };
+		1B5142362C364D530080E504 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B5142352C364D530080E504 /* JustACourierAppDomain */; };
 		1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF762BE6BBE90066F447 /* MobileCourierApp.swift */; };
 		1B58EF792BE6BBE90066F447 /* CoordinatorRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF782BE6BBE90066F447 /* CoordinatorRootView.swift */; };
 		1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */; };
@@ -192,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5142362C364D530080E504 /* JustACourierAppDomain in Frameworks */,
 				1B6E61772C3642E600562112 /* JustACourierAppDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +577,7 @@
 			name = "mobile-courier-app";
 			packageProductDependencies = (
 				1B6E61762C3642E600562112 /* JustACourierAppDomain */,
+				1B5142352C364D530080E504 /* JustACourierAppDomain */,
 			);
 			productName = "mobile-courier-app";
 			productReference = 1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */;
@@ -650,7 +653,7 @@
 			);
 			mainGroup = 1B58EF6A2BE6BBE90066F447;
 			packageReferences = (
-				1B6E61752C3642E600562112 /* XCLocalSwiftPackageReference "../mobile-courier-app-domain" */,
+				1B5142342C364D530080E504 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */,
 			);
 			productRefGroup = 1B58EF742BE6BBE90066F447 /* Products */;
 			projectDirPath = "";
@@ -1155,14 +1158,23 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		1B6E61752C3642E600562112 /* XCLocalSwiftPackageReference "../mobile-courier-app-domain" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../mobile-courier-app-domain";
+/* Begin XCRemoteSwiftPackageReference section */
+		1B5142342C364D530080E504 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vespinola/mobile-courier-app-domain.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B5142352C364D530080E504 /* JustACourierAppDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B5142342C364D530080E504 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */;
+			productName = JustACourierAppDomain;
+		};
 		1B6E61762C3642E600562112 /* JustACourierAppDomain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JustACourierAppDomain;
