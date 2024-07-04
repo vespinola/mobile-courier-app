@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class AuthData {
   static var shared: AuthData = .init()

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import JustACourierAppDomain
 
 struct ShipmentRowView: View {
   var shipment: ShipmentsEntity

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class HomeViewModel: ObservableObject {
   @Published var toastMessage: String?

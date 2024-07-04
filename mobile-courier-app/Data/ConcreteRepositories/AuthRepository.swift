@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 struct AuthRepository: AuthRepositoryProtocol {
   private var apiRequestClient: APIRequestClientProtocol

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class WithdrawnPackagesViewModel: ObservableObject {
   private enum Constants {

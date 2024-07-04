@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class SettingsViewModel: ObservableObject {
   private let authRepository: AuthRepositoryProtocol

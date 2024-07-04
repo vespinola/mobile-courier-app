@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class AuthRepositoryMock: AuthRepositoryProtocol {
   func performLogin(email: String, password: String) async throws { }

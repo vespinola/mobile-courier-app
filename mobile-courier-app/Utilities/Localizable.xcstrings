@@ -112,6 +112,7 @@
       }
     },
     "In Locker" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -122,6 +123,7 @@
       }
     },
     "Inconsistent" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -179,6 +181,7 @@
       }
     },
     "On the Way" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -226,6 +229,7 @@
       }
     },
     "Processing" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -246,6 +250,7 @@
       }
     },
     "Ready for Pickup" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -293,6 +298,7 @@
       }
     },
     "Shipment (shipmentCode) with a total cost of (totalCost), is (packageCurrentStatus.localized)." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -323,6 +329,7 @@
       }
     },
     "Unknown Status" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {

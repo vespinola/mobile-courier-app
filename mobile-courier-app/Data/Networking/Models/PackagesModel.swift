@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 struct PackagesModel: Codable {
   let packages: [PackageModel]

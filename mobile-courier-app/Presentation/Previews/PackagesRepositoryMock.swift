@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 struct PackagesRepositoryMock: PackagesRepositoryProtocol {
   func getPackagesForWithdrawl() async throws -> [GroupedPackageEntity] {

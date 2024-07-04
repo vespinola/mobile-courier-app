@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class AppDIContainer: DIContainerProtocol {
   private var services: [String: Any] = [:]

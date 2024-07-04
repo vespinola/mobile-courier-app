@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import JustACourierAppDomain
 
 struct ShipmentDetailView: View {
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class LoginViewModel: ObservableObject {
   @Published var password: String = ""

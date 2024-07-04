@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 struct AddressesRepositoryMock: AddressRepositoryProtocol {
   func getAddress() async throws -> AddressesEntity {

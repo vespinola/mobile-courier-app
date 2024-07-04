@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JustACourierAppDomain
 
 final class PackagesForWithdrawalViewModel: ObservableObject {
   @Published var isLoading: Bool = false

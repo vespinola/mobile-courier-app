@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import JustACourierAppDomain
 
 enum Page: String, Identifiable {
   case login
