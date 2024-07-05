@@ -19,14 +19,29 @@ struct ProfileView: View {
   private func content(addressEntity: AddressesEntity) -> some View {
       List {
         Section {
-          RowView(title: "Document Number", subtitle: addressEntity.documentNumber)
-          RowView(title: "Phone Number", subtitle: addressEntity.phoneNumber)
-          RowView(title: "Email", subtitle: addressEntity.email)
+          RowView(
+            title: String(localized: "Document Number"),
+            subtitle: addressEntity.documentNumber
+          )
+          RowView(
+            title: String(localized: "Phone Number"),
+            subtitle: addressEntity.phoneNumber
+          )
+          RowView(
+            title: String(localized: "Email"),
+            subtitle: addressEntity.email
+          )
         }
 
         Section {
-          ShipmentRowView(shipment: addressEntity.airShipments, title: "Air Shipments")
-          ShipmentRowView(shipment: addressEntity.seaShipments, title: "Sea Shipments")
+          ShipmentRowView(
+            shipment: addressEntity.airShipments,
+            title: String(localized: "Air Shipments")
+          )
+          ShipmentRowView(
+            shipment: addressEntity.seaShipments,
+            title: String(localized: "Sea Shipments")
+          )
         }
       }
   }

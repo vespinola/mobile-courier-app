@@ -44,6 +44,16 @@
         }
       }
     },
+    "Air Shipments" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envios aéreos"
+          }
+        }
+      }
+    },
     "At the branch" : {
       "localizations" : {
         "es" : {
@@ -60,6 +70,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modo Oscuro"
+          }
+        }
+      }
+    },
+    "Document Number" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Número de Documento"
           }
         }
       }
@@ -111,28 +132,6 @@
         }
       }
     },
-    "In Locker" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En origen"
-          }
-        }
-      }
-    },
-    "Inconsistent" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inconsistente"
-          }
-        }
-      }
-    },
     "Loading..." : {
       "localizations" : {
         "es" : {
@@ -180,17 +179,6 @@
         }
       }
     },
-    "On the Way" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En camino"
-          }
-        }
-      }
-    },
     "Packages" : {
       "localizations" : {
         "es" : {
@@ -218,6 +206,16 @@
         }
       }
     },
+    "Phone Number" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teléfono"
+          }
+        }
+      }
+    },
     "Please select a year for filtering your shipments" : {
       "localizations" : {
         "es" : {
@@ -228,34 +226,12 @@
         }
       }
     },
-    "Processing" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Procesando"
-          }
-        }
-      }
-    },
     "Profile" : {
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfil"
-          }
-        }
-      }
-    },
-    "Ready for Pickup" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Listo para retirar"
           }
         }
       }
@@ -273,6 +249,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Recordarme"
+          }
+        }
+      }
+    },
+    "Sea Shipments" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envios Marítimos"
           }
         }
       }
@@ -297,17 +283,6 @@
         }
       }
     },
-    "Shipment (shipmentCode) with a total cost of (totalCost), is (packageCurrentStatus.localized)." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Embarque (shipmentCode) con costo total de (totalCost), está (packageCurrentStatus.localized)."
-          }
-        }
-      }
-    },
     "Shipment #%@" : {
       "localizations" : {
         "es" : {
@@ -324,17 +299,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Total"
-          }
-        }
-      }
-    },
-    "Unknown Status" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estado desconocido"
           }
         }
       }
