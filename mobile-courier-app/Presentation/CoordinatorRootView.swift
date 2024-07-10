@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import JustACourierAppDomain
 
 struct CoordinatorRootView: View {
   @EnvironmentObject private var coordinator: Coordinator

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import JustACourierAppDomain
 
 struct HeaderView: View {
   @EnvironmentObject var appData: AppData
