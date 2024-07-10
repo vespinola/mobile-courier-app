@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		1B58EF932BE6BBEA0066F447 /* MobileCourierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */; };
 		1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */; };
 		1B5E84A12C267FE200EDFDE2 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E84A02C267FE200EDFDE2 /* AppDIContainer.swift */; };
+		1B5EB7A72C3E3D9C007AD50F /* JustACourierAppPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 1B5EB7A62C3E3D9C007AD50F /* JustACourierAppPresentation */; };
 		1B6177D92C3E2E5000324A69 /* JustACourierAppPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6177D82C3E2E5000324A69 /* JustACourierAppPresentation */; };
 		1B6177DC2C3E2F2100324A69 /* JustACourierAppData in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6177DB2C3E2F2100324A69 /* JustACourierAppData */; };
 		1B6177DF2C3E2F2B00324A69 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6177DE2C3E2F2B00324A69 /* JustACourierAppDomain */; };
@@ -22,7 +23,6 @@
 		1B96E9AF2C3E1A3000ECC3F6 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B96E9AE2C3E1A3000ECC3F6 /* JustACourierAppDomain */; };
 		1B96E9B22C3E1A4500ECC3F6 /* JustACourierAppData in Frameworks */ = {isa = PBXBuildFile; productRef = 1B96E9B12C3E1A4500ECC3F6 /* JustACourierAppData */; };
 		1B98EDCC2C37902800FD5F04 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B98EDCB2C37902800FD5F04 /* JustACourierAppDomain */; };
-		1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */; };
 		1BE1152F2C3E2A260018958E /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1BE1152E2C3E2A260018958E /* JustACourierAppDomain */; };
 		1BE58CAE2C05757000C7DF63 /* AuthRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CAD2C05757000C7DF63 /* AuthRepositorySpy.swift */; };
 		1BE58CB02C05757C00C7DF63 /* StorageSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CAF2C05757C00C7DF63 /* StorageSpy.swift */; };
@@ -62,7 +62,6 @@
 		1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppUITests.swift; sourceTree = "<group>"; };
 		1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B5E84A02C267FE200EDFDE2 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
-		1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		1BE58CAD2C05757000C7DF63 /* AuthRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositorySpy.swift; sourceTree = "<group>"; };
 		1BE58CAF2C05757C00C7DF63 /* StorageSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageSpy.swift; sourceTree = "<group>"; };
 		1BE63F702BE980D60016A26E /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 				1BE1152F2C3E2A260018958E /* JustACourierAppDomain in Frameworks */,
 				1B6E61772C3642E600562112 /* JustACourierAppDomain in Frameworks */,
 				1B6177E22C3E2F3B00324A69 /* JustACourierAppPresentation in Frameworks */,
+				1B5EB7A72C3E3D9C007AD50F /* JustACourierAppPresentation in Frameworks */,
 				1B96E9B22C3E1A4500ECC3F6 /* JustACourierAppData in Frameworks */,
 				1B6177DC2C3E2F2100324A69 /* JustACourierAppData in Frameworks */,
 				1B96E9AF2C3E1A3000ECC3F6 /* JustACourierAppDomain in Frameworks */,
@@ -133,7 +133,6 @@
 			children = (
 				1B5E849D2C267F7B00EDFDE2 /* App */,
 				1BE63F722BE98ADD0016A26E /* Info.plist */,
-				1B58EFA62BE6BFD70066F447 /* Utilities */,
 				1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */,
 				1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */,
 				1B58EF7D2BE6BBEA0066F447 /* Preview Content */,
@@ -167,14 +166,6 @@
 				1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */,
 			);
 			path = "mobile-courier-appUITests";
-			sourceTree = "<group>";
-		};
-		1B58EFA62BE6BFD70066F447 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				1BAB0EE52BFEE2D9004DF155 /* Localizable.xcstrings */,
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		1B5E849D2C267F7B00EDFDE2 /* App */ = {
@@ -256,6 +247,7 @@
 				1B6177DB2C3E2F2100324A69 /* JustACourierAppData */,
 				1B6177DE2C3E2F2B00324A69 /* JustACourierAppDomain */,
 				1B6177E12C3E2F3B00324A69 /* JustACourierAppPresentation */,
+				1B5EB7A62C3E3D9C007AD50F /* JustACourierAppPresentation */,
 			);
 			productName = "mobile-courier-app";
 			productReference = 1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */;
@@ -333,7 +325,7 @@
 			packageReferences = (
 				1B6177DA2C3E2F2100324A69 /* XCRemoteSwiftPackageReference "mobile-courier-app-data" */,
 				1B6177DD2C3E2F2A00324A69 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */,
-				1B6177E02C3E2F3B00324A69 /* XCLocalSwiftPackageReference "../mobile-courier-app-presentation" */,
+				1B5EB7A52C3E3D9C007AD50F /* XCRemoteSwiftPackageReference "mobile-courier-app-presentation" */,
 			);
 			productRefGroup = 1B58EF742BE6BBE90066F447 /* Products */;
 			projectDirPath = "";
@@ -352,7 +344,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */,
-				1BAB0EE62BFEE2D9004DF155 /* Localizable.xcstrings in Resources */,
 				1B58EF7F2BE6BBEA0066F447 /* Preview Assets.xcassets in Resources */,
 				1B58EF7B2BE6BBEA0066F447 /* Assets.xcassets in Resources */,
 			);
@@ -777,14 +768,15 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		1B6177E02C3E2F3B00324A69 /* XCLocalSwiftPackageReference "../mobile-courier-app-presentation" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../mobile-courier-app-presentation";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
+		1B5EB7A52C3E3D9C007AD50F /* XCRemoteSwiftPackageReference "mobile-courier-app-presentation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vespinola/mobile-courier-app-presentation";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		1B6177DA2C3E2F2100324A69 /* XCRemoteSwiftPackageReference "mobile-courier-app-data" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vespinola/mobile-courier-app-data";
@@ -804,6 +796,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1B5EB7A62C3E3D9C007AD50F /* JustACourierAppPresentation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B5EB7A52C3E3D9C007AD50F /* XCRemoteSwiftPackageReference "mobile-courier-app-presentation" */;
+			productName = JustACourierAppPresentation;
+		};
 		1B6177D82C3E2E5000324A69 /* JustACourierAppPresentation */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = JustACourierAppPresentation;

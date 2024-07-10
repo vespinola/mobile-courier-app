@@ -1,5 +1,5 @@
 {
-  "originHash" : "0f502daa2445a10fd648289bde29bb746f017e259762f763b2851221883cb8b0",
+  "originHash" : "cbc9d889b0cf14d1e78c40c7f350209a5a0de72ec1b00a76a8a7bd5467698914",
   "pins" : [
     {
       "identity" : "mobile-courier-app-data",
@@ -17,6 +17,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "e26ffb1f86787ad43cb551278a0e7f99472aa9ed"
+      }
+    },
+    {
+      "identity" : "mobile-courier-app-presentation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vespinola/mobile-courier-app-presentation",
+      "state" : {
+        "branch" : "main",
+        "revision" : "a3c1c7da6110ffe08fc23e45e55b3f9052ecc0ad"
       }
     }
   ],
