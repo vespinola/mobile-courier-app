@@ -6,15 +6,7 @@
 //
 
 import Foundation
-
-protocol Storage {
-  func getBool(forKey key: String) -> Bool
-  func setBool(_ value: Bool, forKey key: String)
-  func getString(forKey key: String) -> String?
-  func setString(_ value: String, forKey key: String)
-
-  func delete(forKey: String)
-}
+import JustACourierAppPresentation
 
 final class UserDefaultsStorage: Storage {
   func getString(forKey key: String) -> String? {

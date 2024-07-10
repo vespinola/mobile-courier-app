@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import mobile_courier_app
+@testable import JustACourierAppDomain
 
 final class AuthRepositorySpy: AuthRepositoryProtocol {
   private(set) var performLoginCalled: Bool = false

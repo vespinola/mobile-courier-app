@@ -1,10 +1,8 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%lld packages" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "variations" : {
@@ -44,7 +42,19 @@
         }
       }
     },
+    "Air Shipments" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envios aéreos"
+          }
+        }
+      }
+    },
     "At the branch" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -55,11 +65,23 @@
       }
     },
     "Dark Mode" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Modo Oscuro"
+          }
+        }
+      }
+    },
+    "Document Number" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Número de Documento"
           }
         }
       }
@@ -82,6 +104,7 @@
       }
     },
     "Gs %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -92,6 +115,7 @@
       }
     },
     "Hi, %@!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -102,6 +126,7 @@
       }
     },
     "Home" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -111,27 +136,8 @@
         }
       }
     },
-    "In Locker" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En origen"
-          }
-        }
-      }
-    },
-    "Inconsistent" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inconsistente"
-          }
-        }
-      }
-    },
     "Loading..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -159,6 +165,7 @@
       }
     },
     "Log out" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -169,6 +176,7 @@
       }
     },
     "N° %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -178,17 +186,8 @@
         }
       }
     },
-    "On the Way" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "En camino"
-          }
-        }
-      }
-    },
     "Packages" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -215,7 +214,19 @@
         }
       }
     },
+    "Phone Number" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teléfono"
+          }
+        }
+      }
+    },
     "Please select a year for filtering your shipments" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -225,32 +236,13 @@
         }
       }
     },
-    "Processing" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Procesando"
-          }
-        }
-      }
-    },
     "Profile" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perfil"
-          }
-        }
-      }
-    },
-    "Ready for Pickup" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Listo para retirar"
           }
         }
       }
@@ -272,7 +264,19 @@
         }
       }
     },
+    "Sea Shipments" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envios Marítimos"
+          }
+        }
+      }
+    },
     "Select Year" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -283,6 +287,7 @@
       }
     },
     "Settings" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -292,17 +297,8 @@
         }
       }
     },
-    "Shipment (shipmentCode) with a total cost of (totalCost), is (packageCurrentStatus.localized)." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Embarque (shipmentCode) con costo total de (totalCost), está (packageCurrentStatus.localized)."
-          }
-        }
-      }
-    },
     "Shipment #%@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -313,6 +309,7 @@
       }
     },
     "Total" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -322,17 +319,8 @@
         }
       }
     },
-    "Unknown Status" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estado desconocido"
-          }
-        }
-      }
-    },
     "Withdrawn" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -343,6 +331,7 @@
       }
     },
     "You have no packages" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -353,6 +342,7 @@
       }
     },
     "Your packages will be displayed here when they arrive at your mailbox" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {

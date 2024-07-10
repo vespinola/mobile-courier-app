@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import JustACourierAppDomain
+import JustACourierAppPresentation
 
 @main
 struct MobileCourierApp: App {
