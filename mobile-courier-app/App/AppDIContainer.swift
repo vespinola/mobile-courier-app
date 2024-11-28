@@ -21,30 +21,6 @@ final class AppDIContainer: DIContainerProtocol {
 
     // Helpers
     register(UserDefaultsStorage(), for: Storage.self)
-
-    // ViewModels
-    register(
-      LoginViewModel(
-        authRepository: resolve(AuthRepositoryProtocol.self),
-        storage: resolve(Storage.self)),
-      for: LoginViewModel.self
-    )
-    register(
-      HomeViewModel(addressesRepository: resolve(AddressRepositoryProtocol.self)),
-      for: HomeViewModel.self
-    )
-    register(
-      WithdrawnPackagesViewModel(packagesRepository: resolve(PackagesRepositoryProtocol.self)),
-      for: WithdrawnPackagesViewModel.self
-    )
-    register(
-      PackagesForWithdrawalViewModel(packagesRepository: resolve(PackagesRepositoryProtocol.self)),
-      for: PackagesForWithdrawalViewModel.self
-    )
-    register(
-      SettingsViewModel(authRepository: resolve(AuthRepositoryProtocol.self)),
-      for: SettingsViewModel.self
-    )
   }
 
   func register<T>(_ service: T, for type: T.Type) {
