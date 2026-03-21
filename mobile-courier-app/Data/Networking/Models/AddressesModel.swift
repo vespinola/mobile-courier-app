@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JustACourierAppDomain
 
 struct AddressesModel: Codable {
   let airShipments: ShipmentsModel
