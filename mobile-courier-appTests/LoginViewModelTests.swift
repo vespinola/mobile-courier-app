@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import JustACourierAppPresentation
 @testable import mobile_courier_app
 
 final class LoginViewModelTests: XCTestCase {

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JustACourierAppDomain
 
 enum RequestType: String {
   case get = "GET"
