@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JustACourierAppDomain
 
 struct LoginModel: Decodable {
   var username: String
