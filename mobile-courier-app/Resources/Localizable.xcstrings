@@ -1,0 +1,167 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@ Kg" : {
+
+    },
+    "%lld packages" : {
+
+    },
+    "Air Shipments" : {
+
+    },
+    "At the branch" : {
+
+    },
+    "Dark Mode" : {
+
+    },
+    "Document Number" : {
+
+    },
+    "Email" : {
+
+    },
+    "Gs %@" : {
+
+    },
+    "Hi, %@!" : {
+
+    },
+    "Home" : {
+
+    },
+    "In Locker" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En casilla"
+          }
+        }
+      }
+    },
+    "Inconsistent" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inconsistente"
+          }
+        }
+      }
+    },
+    "Loading..." : {
+
+    },
+    "Log In" : {
+
+    },
+    "Log out" : {
+
+    },
+    "N° %@" : {
+
+    },
+    "On the Way" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En camino"
+          }
+        }
+      }
+    },
+    "Packages" : {
+
+    },
+    "Password" : {
+
+    },
+    "Phone Number" : {
+
+    },
+    "Please select a year for filtering your shipments" : {
+
+    },
+    "Processing" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Procesando"
+          }
+        }
+      }
+    },
+    "Profile" : {
+
+    },
+    "Ready for Pickup" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo para retirar"
+          }
+        }
+      }
+    },
+    "Sea Shipments" : {
+
+    },
+    "Select Year" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Shipment #%@" : {
+
+    },
+    "Shipment %1$@ with a total cost of %2$@, is %3$@." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Embarque %1$@ con coste total de %2$@ es %3$@"
+          }
+        }
+      }
+    },
+    "Total" : {
+
+    },
+    "Unknown Status" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado desconocido"
+          }
+        }
+      }
+    },
+    "Withdrawn" : {
+
+    },
+    "You have no packages" : {
+
+    },
+    "Your packages will be displayed here when they arrive at your mailbox" : {
+
+    }
+  },
+  "version" : "1.0"
+}

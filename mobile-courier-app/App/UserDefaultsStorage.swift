@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JustACourierAppPresentation
 
 final class UserDefaultsStorage: Storage {
   func getString(forKey key: String) -> String? {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,14 +14,6 @@
 		1B58EF932BE6BBEA0066F447 /* MobileCourierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B58EF922BE6BBEA0066F447 /* MobileCourierAppUITests.swift */; };
 		1B58EFAB2BE6C1F30066F447 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */; };
 		1B5E84A12C267FE200EDFDE2 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5E84A02C267FE200EDFDE2 /* AppDIContainer.swift */; };
-		1B6177D92C3E2E5000324A69 /* JustACourierAppPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6177D82C3E2E5000324A69 /* JustACourierAppPresentation */; };
-		1B6177DF2C3E2F2B00324A69 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6177DE2C3E2F2B00324A69 /* JustACourierAppDomain */; };
-		1B6177E22C3E2F3B00324A69 /* JustACourierAppPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6177E12C3E2F3B00324A69 /* JustACourierAppPresentation */; };
-		1B6E61772C3642E600562112 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6E61762C3642E600562112 /* JustACourierAppDomain */; };
-		1B96E9AF2C3E1A3000ECC3F6 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B96E9AE2C3E1A3000ECC3F6 /* JustACourierAppDomain */; };
-		1B96E9B22C3E1A4500ECC3F6 /* JustACourierAppData in Frameworks */ = {isa = PBXBuildFile; productRef = 1B96E9B12C3E1A4500ECC3F6 /* JustACourierAppData */; };
-		1B98EDCC2C37902800FD5F04 /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1B98EDCB2C37902800FD5F04 /* JustACourierAppDomain */; };
-		1BE1152F2C3E2A260018958E /* JustACourierAppDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 1BE1152E2C3E2A260018958E /* JustACourierAppDomain */; };
 		1BE58CAE2C05757000C7DF63 /* AuthRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CAD2C05757000C7DF63 /* AuthRepositorySpy.swift */; };
 		1BE58CB02C05757C00C7DF63 /* StorageSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE58CAF2C05757C00C7DF63 /* StorageSpy.swift */; };
 		1BE63F712BE980D60016A26E /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE63F702BE980D60016A26E /* UserDefaultsStorage.swift */; };
@@ -29,9 +21,80 @@
 		1BE783802C2E61CA00D2093E /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE7837F2C2E61CA00D2093E /* HomeScreen.swift */; };
 		1BE783822C2E61D400D2093E /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE783812C2E61D400D2093E /* Screen.swift */; };
 		1BE783852C2E630000D2093E /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE783842C2E630000D2093E /* XCUIElement+Extensions.swift */; };
-		FB65A21A2CF8B6960085A371 /* JustACourierAppPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = FB65A2192CF8B6960085A371 /* JustACourierAppPresentation */; };
-		FB65A21D2CF8B7060085A371 /* JustACourierAppData in Frameworks */ = {isa = PBXBuildFile; productRef = FB65A21C2CF8B7060085A371 /* JustACourierAppData */; };
-		FB65A2202CF8BF000085A371 /* JustACourierAppData in Frameworks */ = {isa = PBXBuildFile; productRef = FB65A21F2CF8BF000085A371 /* JustACourierAppData */; };
+		FB03E49D2F6F371A00B3C6BF /* RoundedIndicatorViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4652F6F371A00B3C6BF /* RoundedIndicatorViewModifier.swift */; };
+		FB03E49E2F6F371A00B3C6BF /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E48D2F6F371A00B3C6BF /* RowView.swift */; };
+		FB03E49F2F6F371A00B3C6BF /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E46D2F6F371A00B3C6BF /* HeaderView.swift */; };
+		FB03E4A02F6F371A00B3C6BF /* ShipmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E48E2F6F371A00B3C6BF /* ShipmentRowView.swift */; };
+		FB03E4A12F6F371A00B3C6BF /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E46A2F6F371A00B3C6BF /* AccessibilityIdentifiers.swift */; };
+		FB03E4A22F6F371A00B3C6BF /* GroupedPackageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4952F6F371A00B3C6BF /* GroupedPackageRowView.swift */; };
+		FB03E4A32F6F371A00B3C6BF /* GroupedPackageReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E47B2F6F371A00B3C6BF /* GroupedPackageReadyView.swift */; };
+		FB03E4A42F6F371A00B3C6BF /* HomeViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4842F6F371A00B3C6BF /* HomeViewModelMock.swift */; };
+		FB03E4A52F6F371A00B3C6BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4742F6F371A00B3C6BF /* HomeViewModel.swift */; };
+		FB03E4A62F6F371A00B3C6BF /* ShipmentDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4932F6F371A00B3C6BF /* ShipmentDetailView.swift */; };
+		FB03E4A72F6F371A00B3C6BF /* PackagesForWithdrawalViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4862F6F371A00B3C6BF /* PackagesForWithdrawalViewModelMock.swift */; };
+		FB03E4A82F6F371A00B3C6BF /* WithdrawnPackagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4972F6F371A00B3C6BF /* WithdrawnPackagesViewModel.swift */; };
+		FB03E4A92F6F371A00B3C6BF /* AddressEntityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E47F2F6F371A00B3C6BF /* AddressEntityMock.swift */; };
+		FB03E4AA2F6F371A00B3C6BF /* PackagesForWithdrawalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E47C2F6F371A00B3C6BF /* PackagesForWithdrawalView.swift */; };
+		FB03E4AB2F6F371A00B3C6BF /* CourierTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4682F6F371A00B3C6BF /* CourierTextFieldStyle.swift */; };
+		FB03E4AC2F6F371A00B3C6BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4762F6F371A00B3C6BF /* LoginView.swift */; };
+		FB03E4AD2F6F371A00B3C6BF /* WithdrawnPackagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4962F6F371A00B3C6BF /* WithdrawnPackagesView.swift */; };
+		FB03E4AE2F6F371A00B3C6BF /* SettingsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4882F6F371A00B3C6BF /* SettingsViewModelMock.swift */; };
+		FB03E4AF2F6F371A00B3C6BF /* PackagesForWithdrawalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E47D2F6F371A00B3C6BF /* PackagesForWithdrawalViewModel.swift */; };
+		FB03E4B02F6F371A00B3C6BF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4702F6F371A00B3C6BF /* Storage.swift */; };
+		FB03E4B12F6F371A00B3C6BF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4772F6F371A00B3C6BF /* LoginViewModel.swift */; };
+		FB03E4B22F6F371A00B3C6BF /* CoordinatorRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4992F6F371A00B3C6BF /* CoordinatorRootView.swift */; };
+		FB03E4B32F6F371A00B3C6BF /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4912F6F371A00B3C6BF /* SettingsViewModel.swift */; };
+		FB03E4B42F6F371A00B3C6BF /* AddressesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4802F6F371A00B3C6BF /* AddressesRepositoryMock.swift */; };
+		FB03E4B52F6F371A00B3C6BF /* RippleSpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E46F2F6F371A00B3C6BF /* RippleSpinnerView.swift */; };
+		FB03E4B62F6F371A00B3C6BF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4792F6F371A00B3C6BF /* Coordinator.swift */; };
+		FB03E4B72F6F371A00B3C6BF /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E46C2F6F371A00B3C6BF /* Color+Extension.swift */; };
+		FB03E4B82F6F371A00B3C6BF /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4712F6F371A00B3C6BF /* ToastView.swift */; };
+		FB03E4B92F6F371A00B3C6BF /* AuthRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4832F6F371A00B3C6BF /* AuthRepositoryMock.swift */; };
+		FB03E4BA2F6F371A00B3C6BF /* PackagesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4872F6F371A00B3C6BF /* PackagesRepositoryMock.swift */; };
+		FB03E4BB2F6F371A00B3C6BF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4902F6F371A00B3C6BF /* SettingsView.swift */; };
+		FB03E4BC2F6F371A00B3C6BF /* DIContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E49A2F6F371A00B3C6BF /* DIContainerProtocol.swift */; };
+		FB03E4BD2F6F371A00B3C6BF /* PackagePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E46E2F6F371A00B3C6BF /* PackagePlaceholderView.swift */; };
+		FB03E4BE2F6F371A00B3C6BF /* LoginViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4852F6F371A00B3C6BF /* LoginViewModelMock.swift */; };
+		FB03E4BF2F6F371A00B3C6BF /* RippleSpinnerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4642F6F371A00B3C6BF /* RippleSpinnerModifier.swift */; };
+		FB03E4C02F6F371A00B3C6BF /* WithdrawnPackagesViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E48A2F6F371A00B3C6BF /* WithdrawnPackagesViewModelMock.swift */; };
+		FB03E4C12F6F371A00B3C6BF /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E46B2F6F371A00B3C6BF /* Bundle+Extension.swift */; };
+		FB03E4C22F6F371A00B3C6BF /* MobileCourierAppPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E49B2F6F371A00B3C6BF /* MobileCourierAppPresentation.swift */; };
+		FB03E4C32F6F371A00B3C6BF /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4662F6F371A00B3C6BF /* ToastModifier.swift */; };
+		FB03E4C42F6F371A00B3C6BF /* AppDIContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4822F6F371A00B3C6BF /* AppDIContainerMock.swift */; };
+		FB03E4C52F6F371A00B3C6BF /* StorageMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4892F6F371A00B3C6BF /* StorageMock.swift */; };
+		FB03E4C62F6F371A00B3C6BF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4732F6F371A00B3C6BF /* HomeView.swift */; };
+		FB03E4C72F6F371A00B3C6BF /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4622F6F371A00B3C6BF /* BorderedViewModifier.swift */; };
+		FB03E4C82F6F371A00B3C6BF /* AppDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4812F6F371A00B3C6BF /* AppDataMock.swift */; };
+		FB03E4C92F6F371A00B3C6BF /* GroupedPackageStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4632F6F371A00B3C6BF /* GroupedPackageStyleModifier.swift */; };
+		FB03E4CA2F6F371A00B3C6BF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E48C2F6F371A00B3C6BF /* ProfileView.swift */; };
+		FB03E4DE2F6F387B00B3C6BF /* PackagesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D92F6F387B00B3C6BF /* PackagesRepositoryProtocol.swift */; };
+		FB03E4DF2F6F387B00B3C6BF /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4CD2F6F387B00B3C6BF /* LoginEntity.swift */; };
+		FB03E4E02F6F387B00B3C6BF /* String+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D32F6F387B00B3C6BF /* String+Domain.swift */; };
+		FB03E4E12F6F387B00B3C6BF /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D82F6F387B00B3C6BF /* AuthRepositoryProtocol.swift */; };
+		FB03E4E22F6F387B00B3C6BF /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4DB2F6F387B00B3C6BF /* AppData.swift */; };
+		FB03E4E32F6F387B00B3C6BF /* AddressesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4CB2F6F387B00B3C6BF /* AddressesEntity.swift */; };
+		FB03E4E42F6F387B00B3C6BF /* DateFormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D52F6F387B00B3C6BF /* DateFormatType.swift */; };
+		FB03E4E52F6F387B00B3C6BF /* ShipmentStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4CF2F6F387B00B3C6BF /* ShipmentStatus.swift */; };
+		FB03E4E62F6F387B00B3C6BF /* GroupedPackageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4CC2F6F387B00B3C6BF /* GroupedPackageEntity.swift */; };
+		FB03E4E72F6F387B00B3C6BF /* PackageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4CE2F6F387B00B3C6BF /* PackageEntity.swift */; };
+		FB03E4E82F6F387B00B3C6BF /* AddressRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D72F6F387B00B3C6BF /* AddressRepositoryProtocol.swift */; };
+		FB03E4E92F6F387B00B3C6BF /* Date+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D12F6F387B00B3C6BF /* Date+Domain.swift */; };
+		FB03E4EA2F6F387B00B3C6BF /* mobile_courier_app_domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4DC2F6F387B00B3C6BF /* mobile_courier_app_domain.swift */; };
+		FB03E4EB2F6F387B00B3C6BF /* NSDecimalNumber+Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4D22F6F387B00B3C6BF /* NSDecimalNumber+Domain.swift */; };
+		FB03E5022F6F3AC900B3C6BF /* AuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F32F6F3AC900B3C6BF /* AuthEndpoints.swift */; };
+		FB03E5032F6F3AC900B3C6BF /* MobileCourierData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E5002F6F3AC900B3C6BF /* MobileCourierData.swift */; };
+		FB03E5042F6F3AC900B3C6BF /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4FE2F6F3AC900B3C6BF /* CustomSessionDelegate.swift */; };
+		FB03E5052F6F3AC900B3C6BF /* PackageEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F52F6F3AC900B3C6BF /* PackageEndpoints.swift */; };
+		FB03E5062F6F3AC900B3C6BF /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4FA2F6F3AC900B3C6BF /* LoginModel.swift */; };
+		FB03E5072F6F3AC900B3C6BF /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4EF2F6F3AC900B3C6BF /* AuthRepository.swift */; };
+		FB03E5082F6F3AC900B3C6BF /* AddressEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F22F6F3AC900B3C6BF /* AddressEndpoints.swift */; };
+		FB03E5092F6F3AC900B3C6BF /* PackagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4FB2F6F3AC900B3C6BF /* PackagesModel.swift */; };
+		FB03E50A2F6F3AC900B3C6BF /* APIRequestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4FD2F6F3AC900B3C6BF /* APIRequestClient.swift */; };
+		FB03E50B2F6F3AC900B3C6BF /* AddressRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4EE2F6F3AC900B3C6BF /* AddressRespository.swift */; };
+		FB03E50C2F6F3AC900B3C6BF /* AddressesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F92F6F3AC900B3C6BF /* AddressesModel.swift */; };
+		FB03E50D2F6F3AC900B3C6BF /* Data+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F72F6F3AC900B3C6BF /* Data+Data.swift */; };
+		FB03E50E2F6F3AC900B3C6BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F42F6F3AC900B3C6BF /* Endpoint.swift */; };
+		FB03E50F2F6F3AC900B3C6BF /* PackagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F02F6F3AC900B3C6BF /* PackagesRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,24 +134,91 @@
 		1BE7837F2C2E61CA00D2093E /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		1BE783812C2E61D400D2093E /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		1BE783842C2E630000D2093E /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
+		FB03E4622F6F371A00B3C6BF /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
+		FB03E4632F6F371A00B3C6BF /* GroupedPackageStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageStyleModifier.swift; sourceTree = "<group>"; };
+		FB03E4642F6F371A00B3C6BF /* RippleSpinnerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleSpinnerModifier.swift; sourceTree = "<group>"; };
+		FB03E4652F6F371A00B3C6BF /* RoundedIndicatorViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedIndicatorViewModifier.swift; sourceTree = "<group>"; };
+		FB03E4662F6F371A00B3C6BF /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		FB03E4682F6F371A00B3C6BF /* CourierTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourierTextFieldStyle.swift; sourceTree = "<group>"; };
+		FB03E46A2F6F371A00B3C6BF /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		FB03E46B2F6F371A00B3C6BF /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		FB03E46C2F6F371A00B3C6BF /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		FB03E46D2F6F371A00B3C6BF /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		FB03E46E2F6F371A00B3C6BF /* PackagePlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagePlaceholderView.swift; sourceTree = "<group>"; };
+		FB03E46F2F6F371A00B3C6BF /* RippleSpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleSpinnerView.swift; sourceTree = "<group>"; };
+		FB03E4702F6F371A00B3C6BF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		FB03E4712F6F371A00B3C6BF /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		FB03E4732F6F371A00B3C6BF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FB03E4742F6F371A00B3C6BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FB03E4762F6F371A00B3C6BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FB03E4772F6F371A00B3C6BF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FB03E4792F6F371A00B3C6BF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FB03E47B2F6F371A00B3C6BF /* GroupedPackageReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageReadyView.swift; sourceTree = "<group>"; };
+		FB03E47C2F6F371A00B3C6BF /* PackagesForWithdrawalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalView.swift; sourceTree = "<group>"; };
+		FB03E47D2F6F371A00B3C6BF /* PackagesForWithdrawalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalViewModel.swift; sourceTree = "<group>"; };
+		FB03E47F2F6F371A00B3C6BF /* AddressEntityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEntityMock.swift; sourceTree = "<group>"; };
+		FB03E4802F6F371A00B3C6BF /* AddressesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesRepositoryMock.swift; sourceTree = "<group>"; };
+		FB03E4812F6F371A00B3C6BF /* AppDataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataMock.swift; sourceTree = "<group>"; };
+		FB03E4822F6F371A00B3C6BF /* AppDIContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainerMock.swift; sourceTree = "<group>"; };
+		FB03E4832F6F371A00B3C6BF /* AuthRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryMock.swift; sourceTree = "<group>"; };
+		FB03E4842F6F371A00B3C6BF /* HomeViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelMock.swift; sourceTree = "<group>"; };
+		FB03E4852F6F371A00B3C6BF /* LoginViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelMock.swift; sourceTree = "<group>"; };
+		FB03E4862F6F371A00B3C6BF /* PackagesForWithdrawalViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesForWithdrawalViewModelMock.swift; sourceTree = "<group>"; };
+		FB03E4872F6F371A00B3C6BF /* PackagesRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesRepositoryMock.swift; sourceTree = "<group>"; };
+		FB03E4882F6F371A00B3C6BF /* SettingsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelMock.swift; sourceTree = "<group>"; };
+		FB03E4892F6F371A00B3C6BF /* StorageMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageMock.swift; sourceTree = "<group>"; };
+		FB03E48A2F6F371A00B3C6BF /* WithdrawnPackagesViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawnPackagesViewModelMock.swift; sourceTree = "<group>"; };
+		FB03E48C2F6F371A00B3C6BF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FB03E48D2F6F371A00B3C6BF /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		FB03E48E2F6F371A00B3C6BF /* ShipmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentRowView.swift; sourceTree = "<group>"; };
+		FB03E4902F6F371A00B3C6BF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FB03E4912F6F371A00B3C6BF /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		FB03E4932F6F371A00B3C6BF /* ShipmentDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentDetailView.swift; sourceTree = "<group>"; };
+		FB03E4952F6F371A00B3C6BF /* GroupedPackageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageRowView.swift; sourceTree = "<group>"; };
+		FB03E4962F6F371A00B3C6BF /* WithdrawnPackagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawnPackagesView.swift; sourceTree = "<group>"; };
+		FB03E4972F6F371A00B3C6BF /* WithdrawnPackagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawnPackagesViewModel.swift; sourceTree = "<group>"; };
+		FB03E4992F6F371A00B3C6BF /* CoordinatorRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorRootView.swift; sourceTree = "<group>"; };
+		FB03E49A2F6F371A00B3C6BF /* DIContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainerProtocol.swift; sourceTree = "<group>"; };
+		FB03E49B2F6F371A00B3C6BF /* MobileCourierAppPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierAppPresentation.swift; sourceTree = "<group>"; };
+		FB03E4CB2F6F387B00B3C6BF /* AddressesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesEntity.swift; sourceTree = "<group>"; };
+		FB03E4CC2F6F387B00B3C6BF /* GroupedPackageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedPackageEntity.swift; sourceTree = "<group>"; };
+		FB03E4CD2F6F387B00B3C6BF /* LoginEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		FB03E4CE2F6F387B00B3C6BF /* PackageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageEntity.swift; sourceTree = "<group>"; };
+		FB03E4CF2F6F387B00B3C6BF /* ShipmentStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipmentStatus.swift; sourceTree = "<group>"; };
+		FB03E4D12F6F387B00B3C6BF /* Date+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Domain.swift"; sourceTree = "<group>"; };
+		FB03E4D22F6F387B00B3C6BF /* NSDecimalNumber+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumber+Domain.swift"; sourceTree = "<group>"; };
+		FB03E4D32F6F387B00B3C6BF /* String+Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Domain.swift"; sourceTree = "<group>"; };
+		FB03E4D52F6F387B00B3C6BF /* DateFormatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatType.swift; sourceTree = "<group>"; };
+		FB03E4D72F6F387B00B3C6BF /* AddressRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FB03E4D82F6F387B00B3C6BF /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FB03E4D92F6F387B00B3C6BF /* PackagesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FB03E4DB2F6F387B00B3C6BF /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		FB03E4DC2F6F387B00B3C6BF /* mobile_courier_app_domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mobile_courier_app_domain.swift; sourceTree = "<group>"; };
+		FB03E4EE2F6F3AC900B3C6BF /* AddressRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRespository.swift; sourceTree = "<group>"; };
+		FB03E4EF2F6F3AC900B3C6BF /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		FB03E4F02F6F3AC900B3C6BF /* PackagesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesRepository.swift; sourceTree = "<group>"; };
+		FB03E4F22F6F3AC900B3C6BF /* AddressEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressEndpoints.swift; sourceTree = "<group>"; };
+		FB03E4F32F6F3AC900B3C6BF /* AuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoints.swift; sourceTree = "<group>"; };
+		FB03E4F42F6F3AC900B3C6BF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FB03E4F52F6F3AC900B3C6BF /* PackageEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageEndpoints.swift; sourceTree = "<group>"; };
+		FB03E4F72F6F3AC900B3C6BF /* Data+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Data.swift"; sourceTree = "<group>"; };
+		FB03E4F92F6F3AC900B3C6BF /* AddressesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressesModel.swift; sourceTree = "<group>"; };
+		FB03E4FA2F6F3AC900B3C6BF /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		FB03E4FB2F6F3AC900B3C6BF /* PackagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackagesModel.swift; sourceTree = "<group>"; };
+		FB03E4FD2F6F3AC900B3C6BF /* APIRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestClient.swift; sourceTree = "<group>"; };
+		FB03E4FE2F6F3AC900B3C6BF /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
+		FB03E5002F6F3AC900B3C6BF /* MobileCourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FB03E5102F6F3ADD00B3C6BF /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B58EF702BE6BBE90066F447 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B98EDCC2C37902800FD5F04 /* JustACourierAppDomain in Frameworks */,
-				1B6177D92C3E2E5000324A69 /* JustACourierAppPresentation in Frameworks */,
-				1B6177DF2C3E2F2B00324A69 /* JustACourierAppDomain in Frameworks */,
-				1BE1152F2C3E2A260018958E /* JustACourierAppDomain in Frameworks */,
-				1B6E61772C3642E600562112 /* JustACourierAppDomain in Frameworks */,
-				1B6177E22C3E2F3B00324A69 /* JustACourierAppPresentation in Frameworks */,
-				FB65A21A2CF8B6960085A371 /* JustACourierAppPresentation in Frameworks */,
-				1B96E9B22C3E1A4500ECC3F6 /* JustACourierAppData in Frameworks */,
-				FB65A2202CF8BF000085A371 /* JustACourierAppData in Frameworks */,
-				FB65A21D2CF8B7060085A371 /* JustACourierAppData in Frameworks */,
-				1B96E9AF2C3E1A3000ECC3F6 /* JustACourierAppDomain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,10 +264,14 @@
 			isa = PBXGroup;
 			children = (
 				1B5E849D2C267F7B00EDFDE2 /* App */,
+				FB03E5012F6F3AC900B3C6BF /* Data */,
+				FB03E4DD2F6F387B00B3C6BF /* Domain */,
+				FB03E49C2F6F371A00B3C6BF /* Presentation */,
 				1BE63F722BE98ADD0016A26E /* Info.plist */,
 				1B58EF7A2BE6BBEA0066F447 /* Assets.xcassets */,
 				1B58EF7C2BE6BBEA0066F447 /* mobile_courier_app.entitlements */,
 				1B58EF7D2BE6BBEA0066F447 /* Preview Content */,
+				FB03E5102F6F3ADD00B3C6BF /* Resources */,
 				1B58EFAA2BE6C1F30066F447 /* LaunchScreen.storyboard */,
 			);
 			path = "mobile-courier-app";
@@ -222,6 +356,269 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FB03E4672F6F371A00B3C6BF /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4622F6F371A00B3C6BF /* BorderedViewModifier.swift */,
+				FB03E4632F6F371A00B3C6BF /* GroupedPackageStyleModifier.swift */,
+				FB03E4642F6F371A00B3C6BF /* RippleSpinnerModifier.swift */,
+				FB03E4652F6F371A00B3C6BF /* RoundedIndicatorViewModifier.swift */,
+				FB03E4662F6F371A00B3C6BF /* ToastModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		FB03E4692F6F371A00B3C6BF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4682F6F371A00B3C6BF /* CourierTextFieldStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		FB03E4722F6F371A00B3C6BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4672F6F371A00B3C6BF /* Modifiers */,
+				FB03E4692F6F371A00B3C6BF /* Styles */,
+				FB03E46A2F6F371A00B3C6BF /* AccessibilityIdentifiers.swift */,
+				FB03E46B2F6F371A00B3C6BF /* Bundle+Extension.swift */,
+				FB03E46C2F6F371A00B3C6BF /* Color+Extension.swift */,
+				FB03E46D2F6F371A00B3C6BF /* HeaderView.swift */,
+				FB03E46E2F6F371A00B3C6BF /* PackagePlaceholderView.swift */,
+				FB03E46F2F6F371A00B3C6BF /* RippleSpinnerView.swift */,
+				FB03E4702F6F371A00B3C6BF /* Storage.swift */,
+				FB03E4712F6F371A00B3C6BF /* ToastView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB03E4752F6F371A00B3C6BF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4732F6F371A00B3C6BF /* HomeView.swift */,
+				FB03E4742F6F371A00B3C6BF /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FB03E4782F6F371A00B3C6BF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4762F6F371A00B3C6BF /* LoginView.swift */,
+				FB03E4772F6F371A00B3C6BF /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FB03E47A2F6F371A00B3C6BF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4792F6F371A00B3C6BF /* Coordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		FB03E47E2F6F371A00B3C6BF /* PackagesForWithdrawal */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E47B2F6F371A00B3C6BF /* GroupedPackageReadyView.swift */,
+				FB03E47C2F6F371A00B3C6BF /* PackagesForWithdrawalView.swift */,
+				FB03E47D2F6F371A00B3C6BF /* PackagesForWithdrawalViewModel.swift */,
+			);
+			path = PackagesForWithdrawal;
+			sourceTree = "<group>";
+		};
+		FB03E48B2F6F371A00B3C6BF /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E47F2F6F371A00B3C6BF /* AddressEntityMock.swift */,
+				FB03E4802F6F371A00B3C6BF /* AddressesRepositoryMock.swift */,
+				FB03E4812F6F371A00B3C6BF /* AppDataMock.swift */,
+				FB03E4822F6F371A00B3C6BF /* AppDIContainerMock.swift */,
+				FB03E4832F6F371A00B3C6BF /* AuthRepositoryMock.swift */,
+				FB03E4842F6F371A00B3C6BF /* HomeViewModelMock.swift */,
+				FB03E4852F6F371A00B3C6BF /* LoginViewModelMock.swift */,
+				FB03E4862F6F371A00B3C6BF /* PackagesForWithdrawalViewModelMock.swift */,
+				FB03E4872F6F371A00B3C6BF /* PackagesRepositoryMock.swift */,
+				FB03E4882F6F371A00B3C6BF /* SettingsViewModelMock.swift */,
+				FB03E4892F6F371A00B3C6BF /* StorageMock.swift */,
+				FB03E48A2F6F371A00B3C6BF /* WithdrawnPackagesViewModelMock.swift */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		FB03E48F2F6F371A00B3C6BF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E48C2F6F371A00B3C6BF /* ProfileView.swift */,
+				FB03E48D2F6F371A00B3C6BF /* RowView.swift */,
+				FB03E48E2F6F371A00B3C6BF /* ShipmentRowView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FB03E4922F6F371A00B3C6BF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4902F6F371A00B3C6BF /* SettingsView.swift */,
+				FB03E4912F6F371A00B3C6BF /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FB03E4942F6F371A00B3C6BF /* ShipmentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4932F6F371A00B3C6BF /* ShipmentDetailView.swift */,
+			);
+			path = ShipmentDetail;
+			sourceTree = "<group>";
+		};
+		FB03E4982F6F371A00B3C6BF /* WithdrawnPackages */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4952F6F371A00B3C6BF /* GroupedPackageRowView.swift */,
+				FB03E4962F6F371A00B3C6BF /* WithdrawnPackagesView.swift */,
+				FB03E4972F6F371A00B3C6BF /* WithdrawnPackagesViewModel.swift */,
+			);
+			path = WithdrawnPackages;
+			sourceTree = "<group>";
+		};
+		FB03E49C2F6F371A00B3C6BF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4722F6F371A00B3C6BF /* Helpers */,
+				FB03E4752F6F371A00B3C6BF /* Home */,
+				FB03E4782F6F371A00B3C6BF /* Login */,
+				FB03E47A2F6F371A00B3C6BF /* Navigation */,
+				FB03E47E2F6F371A00B3C6BF /* PackagesForWithdrawal */,
+				FB03E48B2F6F371A00B3C6BF /* Previews */,
+				FB03E48F2F6F371A00B3C6BF /* Profile */,
+				FB03E4922F6F371A00B3C6BF /* Settings */,
+				FB03E4942F6F371A00B3C6BF /* ShipmentDetail */,
+				FB03E4982F6F371A00B3C6BF /* WithdrawnPackages */,
+				FB03E4992F6F371A00B3C6BF /* CoordinatorRootView.swift */,
+				FB03E49A2F6F371A00B3C6BF /* DIContainerProtocol.swift */,
+				FB03E49B2F6F371A00B3C6BF /* MobileCourierAppPresentation.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FB03E4D02F6F387B00B3C6BF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4CB2F6F387B00B3C6BF /* AddressesEntity.swift */,
+				FB03E4CC2F6F387B00B3C6BF /* GroupedPackageEntity.swift */,
+				FB03E4CD2F6F387B00B3C6BF /* LoginEntity.swift */,
+				FB03E4CE2F6F387B00B3C6BF /* PackageEntity.swift */,
+				FB03E4CF2F6F387B00B3C6BF /* ShipmentStatus.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FB03E4D42F6F387B00B3C6BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4D12F6F387B00B3C6BF /* Date+Domain.swift */,
+				FB03E4D22F6F387B00B3C6BF /* NSDecimalNumber+Domain.swift */,
+				FB03E4D32F6F387B00B3C6BF /* String+Domain.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FB03E4D62F6F387B00B3C6BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4D52F6F387B00B3C6BF /* DateFormatType.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FB03E4DA2F6F387B00B3C6BF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4D72F6F387B00B3C6BF /* AddressRepositoryProtocol.swift */,
+				FB03E4D82F6F387B00B3C6BF /* AuthRepositoryProtocol.swift */,
+				FB03E4D92F6F387B00B3C6BF /* PackagesRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		FB03E4DD2F6F387B00B3C6BF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4D02F6F387B00B3C6BF /* Entities */,
+				FB03E4D42F6F387B00B3C6BF /* Extensions */,
+				FB03E4D62F6F387B00B3C6BF /* Helpers */,
+				FB03E4DA2F6F387B00B3C6BF /* Repositories */,
+				FB03E4DB2F6F387B00B3C6BF /* AppData.swift */,
+				FB03E4DC2F6F387B00B3C6BF /* mobile_courier_app_domain.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FB03E4F12F6F3AC900B3C6BF /* ConcreteRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4EE2F6F3AC900B3C6BF /* AddressRespository.swift */,
+				FB03E4EF2F6F3AC900B3C6BF /* AuthRepository.swift */,
+				FB03E4F02F6F3AC900B3C6BF /* PackagesRepository.swift */,
+			);
+			path = ConcreteRepositories;
+			sourceTree = "<group>";
+		};
+		FB03E4F62F6F3AC900B3C6BF /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4F22F6F3AC900B3C6BF /* AddressEndpoints.swift */,
+				FB03E4F32F6F3AC900B3C6BF /* AuthEndpoints.swift */,
+				FB03E4F42F6F3AC900B3C6BF /* Endpoint.swift */,
+				FB03E4F52F6F3AC900B3C6BF /* PackageEndpoints.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		FB03E4F82F6F3AC900B3C6BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4F72F6F3AC900B3C6BF /* Data+Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FB03E4FC2F6F3AC900B3C6BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4F92F6F3AC900B3C6BF /* AddressesModel.swift */,
+				FB03E4FA2F6F3AC900B3C6BF /* LoginModel.swift */,
+				FB03E4FB2F6F3AC900B3C6BF /* PackagesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB03E4FF2F6F3AC900B3C6BF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4F62F6F3AC900B3C6BF /* Endpoints */,
+				FB03E4F82F6F3AC900B3C6BF /* Extensions */,
+				FB03E4FC2F6F3AC900B3C6BF /* Models */,
+				FB03E4FD2F6F3AC900B3C6BF /* APIRequestClient.swift */,
+				FB03E4FE2F6F3AC900B3C6BF /* CustomSessionDelegate.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FB03E5012F6F3AC900B3C6BF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FB03E4F12F6F3AC900B3C6BF /* ConcreteRepositories */,
+				FB03E4FF2F6F3AC900B3C6BF /* Networking */,
+				FB03E5002F6F3AC900B3C6BF /* MobileCourierData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,19 +635,11 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				FB03E5102F6F3ADD00B3C6BF /* Resources */,
+			);
 			name = "mobile-courier-app";
 			packageProductDependencies = (
-				1B6E61762C3642E600562112 /* JustACourierAppDomain */,
-				1B98EDCB2C37902800FD5F04 /* JustACourierAppDomain */,
-				1B96E9AE2C3E1A3000ECC3F6 /* JustACourierAppDomain */,
-				1B96E9B12C3E1A4500ECC3F6 /* JustACourierAppData */,
-				1BE1152E2C3E2A260018958E /* JustACourierAppDomain */,
-				1B6177D82C3E2E5000324A69 /* JustACourierAppPresentation */,
-				1B6177DE2C3E2F2B00324A69 /* JustACourierAppDomain */,
-				1B6177E12C3E2F3B00324A69 /* JustACourierAppPresentation */,
-				FB65A2192CF8B6960085A371 /* JustACourierAppPresentation */,
-				FB65A21C2CF8B7060085A371 /* JustACourierAppData */,
-				FB65A21F2CF8BF000085A371 /* JustACourierAppData */,
 			);
 			productName = "mobile-courier-app";
 			productReference = 1B58EF732BE6BBE90066F447 /* mobile-courier-app.app */;
@@ -326,9 +715,6 @@
 			);
 			mainGroup = 1B58EF6A2BE6BBE90066F447;
 			packageReferences = (
-				1B6177DD2C3E2F2A00324A69 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */,
-				FB65A2212CF8BF500085A371 /* XCRemoteSwiftPackageReference "mobile-courier-app-data" */,
-				FB34DAE42CF8FD04009E9D58 /* XCRemoteSwiftPackageReference "mobile-courier-app-presentation" */,
 			);
 			productRefGroup = 1B58EF742BE6BBE90066F447 /* Products */;
 			projectDirPath = "";
@@ -397,6 +783,80 @@
 			files = (
 				1BE63F712BE980D60016A26E /* UserDefaultsStorage.swift in Sources */,
 				1B5E84A12C267FE200EDFDE2 /* AppDIContainer.swift in Sources */,
+				FB03E49D2F6F371A00B3C6BF /* RoundedIndicatorViewModifier.swift in Sources */,
+				FB03E49E2F6F371A00B3C6BF /* RowView.swift in Sources */,
+				FB03E49F2F6F371A00B3C6BF /* HeaderView.swift in Sources */,
+				FB03E4A02F6F371A00B3C6BF /* ShipmentRowView.swift in Sources */,
+				FB03E4A12F6F371A00B3C6BF /* AccessibilityIdentifiers.swift in Sources */,
+				FB03E4A22F6F371A00B3C6BF /* GroupedPackageRowView.swift in Sources */,
+				FB03E4A32F6F371A00B3C6BF /* GroupedPackageReadyView.swift in Sources */,
+				FB03E4A42F6F371A00B3C6BF /* HomeViewModelMock.swift in Sources */,
+				FB03E4A52F6F371A00B3C6BF /* HomeViewModel.swift in Sources */,
+				FB03E4A62F6F371A00B3C6BF /* ShipmentDetailView.swift in Sources */,
+				FB03E4A72F6F371A00B3C6BF /* PackagesForWithdrawalViewModelMock.swift in Sources */,
+				FB03E4A82F6F371A00B3C6BF /* WithdrawnPackagesViewModel.swift in Sources */,
+				FB03E4A92F6F371A00B3C6BF /* AddressEntityMock.swift in Sources */,
+				FB03E4AA2F6F371A00B3C6BF /* PackagesForWithdrawalView.swift in Sources */,
+				FB03E4AB2F6F371A00B3C6BF /* CourierTextFieldStyle.swift in Sources */,
+				FB03E4AC2F6F371A00B3C6BF /* LoginView.swift in Sources */,
+				FB03E4AD2F6F371A00B3C6BF /* WithdrawnPackagesView.swift in Sources */,
+				FB03E4AE2F6F371A00B3C6BF /* SettingsViewModelMock.swift in Sources */,
+				FB03E4AF2F6F371A00B3C6BF /* PackagesForWithdrawalViewModel.swift in Sources */,
+				FB03E4B02F6F371A00B3C6BF /* Storage.swift in Sources */,
+				FB03E4B12F6F371A00B3C6BF /* LoginViewModel.swift in Sources */,
+				FB03E4B22F6F371A00B3C6BF /* CoordinatorRootView.swift in Sources */,
+				FB03E4B32F6F371A00B3C6BF /* SettingsViewModel.swift in Sources */,
+				FB03E4B42F6F371A00B3C6BF /* AddressesRepositoryMock.swift in Sources */,
+				FB03E4B52F6F371A00B3C6BF /* RippleSpinnerView.swift in Sources */,
+				FB03E4B62F6F371A00B3C6BF /* Coordinator.swift in Sources */,
+				FB03E4B72F6F371A00B3C6BF /* Color+Extension.swift in Sources */,
+				FB03E4B82F6F371A00B3C6BF /* ToastView.swift in Sources */,
+				FB03E4B92F6F371A00B3C6BF /* AuthRepositoryMock.swift in Sources */,
+				FB03E4BA2F6F371A00B3C6BF /* PackagesRepositoryMock.swift in Sources */,
+				FB03E4BB2F6F371A00B3C6BF /* SettingsView.swift in Sources */,
+				FB03E4BC2F6F371A00B3C6BF /* DIContainerProtocol.swift in Sources */,
+				FB03E4BD2F6F371A00B3C6BF /* PackagePlaceholderView.swift in Sources */,
+				FB03E4BE2F6F371A00B3C6BF /* LoginViewModelMock.swift in Sources */,
+				FB03E4BF2F6F371A00B3C6BF /* RippleSpinnerModifier.swift in Sources */,
+				FB03E4C02F6F371A00B3C6BF /* WithdrawnPackagesViewModelMock.swift in Sources */,
+				FB03E4C12F6F371A00B3C6BF /* Bundle+Extension.swift in Sources */,
+				FB03E4C22F6F371A00B3C6BF /* MobileCourierAppPresentation.swift in Sources */,
+				FB03E4C32F6F371A00B3C6BF /* ToastModifier.swift in Sources */,
+				FB03E4C42F6F371A00B3C6BF /* AppDIContainerMock.swift in Sources */,
+				FB03E4C52F6F371A00B3C6BF /* StorageMock.swift in Sources */,
+				FB03E4C62F6F371A00B3C6BF /* HomeView.swift in Sources */,
+				FB03E4DE2F6F387B00B3C6BF /* PackagesRepositoryProtocol.swift in Sources */,
+				FB03E4DF2F6F387B00B3C6BF /* LoginEntity.swift in Sources */,
+				FB03E4E02F6F387B00B3C6BF /* String+Domain.swift in Sources */,
+				FB03E4E12F6F387B00B3C6BF /* AuthRepositoryProtocol.swift in Sources */,
+				FB03E4E22F6F387B00B3C6BF /* AppData.swift in Sources */,
+				FB03E4E32F6F387B00B3C6BF /* AddressesEntity.swift in Sources */,
+				FB03E4E42F6F387B00B3C6BF /* DateFormatType.swift in Sources */,
+				FB03E5022F6F3AC900B3C6BF /* AuthEndpoints.swift in Sources */,
+				FB03E5032F6F3AC900B3C6BF /* MobileCourierData.swift in Sources */,
+				FB03E5042F6F3AC900B3C6BF /* CustomSessionDelegate.swift in Sources */,
+				FB03E5052F6F3AC900B3C6BF /* PackageEndpoints.swift in Sources */,
+				FB03E5062F6F3AC900B3C6BF /* LoginModel.swift in Sources */,
+				FB03E5072F6F3AC900B3C6BF /* AuthRepository.swift in Sources */,
+				FB03E5082F6F3AC900B3C6BF /* AddressEndpoints.swift in Sources */,
+				FB03E5092F6F3AC900B3C6BF /* PackagesModel.swift in Sources */,
+				FB03E50A2F6F3AC900B3C6BF /* APIRequestClient.swift in Sources */,
+				FB03E50B2F6F3AC900B3C6BF /* AddressRespository.swift in Sources */,
+				FB03E50C2F6F3AC900B3C6BF /* AddressesModel.swift in Sources */,
+				FB03E50D2F6F3AC900B3C6BF /* Data+Data.swift in Sources */,
+				FB03E50E2F6F3AC900B3C6BF /* Endpoint.swift in Sources */,
+				FB03E50F2F6F3AC900B3C6BF /* PackagesRepository.swift in Sources */,
+				FB03E4E52F6F387B00B3C6BF /* ShipmentStatus.swift in Sources */,
+				FB03E4E62F6F387B00B3C6BF /* GroupedPackageEntity.swift in Sources */,
+				FB03E4E72F6F387B00B3C6BF /* PackageEntity.swift in Sources */,
+				FB03E4E82F6F387B00B3C6BF /* AddressRepositoryProtocol.swift in Sources */,
+				FB03E4E92F6F387B00B3C6BF /* Date+Domain.swift in Sources */,
+				FB03E4EA2F6F387B00B3C6BF /* mobile_courier_app_domain.swift in Sources */,
+				FB03E4EB2F6F387B00B3C6BF /* NSDecimalNumber+Domain.swift in Sources */,
+				FB03E4C72F6F371A00B3C6BF /* BorderedViewModifier.swift in Sources */,
+				FB03E4C82F6F371A00B3C6BF /* AppDataMock.swift in Sources */,
+				FB03E4C92F6F371A00B3C6BF /* GroupedPackageStyleModifier.swift in Sources */,
+				FB03E4CA2F6F371A00B3C6BF /* ProfileView.swift in Sources */,
 				1B58EF772BE6BBE90066F447 /* MobileCourierApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,81 +1230,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1B6177DD2C3E2F2A00324A69 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vespinola/mobile-courier-app-domain.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		FB34DAE42CF8FD04009E9D58 /* XCRemoteSwiftPackageReference "mobile-courier-app-presentation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vespinola/mobile-courier-app-presentation.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		FB65A2212CF8BF500085A371 /* XCRemoteSwiftPackageReference "mobile-courier-app-data" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vespinola/mobile-courier-app-data.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1B6177D82C3E2E5000324A69 /* JustACourierAppPresentation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppPresentation;
-		};
-		1B6177DE2C3E2F2B00324A69 /* JustACourierAppDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1B6177DD2C3E2F2A00324A69 /* XCRemoteSwiftPackageReference "mobile-courier-app-domain" */;
-			productName = JustACourierAppDomain;
-		};
-		1B6177E12C3E2F3B00324A69 /* JustACourierAppPresentation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppPresentation;
-		};
-		1B6E61762C3642E600562112 /* JustACourierAppDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppDomain;
-		};
-		1B96E9AE2C3E1A3000ECC3F6 /* JustACourierAppDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppDomain;
-		};
-		1B96E9B12C3E1A4500ECC3F6 /* JustACourierAppData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppData;
-		};
-		1B98EDCB2C37902800FD5F04 /* JustACourierAppDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppDomain;
-		};
-		1BE1152E2C3E2A260018958E /* JustACourierAppDomain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppDomain;
-		};
-		FB65A2192CF8B6960085A371 /* JustACourierAppPresentation */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppPresentation;
-		};
-		FB65A21C2CF8B7060085A371 /* JustACourierAppData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppData;
-		};
-		FB65A21F2CF8BF000085A371 /* JustACourierAppData */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = JustACourierAppData;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B58EF6B2BE6BBE90066F447 /* Project object */;
 }
