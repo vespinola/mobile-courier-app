@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JustACourierAppPresentation
 @testable import mobile_courier_app
 
 final class StorageSpy: Storage {
