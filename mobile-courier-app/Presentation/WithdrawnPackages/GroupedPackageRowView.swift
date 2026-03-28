@@ -24,16 +24,19 @@ struct GroupedPackageRowView: View {
             .foregroundStyle(Color.accent)
             .fontWeight(.bold)
           Text("\(groupedPackage.totalWeight) Kg")
+            .foregroundStyle(Color.primary)
         }
       }
 
       HStack {
         Text(groupedPackage.formattedDate)
+          .foregroundStyle(Color.primary)
           .frame(maxWidth: .infinity, alignment: .leading)
 
         Spacer()
 
         Text("\(groupedPackage.packages.count) packages")
+          .foregroundStyle(Color.primary)
       }
 
     }

@@ -95,6 +95,7 @@
 		FB03E50D2F6F3AC900B3C6BF /* Data+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F72F6F3AC900B3C6BF /* Data+Data.swift */; };
 		FB03E50E2F6F3AC900B3C6BF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F42F6F3AC900B3C6BF /* Endpoint.swift */; };
 		FB03E50F2F6F3AC900B3C6BF /* PackagesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB03E4F02F6F3AC900B3C6BF /* PackagesRepository.swift */; };
+		FBA6D5912F7866AA007303F8 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6D5902F7866AA007303F8 /* ViewModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +209,7 @@
 		FB03E4FD2F6F3AC900B3C6BF /* APIRequestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestClient.swift; sourceTree = "<group>"; };
 		FB03E4FE2F6F3AC900B3C6BF /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		FB03E5002F6F3AC900B3C6BF /* MobileCourierData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCourierData.swift; sourceTree = "<group>"; };
+		FBA6D5902F7866AA007303F8 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -415,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				FB03E4792F6F371A00B3C6BF /* Coordinator.swift */,
+				FBA6D5902F7866AA007303F8 /* ViewModelFactory.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -808,6 +811,7 @@
 				FB03E4B32F6F371A00B3C6BF /* SettingsViewModel.swift in Sources */,
 				FB03E4B42F6F371A00B3C6BF /* AddressesRepositoryMock.swift in Sources */,
 				FB03E4B52F6F371A00B3C6BF /* RippleSpinnerView.swift in Sources */,
+				FBA6D5912F7866AA007303F8 /* ViewModelFactory.swift in Sources */,
 				FB03E4B62F6F371A00B3C6BF /* Coordinator.swift in Sources */,
 				FB03E4B72F6F371A00B3C6BF /* Color+Extension.swift in Sources */,
 				FB03E4B82F6F371A00B3C6BF /* ToastView.swift in Sources */,

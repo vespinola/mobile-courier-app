@@ -34,6 +34,7 @@ public final class LoginViewModel: ObservableObject {
       isLoading = true
       try await authRepository.performLogin(email: email, password: password)
       storage.setString(email, forKey: "userEmail")
+      password = ""
       isLoading = false
       return true
     } catch {
