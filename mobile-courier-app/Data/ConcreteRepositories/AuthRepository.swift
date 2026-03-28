@@ -23,5 +23,6 @@ public struct AuthRepository: AuthRepositoryProtocol {
 
   public func performLogout() {
     AppData.shared.updateToken(nil)
+    AppData.shared.setUsername(nil)
   }
 }

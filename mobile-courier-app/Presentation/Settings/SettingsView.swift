@@ -22,7 +22,8 @@ struct SettingsView: View {
         Section {
           Button("Log out", role: .destructive) {
             viewModel.doLogout()
-            coordinator.popToRoot()
+            // Reset navigation and clear persisted UI-only data (email)
+            coordinator.resetForLogout()
           }
         }
       }

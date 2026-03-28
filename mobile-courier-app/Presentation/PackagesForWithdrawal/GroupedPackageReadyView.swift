@@ -21,11 +21,13 @@ struct GroupedPackageReadyView: View {
 
         VStack(alignment: .trailing) {
           Text("\(groupedPackage.totalWeight) Kg")
+            .foregroundStyle(Color.primary)
         }
       }
 
       HStack {
         Text("\(groupedPackage.packages.count) packages")
+          .foregroundStyle(Color.primary)
 
         Spacer()
 

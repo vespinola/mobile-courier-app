@@ -56,17 +56,22 @@ struct LoginView: View {
         )
         .accessibilityLabel("Password")
 
-      Button("Log In") {
-        navigateToLogin()
-      }
-      .frame(maxWidth: .infinity, minHeight: 44)
-      .background(
-        viewModel.buttonIsEnabled
-        ? Color.accent
-        : Color.accent.opacity(0.6)
+      Button(
+        action: { navigateToLogin() },
+        label: {
+          Text("Log In")
+            .frame(maxWidth: .infinity, minHeight: 44)
+            .contentShape(Rectangle())
+            .background(
+              viewModel.buttonIsEnabled
+              ? Color.accent
+              : Color.accent.opacity(0.6)
+            )
+            .foregroundStyle(.white)
+            .cornerRadius(16)
+        }
       )
-      .foregroundStyle(.white)
-      .cornerRadius(16)
+      .buttonStyle(.plain)
       .disabled(!viewModel.buttonIsEnabled)
       .accessibilityIdentifier(
         AccessibilityIdentifiers.Login.loginButton

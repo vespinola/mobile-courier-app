@@ -23,8 +23,12 @@ protocol APIRequestClientProtocol {
 final class APIRequestClient: NSObject, APIRequestClientProtocol {
 
   private lazy var logger: Logger = .init()
-
   private lazy var delegate: URLSessionDelegate? = CustomSessionDelegate()
+  private let session: URLSession
+
+  init(session: URLSession = URLSession(configuration: .default)) {
+    self.session = session
+  }
 
   func performRequest<T: Decodable>(endpoint: Endpoint, decoder: JSONDecoder = JSONDecoder()) async throws -> T {
     #if DEBUG
@@ -45,14 +49,7 @@ final class APIRequestClient: NSObject, APIRequestClientProtocol {
     }
 
     do {
-      let configuration = URLSessionConfiguration.default
-      configuration.timeoutIntervalForRequest = 10
-      configuration.timeoutIntervalForResource = 10
-      configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
-      configuration.urlCache = nil
-
-      let (data, response) = try await URLSession(configuration: configuration, delegate: delegate, delegateQueue: nil)
-        .data(for: urlRequest)
+      let (data, response) = try await session.data(for: urlRequest)
 
       guard let httpResponse = response as? HTTPURLResponse else {
         throw APIErrorMessage.invalidResponse
